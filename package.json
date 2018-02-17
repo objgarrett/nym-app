@@ -1,0 +1,34 @@
+{
+  "name": "nym-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/objgarrett/nym-app.git"
+  },
+  "keywords": [
+    "chore",
+    "task",
+    "manager",
+    "roommates"
+  ],
+  "author": "Olivia Garrett, Mary Hall, Brittany Gillespie, Jordan Shear",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/objgarrett/nym-app/issues"
+  },
+  "homepage": "https://github.com/objgarrett/nym-app#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.15.0",
+    "mysql2": "^1.5.2",
+    "sequelize": "^4.33.4"
+  }
+}
