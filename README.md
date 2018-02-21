@@ -1,3 +1,1 @@
 # nym-app
-
-test
