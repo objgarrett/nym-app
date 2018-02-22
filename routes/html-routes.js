@@ -1,9 +1,15 @@
 
-var path = require("path");
+const path = require("path");
+const exphbs = require('express-handlebars');
+// const express = require('express');
+// const app = express();
+
+
 
 module.exports = function(app) {
-
-  app.get("/", function(req, res) {
-    res.render("login");
+    const test = "";
+    app.get("/", function(req, res) {
+    // res.sendFile(path.join(__dirname, "../public/login.html"));
+        res.render("login", test);
   })
 }
