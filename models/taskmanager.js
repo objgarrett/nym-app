@@ -1,3 +1,4 @@
+//maybe need to add "due by" and user assignment and the value/gold star/punishment
 module.exports = function(sequelize, DataTypes) {
     var Tasklist = sequelize.define("Tasklist", {
         text: {
@@ -15,3 +16,4 @@ module.exports = function(sequelize, DataTypes) {
     });
     return Tasklist;
 };
+
