@@ -1,6 +1,3 @@
-// *****************************************************************************
-// Server.js - This file is the initial starting point for the Node/Express server.
-//
 // ******************************************************************************
 // *** Dependencies
 // =============================================================
@@ -15,18 +12,17 @@ var exphbs = require("express-handlebars");
 app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
-
 // Static directory
 app.use(express.static("public"));
-
 // handlebars
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-
 // Routes
-require("./routes/html-routes.js")(app);
-require("./routes/api-routes.js")(app);
+// require("./routes/api-routes.js")(app);
+// require("./routes/html-routes.js")(app);
+
+require("./routes/login-controller.js")(app);
 
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
