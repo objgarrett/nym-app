@@ -1,6 +1,11 @@
-//maybe need to add "due by" and user assignment and the value/gold star/punishment
+//for the task list - roommates can add, update, remove task items as well as set when it's due and who needs to complete the task
 module.exports = function(sequelize, DataTypes) {
     var Tasklist = sequelize.define("Tasklist", {
+        taskid: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        
         text: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -12,6 +17,21 @@ module.exports = function(sequelize, DataTypes) {
         complete: {
             type: DataTypes.BOOLEAN,
             defaultValue: false
+        },
+
+        dueby: {
+            type: DataTypes.DATE,
+            allowNull: false
+        },
+
+        userassigned: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+
+        userid: {
+            type: DataTypes.INTEGER,
+            allowNull: false
         }
     });
     return Tasklist;
