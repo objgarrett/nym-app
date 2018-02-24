@@ -1,7 +1,11 @@
-//maybe need to add "due by" and user assignment 
-//user assignment - how do we validate who the user is when they are assigned a task?
+//for the task list - roommates can add, update, remove task items as well as set when it's due and who needs to complete the task
 module.exports = function(sequelize, DataTypes) {
     var Tasklist = sequelize.define("Tasklist", {
+        taskid: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        
         text: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -23,6 +27,11 @@ module.exports = function(sequelize, DataTypes) {
         userassigned: {
             type: DataTypes.STRING,
             allowNull: false,
+        },
+
+        userid: {
+            type: DataTypes.INTEGER,
+            allowNull: false
         }
     });
     return Tasklist;
