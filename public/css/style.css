@@ -23,27 +23,28 @@ anything faded is at 65% opacity
 #title {
     font-family: 'Lobster', cursive;
     color: #F2F4F4;
-    font-size: 5vw;
+    font-size: 6vw;
 }
 
 #joinus {
     text-align:center;
     font-family: 'Lobster', cursive;
     color: #FF8552;
-    font-size: 4vw;
+    font-size: 5vw;
 }
 
 h2 {
-    font-family: Arial;
+    font-family: 'Nunito', sans-serif;
     color: #F2F4F4;
-    font-size: 2vw;
+    font-size: 3vw;
 }
 
 #or {
     text-align: center;
-    font-family: Arial;
+    font-family: 'Nunito', sans-serif;
     color: #FF8552;
-    font-size: 4vw;
+    font-size: 3vw;
+    padding:15px;
 }
 
 #login {
@@ -52,6 +53,37 @@ h2 {
     border-radius: 10px;
     padding: 15px;
     margin: auto;
+}
+
+hr {
+  border-color:#ffdbcc
+}
+/* Form Styling */
+input[type=text] {
+  /* padding: 12px 20px; */
+  /* margin: 8px 0; */
+  border: none;
+  font-family: 'Nunito', sans-serif;
+  color: #FF8552;
+  font-size:3vw;
+  opacity: 0.65;
+  /* text-align: center; */
+  /* width:95%; */
+}
+
+.fa-user, .fa-envelope, .fa-unlock-alt {
+  color: #FF8552;
+}
+
+button {
+  background: #FF8552;
+  color: #F2F4F4;
+  font-family: 'Nunito', sans-serif;
+  width:100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 3vw;
 }
 
 /* SIGN IN BUTTONS */
@@ -125,5 +157,5 @@ h2 {
 }
 .loginBtn--email:hover,
 .loginBtn--email:focus {
-    background: #44bbbb;
+    background: #2f8383;
 }
