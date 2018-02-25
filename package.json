@@ -17,7 +17,7 @@
     "manager",
     "roommates"
   ],
-  "author": "Olivia Garrett, Mary Hall, Brittany Gillespie, Jordan Shear",
+  "author": "Olivia Garrett, Brittany Gillespie, Mary Hall, Jordan Shear",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/objgarrett/nym-app/issues"
@@ -25,10 +25,10 @@
   "homepage": "https://github.com/objgarrett/nym-app#readme",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "dotenv": "^5.0.0",
     "express": "^4.16.2",
     "express-handlebars": "^3.0.0",
     "mysql": "^2.15.0",
-    "mysql2": "^1.5.2",
-    "sequelize": "^4.33.4"
+    "mysql2": "^1.5.2"
   }
 }
