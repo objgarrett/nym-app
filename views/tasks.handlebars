@@ -1,0 +1,49 @@
+<header>
+    <div class="container" id="secondary-header">
+        <div class="row">
+            <div class="col-sm-12"></div>
+                <div class="col-sm-12" id="main">
+                    <h1 id="title">Not Your Maid</h1>
+                </div>
+            <div class="col-sm-12" id="orderBorder"></div>    
+        </div>
+    </div>
+</header>
+
+<div class="container" id="calendar"></div>
+
+<div class="container" id="tasklist">
+    <ul class="tasks">
+        {{#each Tasklist}}
+            {{#unless complete}}
+                {{text}}
+            {{/unless}}
+        {{/each}}        
+    </ul>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <a href="/payment"><img class="footerIcons" src="../public/css/images/transfer-10-white.png" alt="payments"></a>
+            </div>
+
+            <div class="col-sm">
+                <a href="/inventory"><img class="footerIcons" src="../public/css/images/026-home-white-fixed.png" alt="inventory"></a>
+            </div>
+            
+            <div class="col-sm">
+                <img class="footerLogo" src="../public/css/images/appIcon.png" alt="not your maid logo">
+            </div>
+            
+            <div class="col-sm">
+                <a href="/tasklist"><img class="footerIcons" src="../public/css/images/list111-white.png" alt="tasklist"></a>
+            </div>
+            
+            <div class="col-sm">
+                <a href="/settings"><img class="footerIcons" src="../public/css/images/settings-5-white.png" alt="settings"></a>
+            </div>   
+        </div>
+    </div>
+</footer>
