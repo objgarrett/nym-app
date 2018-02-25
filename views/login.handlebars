@@ -2,30 +2,32 @@
         <div class="row">
             <div class="col-sm-12"></div>
                 <div class="col-sm-12" id="main">
-                    <h1>Not Your Mother </h1>
+                    <h1 id="title">Not Your Mother </h1>
                     <h2>Clean Up After Your Own Damn Self</h2>
-                    <form class="create-form">
-                        <div class="form-group">
-                            <label for="user">username:</label>
-                            <input type="text" id="user" name="user">
-                        </div>
-                        <div class="form-group">
-                            <label for="password">password:</label>
-                            <input type="text" id="password" name="password">
-                        </div>
-                        <button type="submit" id="orderButton">Sumbit</button>
-                    </form>
                 </div>
             <div class="col-sm-12" id="orderBorder"></div>
         </div>
     </div>
-
-    <div class="container" id="New User">
-            <h2>Create Account</h2>
+    <h1 id="joinus">Join Us</h1>
+    <div class="container" id="login">
+        <form class="create-form">
+        <div class="form-group">
+            <label for="user">username:</label>
+            <input type="text" id="user" name="user">
+        </div>
+        <div class="form-group">
+            <label for="password">password:</label>
+            <input type="text" id="password" name="password">
+        </div>
+        <button type="submit" id="orderButton">Submit</button>
+        </form>
+    </div>
+    <div class="container" id="new-user">
+            <h2 id="or">OR</h2>
         <div class="row">
-            <button class="col-sm-12" id="facebook-create">Create with Facebook</button>
-            <button class="col-sm-12" id="google-create">Create with Google</button>
-            <button class="col-sm-12" id="email-create">Create with Email</button>
+            <button class="col-sm-12 loginBtn loginBtn--facebook" id="facebook-create">Sign in with Facebook</button>
+            <button class="col-sm-12 loginBtn loginBtn--google" id="google-create">Sign in with Google</button>
+            <button class="col-sm-12 loginBtn loginBtn--email" id="email-login">Sign in with E-mail</button>
         </div>
     </div>
 
