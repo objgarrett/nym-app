@@ -4,7 +4,6 @@ const path = require("path");
 
 //import the model (users.js) to use its database functions
 var nym = require("../models/users.js");
-var login = require("./login-controller.js")
 
 //create all our routes and set up logic with those routes where required 
 //***************/
@@ -31,9 +30,9 @@ router.get("/login", function(req, res) {
     });
 });
 
-router.get("/home", function(req, res) {
+router.get("/test", function(req, res) {
     var test
-    res.render("home", test);
+    res.render("test", test);
 })
 
 

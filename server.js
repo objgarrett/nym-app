@@ -19,6 +19,8 @@ app.set("view engine", "handlebars");
 
 // Routes
 var routes = require("./controllers/login-controller.js");
+var routes = require("./controllers/slash-controller.js");
+var routes = require("./controllers/test-controller.js");
 
 app.use(routes);
 

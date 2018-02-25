@@ -1,3 +1,13 @@
+    <div id="fb-root"></div>
+        {{!-- <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12&appId=432818630486037&autoLogAppEvents=1';
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+        </script> --}}
+
     <div class="container" id="titleBox">
         <div class="row">
             <div class="col-sm-12"></div>
@@ -31,9 +41,14 @@
     </div>
     <div class="container" id="new-user">
             <h2 id="or">OR</h2>
-        <div class="row">
-            <button class="col-sm-12 loginBtn loginBtn--facebook" id="facebook-create">Sign in with Facebook</button>
-            <button class="col-sm-12 loginBtn loginBtn--google" id="google-create">Sign in with Google+</button>
-            <button class="col-sm-12 loginBtn loginBtn--email" id="email-login">Sign in with E-mail</button>
+            
+        <div id="status">
         </div>
+        <div class="row">
+            <button class="col-sm-12 loginBtn loginBtn--facebook" id="facebook-login">Sign in with Facebook</button>
+            {{!-- <button class="col-sm-12 loginBtn loginBtn--google" id="google-create">Sign in with Google+</button>
+            <button class="col-sm-12 loginBtn loginBtn--email" id="email-login">Sign in with E-mail</button> --}}
+        </div>
+        {{!-- <div class="fb-login-button" data-width="250" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="true"></div> --}}
+
     </div>
