@@ -159,3 +159,12 @@ button {
 .loginBtn--email:focus {
     background: #2f8383;
 }
+
+/* FOOTER/NAV */
+
+.footerIcons {
+    background-color: #FF8552;
+    height: 10%;
+}
+
+/* PAYMENTS PAGE */
