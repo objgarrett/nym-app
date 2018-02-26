@@ -21,6 +21,7 @@ function objToSql(ob) {
     }
     return arr.toString();
 }
+
   
 var orm = {
     all: function(tableInput, cb) {
@@ -68,6 +69,24 @@ var orm = {
   
         cb(result);
       });
+    },
+    join: function(cols, table1, table2, table3, condition, cb) {
+      var queryString = "SELECT " ;
+
+      queryString += cols.toString();
+      queryString += " FROM " + table1 + table2 + table3;
+      queryString += " WHERE "; 
+      queryString += condition;
+
+      console.log(queryString);
+      connection.query(queryString, function(err, result) {
+        if (err) {
+          throw err
+        }
+
+        cb(result);
+      })
+
     }
 };
 
