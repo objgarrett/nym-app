@@ -18,11 +18,14 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Routes
-var routes = require("./controllers/login-controller.js");
-var routes = require("./controllers/slash-controller.js");
-var routes = require("./controllers/test-controller.js");
+var login = require("./controllers/login-controller.js");
+var slash = require("./controllers/slash-controller.js");
+var test = require("./controllers/test-controller.js");
+app.use('/', slash);
+app.use('login', login);
+app.use('test', test);
 
-app.use(routes);
+// app.use(routes);
 
 app.listen(PORT, function() {
   console.log("App listening on PORT " + PORT);

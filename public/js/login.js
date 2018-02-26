@@ -1,6 +1,26 @@
 console.log("login js loaded");
 
 $(() =>{
+    $("#facebook-login").on("click", () => {
+        console.log("on click happened");
+        FB.login(function(response) {
+          if (response.status === 'connected') {
+            console.log("logged in by magical powers of monster and cocaine")
+            console.log(response.authResponse.userID)
+            $.ajax({
+              method: "GET",
+              url: "/test/?" + response.authResponse.userID,
+              data: response.authResponse.userID
+            })
+            return
+            // Logged into your app and Facebook.
+          } else {
+            // The person is not logged into this app or we are unable to tell. 
+          }
+        });
+    })
+
+
     // This is called with the results from from FB.getLoginStatus().
     function statusChangeCallback(response) {
         console.log('statusChangeCallback');
@@ -11,6 +31,15 @@ $(() =>{
         // for FB.getLoginStatus().
         if (response.status === 'connected') {
           // Logged into your app and Facebook.
+          console.log("Logged in by the powers vested in me by the state of virginia i do hereby pronounce you a beagle")
+          console.log(response.authResponse.userID)
+          $.ajax({
+            method: "GET",
+            url: "/test/?" + response.authResponse.userID,
+            data: response.authResponse.userID
+          })
+          return;
+
           testAPI();
         } else {
           // The person is not logged into your app or we are unable to tell.
