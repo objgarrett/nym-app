@@ -9,13 +9,14 @@ var nym = require("../models/users.js");
 //***************/
 //OBG's NOTE: Not sure if the logic in router.get is what we want...was going off the "MVC Example" in week 14 - hopefully this at least gets you started
 //***************/
-router.get("/login", function(req, res) {
+router.get("/test", function(req, res) {
     nym.all(function(data) {
         var hbsObject = {
             users: data
         };
+        var id = req.param.id;
         console.log(hbsObject);
-        res.render("login", hbsObject);
+        res.render("test", id);
     });
 });
 
