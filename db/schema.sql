@@ -40,14 +40,24 @@ CREATE TABLE Tasklist (
 CREATE TABLE Inventory (
 	inventoryid INT NOT NULL auto_increment,
     inventorytext VARCHAR (225),
-    PRIMARY KEY (inventoryid)
+    PRIMARY KEY (inventoryid),
+    houseid INT NOT NULL,
+    INDEX house_id (houseid),
+    FOREIGN KEY (houseid)
+		REFERENCES house(houseid)
+        ON DELETE CASCADE
 );
 
 CREATE TABLE HouseholdStatus (
 	householdid INT NOT NULL auto_increment,
     statustext VARCHAR (225),
     status BOOLEAN,
-    PRIMARY KEY (householdid)
+    houseid INT NOT NULL,
+    PRIMARY KEY (householdid),
+    INDEX house_id (houseid),
+    FOREIGN KEY (houseid)
+		REFERENCES house(houseid)
+        ON DELETE CASCADE
 );
 
 CREATE TABLE sessions (
@@ -77,8 +87,5 @@ CREATE TABLE houseuserrelationship (
     
 
 
-INSERT INTO users (firstname, lastname, email, phone, city, state, zip, facebook_id) VALUES ("Chrom", "Ylisse", "chrom@forylisse.net", 5555555, "Village", "Capitol", 23401, 6);  
-INSERT INTO house (password) VALUES ("shahahalaalabala");
-INSERT INTO houseuserrelationship VALUES (1, 1);
-INSERT INTO Tasklist (text, complete, dueby, userassigned, userid, houseid) VALUES ("Polish shields", false, "2018-03-03", "Chrom", 1, 1); 
+
 
