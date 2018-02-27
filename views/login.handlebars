@@ -1,54 +1,43 @@
-    <div id="fb-root"></div>
-        {{!-- <script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12&appId=432818630486037&autoLogAppEvents=1';
-        fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-        </script> --}}
+<div id="fb-root"></div>
 
-    <div class="container" id="titleBox">
-        <div class="row">
-            <div class="col-sm-12"></div>
-                <div class="col-sm-12" id="main">
-                    <h1 id="title">Not Your Maid </h1>
-                    <h2>Clean Up After Your Own Damn Self</h2>
-                </div>
-            <div class="col-sm-12" id="orderBorder"></div>
-        </div>
+<div class="container" id="titleBox">
+    <div class="row">
+        <div class="col-sm-12"></div>
+            <div class="col-sm-12" id="main">
+                <h1 id="title">Not Your Maid </h1>
+                <h2>Clean Up After Your Own Damn Self</h2>
+            </div>
+        <div class="col-sm-12" id="orderBorder"></div>
     </div>
-    <h1 id="joinus">Join Us</h1>
-    <div class="container" id="login">
-        <form class="create-form">
-        <div class="form-group">
-            <label for="user"><i class="far fa-user fa-3x"></i></label>
-            <input type="text" id="user" name="user" value="Full Name">
-        </div>
-        <hr>
-        <div class="form-group">
-            <label for="email"><i class="far fa-envelope fa-3x"></i></label>
-            <input type="text" id="email" name="email" value="Email">
-        </div>
-        <hr>
-        <div class="form-group">
-            <label for="password"><i class="fas fa-unlock-alt fa-3x"></i></label>
-            <input type="text" id="password" name="password" value="Password">
-        </div>
-        <hr>
-        <button type="submit" id="orderButton">Submit</button>
-        </form>
+</div>
+<h1 id="joinus">Join Us</h1>
+<div class="container" id="login">
+    <form class="create-form">
+    <div class="form-group">
+        <label for="user"><i class="far fa-user fa-3x"></i></label>
+        <input type="text" id="user" name="user" value="Full Name">
     </div>
-    <div class="container" id="new-user">
-            <h2 id="or">OR</h2>
-            
-        <div id="status">
-        </div>
-        <div class="row">
-            <button class="col-sm-12 loginBtn loginBtn--facebook" id="facebook-login">Sign in with Facebook</button>
-            {{!-- <button class="col-sm-12 loginBtn loginBtn--google" id="google-create">Sign in with Google+</button>
-            <button class="col-sm-12 loginBtn loginBtn--email" id="email-login">Sign in with E-mail</button> --}}
-        </div>
-        {{!-- <div class="fb-login-button" data-width="250" data-max-rows="1" data-size="large" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="true" data-use-continue-as="true"></div> --}}
+    <hr>
+    <div class="form-group">
+        <label for="email"><i class="far fa-envelope fa-3x"></i></label>
+        <input type="text" id="email" name="email" value="Email">
+    </div>
+    <hr>
+    <div class="form-group">
+        <label for="password"><i class="fas fa-unlock-alt fa-3x"></i></label>
+        <input type="text" id="password" name="password" value="Password">
+    </div>
+    <hr>
+    <button type="submit" id="orderButton">Submit</button>
+    </form>
+</div>
+<div class="container" id="new-user">
+    <h2 id="or">OR</h2>
+        
+    <div id="status"></div>
+    <div class="row">
+        <button class="col-sm-12 loginBtn loginBtn--facebook" id="facebook-login">Sign in with Facebook</button>
+    </div>
+</div>
 
-    </div>
+<script src="/js/login.js"></script>
