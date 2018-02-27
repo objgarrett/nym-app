@@ -40,10 +40,16 @@ router.get("/test", function(req, res) {
     });
 });
 
+router.get("/newlogin", function(req, res) {
+    console.log("newlogin ran")
+    var id;
+    res.redirect("/");
+});
 
 
-router.get('/api/allusers', function(req, res) {
-    console.log(req.body);
+router.get('/api/allusers/:id', function(req, res) {
+    var id = req.params.id;
+    console.log(id)
     nym.all(data => {
         res.json(data);
     })
