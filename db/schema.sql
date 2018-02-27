@@ -1,6 +1,6 @@
 CREATE DATABASE s2lugpg6wdxixion;
 
-USE 2lugpg6wdxixion; 
+USE s2lugpg6wdxixion; 
 
 CREATE TABLE users (
 	id INT NOT NULL auto_increment,
@@ -85,6 +85,8 @@ CREATE TABLE houseuserrelationship (
         ON DELETE CASCADE
 );
     
+ALTER TABLE house 
+ADD house_name VARCHAR(225);
 
 
 
