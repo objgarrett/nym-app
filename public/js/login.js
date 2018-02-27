@@ -8,11 +8,17 @@ $(() =>{
             console.log("logged in by magical powers of monster and cocaine")
             console.log(response.authResponse.userID)
             $.ajax({
-              method: "GET",
-              url: "/test/?" + response.authResponse.userID,
+              type: "GET",
+              url: 'api/allusers',
               data: response.authResponse.userID
             })
-            return
+
+            //if logged in...redirect to test page. This should be changed to home page when deployed!!!!!!!!!!!!!!!!!!!!
+            // $.get('api/allusers', data => {
+            //   console.log(data);
+            // })
+            
+            // window.location = '/test'
             // Logged into your app and Facebook.
           } else {
             // The person is not logged into this app or we are unable to tell. 
@@ -33,13 +39,6 @@ $(() =>{
           // Logged into your app and Facebook.
           console.log("Logged in by the powers vested in me by the state of virginia i do hereby pronounce you a beagle")
           console.log(response.authResponse.userID)
-          $.ajax({
-            method: "GET",
-            url: "/test/?" + response.authResponse.userID,
-            data: response.authResponse.userID
-          })
-          return;
-
           testAPI();
         } else {
           // The person is not logged into your app or we are unable to tell.

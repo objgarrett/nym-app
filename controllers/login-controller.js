@@ -14,10 +14,17 @@ router.get("/login", function(req, res) {
         var hbsObject = {
             users: data
         };
-        console.log(hbsObject);
+        // console.log(hbsObject);
+        console.log("this happened");
         res.render("login", hbsObject);
     });
 });
+
+router.get('/api/allusers', function(req, res) {
+    nym.all(data => {
+        console.log(data);
+    })
+})
 
 //router.post goes here
 

@@ -24,7 +24,7 @@ router.get("/login", function(req, res) {
         var hbsObject = {
             users: data
         };
-        console.log(hbsObject);
+        // console.log(hbsObject);
         res.render("login", hbsObject);
     });
 });
@@ -35,10 +35,19 @@ router.get("/test", function(req, res) {
             users: data
         };
         var id = req.param.id;
-        console.log(hbsObject);
+        // console.log(hbsObject);
         res.render("test", id);
     });
 });
+
+
+
+router.get('/api/allusers', function(req, res) {
+    console.log(req.body);
+    nym.all(data => {
+        res.json(data);
+    })
+})
 
 
 
