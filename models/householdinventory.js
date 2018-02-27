@@ -26,7 +26,7 @@ var Inventory = {
   }
 };
 
-module.exports = Tasklist;
+module.exports = Inventory;
 
 
 
