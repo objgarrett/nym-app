@@ -24,6 +24,8 @@ var Tasklist = {
   }
 };
 
+module.exports = Tasklist;
+
 
 
 
