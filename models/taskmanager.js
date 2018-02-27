@@ -1,5 +1,57 @@
 // //for the task list - roommates can add, update, remove task items as well as set when it's due and who needs to complete the task
-// module.exports = function(sequelize, DataTypes) {
+var orm = require("../config/orm.js");  
+
+var Tasklist = {
+	all: function(cb) {
+    orm.all("Tasklist", function(res) {
+      cb(res);
+    });
+  },
+  	create: function(cols, vals, cb) {
+    orm.create("Tasklist", cols, vals, function(res) {
+      cb(res);
+    });
+  },
+  	 update: function(objColVals, condition, cb) {
+    orm.update("Tasklist", objColVals, condition, function(res) {
+      cb(res);
+    });
+  },
+  	join: function(cols, table1, table2, table3, condition, cb) {
+  	orm.join(cols, "Tasklist", "users", "houseuserrelationship", condition, function(res) {
+  		cb(res);
+  	}); 
+  }
+};
+
+module.exports = Tasklist;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//module.exports = function(sequelize, DataTypes) {
 //     var Tasklist = sequelize.define("Tasklist", {
 //         taskid: {
 //             type: DataTypes.INTEGER,
