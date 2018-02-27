@@ -21,10 +21,13 @@ app.set("view engine", "handlebars");
 var login = require("./controllers/login-controller.js");
 var slash = require("./controllers/slash-controller.js");
 var test = require("./controllers/test-controller.js");
+var payment = require("./controllers/payment-controller.js");
+var tasks = require("./controllers/tasks-controller.js");
 app.use('/', slash);
 app.use('login', login);
 app.use('test', test);
-
+app.use('payment', payment);
+app.use('tasks', tasks);
 // app.use(routes);
 
 app.listen(PORT, function() {
