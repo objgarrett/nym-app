@@ -1,36 +1,8 @@
-console.log("login js loaded");
-
-$(() =>{
-    $("#facebook-login").on("click", () => {
-        console.log("on click happened");
-        FB.login(function(response) {
-          if (response.status === 'connected') {
-            console.log("logged in by magical powers of monster and cocaine")
-            // console.log(response.authResponse.userID)
-
-            $.ajax({
-              type: "GET",
-              url: 'api/allusers/' + response.authResponse.userID,
-              })
-
-            //if logged in...redirect to test page. This should be changed to home page when deployed!!!!!!!!!!!!!!!!!!!!
-            // $.get('api/allusers', data => {
-            //   console.log(data);
-            // })
-            
-            // window.location = '/test'
-            // Logged into your app and Facebook.
-          } else {
-            // The person is not logged into this app or we are unable to tell. 
-          }
-        });
-    })
-
-
+console.log("test js ran");
     // This is called with the results from from FB.getLoginStatus().
     function statusChangeCallback(response) {
         console.log('statusChangeCallback');
-        console.log(response);
+        // console.log(response);
         // The response object is returned with a status field that lets the
         // app know the current login status of the person.
         // Full docs on the response object can be found in the documentation
@@ -39,9 +11,15 @@ $(() =>{
           // Logged into your app and Facebook.
           console.log("Logged in by the powers vested in me by the state of virginia i do hereby pronounce you a beagle")
           console.log(response.authResponse.userID)
-          testAPI();
+        //   testAPI();
         } else {
           // The person is not logged into your app or we are unable to tell.
+          console.log("this should redirect");
+          $.ajax({
+            type: "GET",
+            url: '/newlogin'
+            })
+            return
         }
     }
       // This function is called when someone finishes with the Login
@@ -92,5 +70,3 @@ $(() =>{
           console.log('Successful login for: ' + response.name);
         });
     }
-})
-
