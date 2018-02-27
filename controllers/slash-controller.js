@@ -3,7 +3,8 @@ var router = express.Router();
 const path = require("path");
 
 //import the model (users.js) to use its database functions
-var nym = require("../models/users.js");
+var nymUsers = require("../models/users.js");
+var nymHouses = require("../models/households.js")
 //create all our routes and set up logic with those routes where required 
 //***************/
 //OBG's NOTE: Not sure if the logic in router.get is what we want...was going off the "MVC Example" in week 14 - hopefully this at least gets you started
@@ -20,7 +21,7 @@ router.get("/", function(req, res) {
 });
 
 router.get("/login", function(req, res) {
-    nym.all(function(data) {
+    nymUsers.all(function(data) {
         var hbsObject = {
             users: data
         };
@@ -30,7 +31,7 @@ router.get("/login", function(req, res) {
 });
 
 router.get("/test", function(req, res) {
-    nym.all(function(data) {
+    nymUsers.all(function(data) {
         var hbsObject = {
             users: data
         };
@@ -49,12 +50,30 @@ router.get("/newlogin", function(req, res) {
 
 router.get('/api/allusers/:id', function(req, res) {
     var id = req.params.id;
+    var nothing
     console.log(id)
-    nym.all(data => {
-        res.json(data);
-    })
+        res.render('create-user', nothing);
 })
 
+router.get('/create', function(req, res){
+    var id
+    res.render('create-user', id);
+})
+
+router.post('/api/newuser/:id', function(req, res) {
+    var newUser = req.body;
+    console.log(newUser);
+})
+
+router.get('/api/allhouses', function(req, res){
+    nymHouses.all(function(data) {
+        var houses = {
+            houses: data
+        };
+        // console.log(hbsObject);
+        res.send(houses);
+    });
+})
 
 
 
