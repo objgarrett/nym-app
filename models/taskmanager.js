@@ -8,12 +8,21 @@ var Tasklist = {
     });
   },
   	create: function(cols, vals, cb) {
-    orm.create("users", cols, vals, function(res) {
+    orm.create("Tasklist", cols, vals, function(res) {
       cb(res);
     });
   },
-
-}
+  	 update: function(objColVals, condition, cb) {
+    orm.update("Tasklist", objColVals, condition, function(res) {
+      cb(res);
+    });
+  },
+  	join: function(cols, table1, table2, table3, condition, cb) {
+  	orm.join(cols, Tasklist, users, houseuserrelationship, condition, function(res) {
+  		cb(res);
+  	}); 
+  }
+};
 
 
 
