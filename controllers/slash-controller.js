@@ -92,9 +92,14 @@ router.get('/api/allhouses', function(req, res){
     });
 })
 
+router.get("/tasks", function(req, res) {
+    var tasks
+    res.render("tasks", tasks);
+});
 
-
-
-
+router.get("/payment", function(req, res) {
+    var payment
+    res.render("payment", payment);
+});
 
 module.exports = router;
