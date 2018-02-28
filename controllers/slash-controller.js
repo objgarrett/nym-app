@@ -9,17 +9,24 @@ var nymHouses = require("../models/households.js")
 //***************/
 //OBG's NOTE: Not sure if the logic in router.get is what we want...was going off the "MVC Example" in week 14 - hopefully this at least gets you started
 //***************/
-router.get("/", function(req, res) {
-    var loggedin = false;
-    if (loggedin === true){
-        console.log("home happened")
-        res.redirect("/home");
-    } else {
-        console.log("login happened")
-        res.redirect("/login");
-    }
-});
 
+//render blank page and redirect 
+router.get("/", function(req, res){
+    var nothing;
+    res.render("slash", nothing);
+})
+// router.get("/", function(req, res) {
+//     var loggedin = false;
+//     if (loggedin === true){
+//         console.log("home happened")
+//         res.redirect("/home");
+//     } else {
+//         console.log("login happened")
+//         res.redirect("/login");
+//     }
+// });
+
+//renders login page
 router.get("/login", function(req, res) {
     nymUsers.all(function(data) {
         var hbsObject = {
@@ -62,11 +69,9 @@ router.get('/api/userlogin/:id', function(req, res) {
             }
         }
         if (!userExists) {
-            console.log("!userexists");
             res.send("create-user");
         } else {
-            console.log("user does exist");
-            res.send("test");
+            res.send("tasks");
         }
     })
         // res.render('create-user', nothing);
