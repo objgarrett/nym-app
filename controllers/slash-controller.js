@@ -48,14 +48,31 @@ router.get("/newlogin", function(req, res) {
 });
 
 
-router.get('/api/allusers/:id', function(req, res) {
+router.get('/api/userlogin/:id', function(req, res) {
     var id = req.params.id;
     var nothing
     console.log(id)
-        res.render('create-user', nothing);
+    var userExists = false;
+    nymUsers.all(function(data){
+        console.log(data);
+        for (var i = 0; i < data.length; i++) {
+            console.log(data[i].facebook_id)
+            if(data[i].facebook_id == id) {
+                userExists = true;
+            }
+        }
+        if (!userExists) {
+            console.log("!userexists");
+            res.send("create-user");
+        } else {
+            console.log("user does exist");
+            res.send("test");
+        }
+    })
+        // res.render('create-user', nothing);
 })
 
-router.get('/create', function(req, res){
+router.get('/create-user', function(req, res){
     var id
     res.render('create-user', id);
 })
