@@ -91,6 +91,9 @@ ADD house_name VARCHAR(225);
 ALTER TABLE users
 MODIFY facebook_id BIGINT;
 
+ALTER TABLE Tasklist 
+ADD chore_price INT;
+
 
 
 
