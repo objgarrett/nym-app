@@ -88,6 +88,9 @@ CREATE TABLE houseuserrelationship (
 ALTER TABLE house 
 ADD house_name VARCHAR(225);
 
+ALTER TABLE users
+MODIFY facebook_id BIGINT;
+
 
 
 
