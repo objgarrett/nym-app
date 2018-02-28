@@ -88,6 +88,17 @@ CREATE TABLE houseuserrelationship (
 ALTER TABLE house 
 ADD house_name VARCHAR(225);
 
+ALTER TABLE users
+MODIFY facebook_id BIGINT;
+
+ALTER TABLE Tasklist 
+ADD chore_price INT;
+
+ALTER TABLE users
+ADD billing_address1 VARCHAR (50),
+ADD billing_address2 VARCHAR (50),
+ADD last_four_ssn int (4);
+
 
 
 

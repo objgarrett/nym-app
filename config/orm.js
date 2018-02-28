@@ -70,11 +70,9 @@ var orm = {
         cb(result);
       });
     },
-    join: function(cols, table1, table2, table3, condition, cb) {
-      var queryString = "SELECT " ;
-
-      queryString += cols.toString();
-      queryString += " FROM " + table1 + table2 + table3;
+    join: function(cols, tables, condition, cb) {
+      var queryString = "SELECT * ";
+      queryString += " FROM " + tables.join(", ");
       queryString += " WHERE "; 
       queryString += condition;
 
@@ -91,3 +89,9 @@ var orm = {
 };
 
   module.exports = orm;
+
+
+  // var tables = ["users", "house", "Tasklist"];
+  // const join = function(cols, tables, condtion, callback) {
+  //   queryString += "FROM " + tables.join(", "); //users, homes, tasklist
+  // } 

@@ -9,17 +9,24 @@ var nymHouses = require("../models/households.js")
 //***************/
 //OBG's NOTE: Not sure if the logic in router.get is what we want...was going off the "MVC Example" in week 14 - hopefully this at least gets you started
 //***************/
-router.get("/", function(req, res) {
-    var loggedin = false;
-    if (loggedin === true){
-        console.log("home happened")
-        res.redirect("/home");
-    } else {
-        console.log("login happened")
-        res.redirect("/login");
-    }
-});
 
+//render blank page and redirect 
+router.get("/", function(req, res){
+    var nothing;
+    res.render("slash", nothing);
+})
+// router.get("/", function(req, res) {
+//     var loggedin = false;
+//     if (loggedin === true){
+//         console.log("home happened")
+//         res.redirect("/home");
+//     } else {
+//         console.log("login happened")
+//         res.redirect("/login");
+//     }
+// });
+
+//renders login page
 router.get("/login", function(req, res) {
     nymUsers.all(function(data) {
         var hbsObject = {
@@ -48,14 +55,29 @@ router.get("/newlogin", function(req, res) {
 });
 
 
-router.get('/api/allusers/:id', function(req, res) {
+router.get('/api/userlogin/:id', function(req, res) {
     var id = req.params.id;
     var nothing
     console.log(id)
-        res.render('create-user', nothing);
+    var userExists = false;
+    nymUsers.all(function(data){
+        console.log(data);
+        for (var i = 0; i < data.length; i++) {
+            console.log(data[i].facebook_id)
+            if(data[i].facebook_id == id) {
+                userExists = true;
+            }
+        }
+        if (!userExists) {
+            res.send("create-user");
+        } else {
+            res.send("tasks");
+        }
+    })
+        // res.render('create-user', nothing);
 })
 
-router.get('/create', function(req, res){
+router.get('/create-user', function(req, res){
     var id
     res.render('create-user', id);
 })
@@ -75,9 +97,14 @@ router.get('/api/allhouses', function(req, res){
     });
 })
 
+router.get("/tasks", function(req, res) {
+    var tasks
+    res.render("tasks", tasks);
+});
 
-
-
-
+router.get("/payment", function(req, res) {
+    var payment
+    res.render("payment", payment);
+});
 
 module.exports = router;

@@ -20,7 +20,7 @@ var Inventory = {
   //   });
   // }, 
   	join: function(cols, table1, table2, table3, condition, cb) {
-  	orm.join(cols, "Inventory", "users", "houseuserrelationship", condition, function(res) {
+  	orm.join(cols, "Inventory", "users", "house", condition, function(res) {
   		cb(res);
   	}); 
   }
