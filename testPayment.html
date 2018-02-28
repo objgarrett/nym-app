@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+    const dwolla = require('dwolla-v2');
+
+    // Navigate to https://www.dwolla.com/applications (production) or https://dashboard-sandbox.dwolla.com/applications (Sandbox) for your application key and secret.
+    const appKey = 'L8EPkSZvL0tmywilYxb4nVhwsw0Sa5n2i1kitiusFAZxm0V9ji';
+    const appSecret = 'Xv6Gs40sdfIhLvx0j9nnTkTxy6PQlLVFzaA6040HjnfnZIPIMN';
+    const client = new dwolla.Client({
+      key: appKey,
+      secret: appSecret,
+      environment: 'sandbox' // optional - defaults to production
+    });
+    
+    // create a token
+    client.auth.client()
+      .then(appToken => appToken.get('customers', { limit: 10 }))
+      .then(res => console.log("this is a console log" + res.body));
+</script>
