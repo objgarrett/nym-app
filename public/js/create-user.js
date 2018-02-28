@@ -101,36 +101,58 @@ $(() =>{
             url: '/api/allhouses'
         }).done(function(data) {
             allHouses = data.houses;
-            console.log(allHouses)
+            console.log(allHouses);
+            var good = validation(firstName, lastName, email, birthdate, phone, city, state, zip, newHouse, newHousePassword, existingHouse, existingHousePassword, allHouses);
+            console.log(good);
+            if (!good) {
+                return;
+            }
+            if (existingHouse) {
+                var newUser = {
+                    firstName,
+                    lastName,
+                    email,
+                    birthdate,
+                    phone,
+                    city,
+                    state,
+                    zip,
+                    facebook_id: facebookId,
+                    created_at,
+                    house_name: existingHouse,
+                    password: existingHousePassword,
+                    houseType: "existing" 
+                }
+            } else {
+                var newUser = {
+                    firstName,
+                    lastName,
+                    email,
+                    birthdate,
+                    phone,
+                    city,
+                    state,
+                    zip,
+                    facebook_id: facebookId,
+                    created_at,
+                    house_name: newHouse,
+                    password: newHousePassword,
+                    houseType: "new" 
+                }
+            }
+            console.log(newUser)
+            $.ajax({
+                type: "POST",
+                url: 'api/newuser/' + facebookId,
+                data: newUser
+            })
         })
 
         
 
         // console.log(`firstname: ${firstName} lastname: ${lastName} email: ${email} birth: ${birthdate} phone: ${phone} city: ${city} state: ${state} zip: ${zip} facebook: ${facebookId} created at: ${created_at}`)
 
-        var good = validation(firstName, lastName, email, birthdate, phone, city, state, zip, newHouse, newHousePassword, existingHouse, existingHousePassword, allHouses);
-        console.log(good);
-        if (!good) {
-            return;
-        }
-        var newUser = {
-            firstName,
-            lastName,
-            email,
-            birthdate,
-            phone,
-            city,
-            state,
-            zip,
-            facebook_id: facebookId,
-            created_at
-        }
-        console.log(newUser)
-        $.ajax({
-            type: "POST",
-            url: 'api/newuser/' + facebookId,
-            data: newUser
-        })
+        
     })
 })
 
@@ -184,9 +206,30 @@ var validation = (firstName, lastName, email, birthdate, phone, city, state, zip
         good = false;
         doubleFault = true;
     }
-    if (newHousePassword !== $("#new-house-pass-confirm") && doubleFault === false) {
+    if (newHousePassword !== $("#new-house-pass-confirm").val() && doubleFault === false && !existingHouse) {
         $("#new-house-problem").text("Make sure passwords match");
         good = false;
+    }
+    var exists = false;
+    for (var i = 0; i < allHouses.length; i++){
+        if (allHouses[i].house_name.toLowerCase() ===     existingHouse.toLowerCase()){
+            exists = true;
+        }
+    }
+    if (!exists && doubleFault === false && !newHouse) {
+        $("#house-problem").text("This house doesn't exist");
+        good = false;
+    } 
+    if (exists){
+        for (var i = 0; i < allHouses.length; i++) {
+            if (allHouses[i].house_name.toLowerCase() === existingHouse.toLowerCase()){
+                if (allHouses[i].password !== existingHousePassword){
+                    console.log(allHouses[i].house_name + " ? " + existingHouse)
+                    good = false;
+                    $("#house-problem").text("the password deosn't match")
+                }
+            }
+        }
     }
     console.log(good);
     return good;
