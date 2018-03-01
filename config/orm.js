@@ -1,6 +1,7 @@
 var connection = require("../config/connection.js");
 
 function printQuestionMarks(num) {
+    console.log("num length" + num.length);
     var arr = [];
     for (var i = 0; i < num; i++) {
       arr.push("?");
@@ -34,12 +35,16 @@ var orm = {
       });
     },
     create: function(table, cols, vals, cb) {
+      console.log(table);
+      console.log(cols);
+      console.log(vals);
       var queryString = "INSERT INTO " + table;
   
       queryString += " (";
       queryString += cols.toString();
       queryString += ") ";
       queryString += "VALUES (";
+      console.log("vals.length: " + vals.length)
       queryString += printQuestionMarks(vals.length);
       queryString += ") ";
   
