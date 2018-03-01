@@ -98,6 +98,10 @@ ALTER TABLE users
 ADD billing_address1 VARCHAR (50),
 ADD billing_address2 VARCHAR (50),
 ADD last_four_ssn int (4);
+ALTER Table users
+MODIFY phone VARCHAR(10);
+ALTER Table users
+MODIFY created_at BIGINT;
 
 
 
