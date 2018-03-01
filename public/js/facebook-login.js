@@ -11,16 +11,16 @@
           console.log("Logged in by the powers vested in me by the state of virginia i do hereby pronounce you a beagle")
           console.log(response.authResponse.userID)
           //redirect needs to happen here
-          $.ajax({
-            type: "GET",
-            url: 'api/userlogin/' + response.authResponse.userID,
-            }).done(data => {
-              console.log(data)
-              window.location.replace(`/${data}`)
-            })
           testAPI();
         } else {
             console.log("should go back to login");
+            $.ajax({
+              type: "GET",
+              url: 'api/userlogin/' + response.authResponse.userID,
+              }).done(data => {
+                console.log(data)
+                window.location.replace(`/${data}`)
+              })
             // The person is not logged into your app or we are unable to tell.
             window.location.replace("/login");
         }

@@ -94,6 +94,8 @@ $(() =>{
         var existingHousePassword = $("#house-pass").val();
 
 
+
+
         var allHouses = []
 
         $.ajax({
@@ -102,6 +104,7 @@ $(() =>{
         }).done(function(data) {
             allHouses = data.houses;
             console.log(allHouses);
+            clearProblems();
             var good = validation(firstName, lastName, email, birthdate, phone, city, state, zip, newHouse, newHousePassword, existingHouse, existingHousePassword, allHouses);
             console.log(good);
             if (!good) {
@@ -156,8 +159,23 @@ $(() =>{
     })
 })
 
+var clearProblems = () => {
+    $("#firstname-problem").text("");
+    $("#lastname-problem").text("");
+    $("#email-problem").text("");
+    $("#birthdate-problem").text("");
+    $("#phone-problem").text("");
+    $("#city-problem").text("");
+    $("#state-problem").text("");
+    $("#zip-problem").text("");
+    $("#double-house-problem").text("");
+    $("#new-house-problem").text("");
+    $("#house-problem").text("");
+}
+
 var validation = (firstName, lastName, email, birthdate, phone, city, state, zip, newHouse, newHousePassword, existingHouse, existingHousePassword, allHouses) => {
     console.log("validation ran");
+    //if any of these fields is incorrect, good gets changed to false and fails to send the json and redirect. $("#xxxx-problem") is each fields empty div for putting error in
     var good = true;
     var doubleFault = false;
     if (!firstName){
@@ -186,6 +204,7 @@ var validation = (firstName, lastName, email, birthdate, phone, city, state, zip
         $("#city-problem").text("City is Required");
         good = false;
     }
+    //this shouldn't be possible...but who knows.....
     if (!state){
         $("#state-problem").text("State is Required");
         good = false;
@@ -197,29 +216,44 @@ var validation = (firstName, lastName, email, birthdate, phone, city, state, zip
         $("#zip-problem").text("Enter a Valid Zipcode (5 digits)");
         good = false;
     }
+    var exists = false;
+    //checks if house exists in db
+    for (var i = 0; i < allHouses.length; i++){
+        if (allHouses[i].house_name.toLowerCase() === existingHouse.toLowerCase() || allHouses[i].house_name.toLowerCase() === newHouse.toLowerCase()){
+            exists = true;
+        }
+    }
+    //checks if user has information in both new house and existing house fields
+    //double fault is sent to top of houses pane and doesn't put anything in the lower panes
     if (existingHouse && newHouse) {
         $("#double-house-problem").text("Either Select or Create. Why would you even want to do both?");
         good = false;
         doubleFault = true;
+    //checks if user put no information in either house fields
     } else if (!existingHouse && !newHouse) {
         $("#double-house-problem").text("Choose one please. They're here for a reason");
         good = false;
         doubleFault = true;
     }
+    //confirms password
     if (newHousePassword !== $("#new-house-pass-confirm").val() && doubleFault === false && !existingHouse) {
         $("#new-house-problem").text("Make sure passwords match");
         good = false;
+    } else if (!newHousePassword && doubleFault === false && !existingHouse){
+        $("#new-house-problem").text("Please enter a password");
+        good = false;
     }
-    var exists = false;
-    for (var i = 0; i < allHouses.length; i++){
-        if (allHouses[i].house_name.toLowerCase() ===     existingHouse.toLowerCase()){
-            exists = true;
-        }
+    //if house name already exists when trying to create a new house, trigger fault
+    if (exists && doubleFault === false && !existingHouse) {
+        $("#new-house-problem").text("This house name already exists. Please choose a new one");
+        good = false;
     }
+    //if house doesn't exist, trigger fault
     if (!exists && doubleFault === false && !newHouse) {
         $("#house-problem").text("This house doesn't exist");
         good = false;
-    } 
+    }
+    //if house exists but password doesn't match, throw fault
     if (exists){
         for (var i = 0; i < allHouses.length; i++) {
             if (allHouses[i].house_name.toLowerCase() === existingHouse.toLowerCase()){

@@ -5,6 +5,8 @@ const path = require("path");
 //import the model (users.js) to use its database functions
 var nymUsers = require("../models/users.js");
 var nymHouses = require("../models/households.js")
+var nymRelation = require("../models/relationship.js")
+
 //create all our routes and set up logic with those routes where required 
 //***************/
 //OBG's NOTE: Not sure if the logic in router.get is what we want...was going off the "MVC Example" in week 14 - hopefully this at least gets you started
@@ -83,8 +85,35 @@ router.get('/create-user', function(req, res){
 })
 
 router.post('/api/newuser/:id', function(req, res) {
-    var newUser = req.body;
-    console.log(newUser);
+    var data = req.body;
+    // console.log(data);
+    var newUser = {
+        firstname: data.firstName,
+        lastname: data.lastName,
+        birthday: data.birthdate,
+        email: data.email,
+        phone: data.phone,
+        city: data.city,
+        state: data.state,
+        zip: data.zip,
+        facebook_id: data.facebook_id,
+        created_at: data.created_at
+    }
+    var newUserCols = "firstname, lastname, birthday, email, phone, city, state, zip, facebook_id, created_at";
+    var newUserVals = [data.firstName, data.lastName, data.birthdate, data.email, parseInt(data.phone), data.city, data.state, data.zip, data.facebook_id, data.created_at]
+    // var newUserVals = `${data.firstName}, ${data.lastname}, ${data.birthdate}, ${data.email}, ${data.phone}, ${data.city}, ${data.state}, ${data.zip}, ${data.facebook_id}, ${data.created_at}`
+    var newRelation = {
+        user_id: data.facebook_id,
+        house_id: data.house_name
+    }
+    var newHouse = {
+        house_name: data.house_name,
+        password: data.password
+    }
+    nymUsers.create(newUserCols, newUserVals, function(res){
+        console.log(res)
+    })
+
 })
 
 router.get('/api/allhouses', function(req, res){
