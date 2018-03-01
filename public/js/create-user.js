@@ -87,16 +87,13 @@ $(() =>{
         var phone = $("#phone").val();
         var city = $("#city").val();
         var state = $("#state").val()
-        var zip = $("#zipcode").val();
+        var zip = $("#zip").val();
         var facebookId = facebook;
         var created_at = moment.utc().valueOf();
         var newHouse = $("#new-house").val();
         var newHousePassword = $("#new-house-pass").val();
         var existingHouse = $("#house").val();
         var existingHousePassword = $("#house-pass").val();
-
-
-
 
         var allHouses = []
 
@@ -189,7 +186,7 @@ var validation = (firstName, lastName, email, birthdate, phone, city, state, zip
         good = false;
     }
     if (!birthdate){
-        $("#birthdate-problem").text("Please Enter your DOB");
+        $("#birthdate-problem").text("Please Enter your Birthday");
         good = false;
     }
     if (!phone){
