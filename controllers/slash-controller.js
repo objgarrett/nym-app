@@ -41,7 +41,7 @@ router.get("/test", function(req, res) {
     });
 });
 
-//not sure what this does...this doesn't look like it should work
+not sure what this does...this doesn't look like it should work
 router.get("/newlogin", function(req, res) {
     console.log("newlogin ran")
     var id;
