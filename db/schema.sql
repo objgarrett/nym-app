@@ -102,6 +102,15 @@ ALTER Table users
 MODIFY phone VARCHAR(10);
 ALTER Table users
 MODIFY created_at BIGINT;
+ALTER Table Tasklist
+MODIFY dueby BIGINT; 
+
+DROP TABLE houseuserrelationship;
+CREATE TABLE houseuserrelationship (
+    facebook_id BIGINT,
+   house_name VARCHAR(225),
+    PRIMARY KEY (facebook_id, house_name)
+);
 
 
 
