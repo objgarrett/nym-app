@@ -1,4 +1,5 @@
 var facebook;
+
     // This is called with the results from from FB.getLoginStatus().
     //Facebook login validation. If valid, continues storing the facebook id as global var facebook
     //if invalid, reroute to login somehow. God help us. 
@@ -25,6 +26,8 @@ var facebook;
           $.ajax({
             type: "GET",
             url: '/newlogin'
+            }).done(data => {
+              window.location.replace(`/login`);
             })
             return
         }
