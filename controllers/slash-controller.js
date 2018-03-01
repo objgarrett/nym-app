@@ -17,16 +17,6 @@ router.get("/", function(req, res){
     var nothing;
     res.render("slash", nothing);
 })
-// router.get("/", function(req, res) {
-//     var loggedin = false;
-//     if (loggedin === true){
-//         console.log("home happened")
-//         res.redirect("/home");
-//     } else {
-//         console.log("login happened")
-//         res.redirect("/login");
-//     }
-// });
 
 //renders login page
 router.get("/login", function(req, res) {
@@ -39,6 +29,7 @@ router.get("/login", function(req, res) {
     });
 });
 
+//this is for testing routes and redirects. it should never be used in production
 router.get("/test", function(req, res) {
     nymUsers.all(function(data) {
         var hbsObject = {
@@ -50,13 +41,14 @@ router.get("/test", function(req, res) {
     });
 });
 
+//not sure what this does...this doesn't look like it should work
 router.get("/newlogin", function(req, res) {
     console.log("newlogin ran")
     var id;
     res.redirect("/");
 });
 
-
+//this is called to check if the user exists in our database. if they dont...it sends "create-user" in the data. if they do they go to tasks
 router.get('/api/userlogin/:id', function(req, res) {
     var id = req.params.id;
     var nothing
@@ -84,24 +76,12 @@ router.get('/create-user', function(req, res){
     res.render('create-user', id);
 })
 
+//this will run if the user creates a new account, pushes that to the user and relational db and the house db if a new house is created
 router.post('/api/newuser/:id', function(req, res) {
     var data = req.body;
     // console.log(data);
-    var newUser = {
-        firstname: data.firstName,
-        lastname: data.lastName,
-        birthday: data.birthdate,
-        email: data.email,
-        phone: data.phone,
-        city: data.city,
-        state: data.state,
-        zip: data.zip,
-        facebook_id: data.facebook_id,
-        created_at: data.created_at
-    }
     var newUserCols = "firstname, lastname, birthday, email, phone, city, state, zip, facebook_id, created_at";
     var newUserVals = [data.firstName, data.lastName, data.birthdate, data.email, parseInt(data.phone), data.city, data.state, data.zip, data.facebook_id, data.created_at]
-    // var newUserVals = `${data.firstName}, ${data.lastname}, ${data.birthdate}, ${data.email}, ${data.phone}, ${data.city}, ${data.state}, ${data.zip}, ${data.facebook_id}, ${data.created_at}`
     var newRelation = {
         user_id: data.facebook_id,
         house_id: data.house_name
@@ -110,10 +90,24 @@ router.post('/api/newuser/:id', function(req, res) {
         house_name: data.house_name,
         password: data.password
     }
+    if (!data.existingHouse) {
+        var newHouseCols = "house_name, password";
+        var newHouseVals = [data.house_name, data.password];
+        nymHouses.create(newHouseCols, newHouseVals, function(res){
+            console.log("house create: " + res)
+        })
+    }
     nymUsers.create(newUserCols, newUserVals, function(res){
-        console.log(res)
+        console.log("user create: " + res)
     })
-
+    var newRelationCols = "house_name, facebook_id";
+    var newRelationVals = [data.house_name, data.facebook_id];
+    nymRelation.create(newRelationCols, newRelationVals, function(res){
+        console.log(res);
+    })
+    //just needed something to pass so that the page could redirect on success
+    var joke = "how much wood could a woodchuck chuck?";
+    res.send(joke);
 })
 
 router.get('/api/allhouses', function(req, res){

@@ -17,13 +17,15 @@ var facebook;
           console.log(response.authResponse.userID)
         //   testAPI();
         } else {
-          // The person is not logged into your app or we are unable to tell.
-          console.log("this should redirect");
-          $.ajax({
-            type: "GET",
-            url: '/newlogin'
-            })
-            return
+            //person is not connected via facebook...redirect to login
+            console.log("should go back to login");
+            $.ajax({
+              type: "GET",
+              url: 'api/userlogin/' + response.authResponse.userID,
+              }).done(data => {
+                console.log(data)
+                window.location.replace(`/${data}`)
+              })
         }
     }
       // This function is called when someone finishes with the Login
@@ -148,14 +150,10 @@ $(() =>{
                 type: "POST",
                 url: 'api/newuser/' + facebookId,
                 data: newUser
+            }).done(data => {
+                window.location.replace("/tasks");
             })
-        })
-
-        
-
-        // console.log(`firstname: ${firstName} lastname: ${lastName} email: ${email} birth: ${birthdate} phone: ${phone} city: ${city} state: ${state} zip: ${zip} facebook: ${facebookId} created at: ${created_at}`)
-
-        
+        })     
     })
 })
 
