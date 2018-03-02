@@ -4,8 +4,9 @@ const path = require("path");
 
 //import the model (users.js) to use its database functions
 var nymUsers = require("../models/users.js");
-var nymHouses = require("../models/households.js")
-var nymRelation = require("../models/relationship.js")
+var nymHouses = require("../models/households.js");
+var nymRelation = require("../models/relationship.js");
+var nymTasks = require("../models/taskmanager.js");
 
 //create all our routes and set up logic with those routes where required 
 //***************/
@@ -71,6 +72,7 @@ router.get('/api/userlogin/:id', function(req, res) {
         // res.render('create-user', nothing);
 })
 
+//displays the create user page when called. I don't think this is being used anymore?
 router.get('/create-user', function(req, res){
     var id
     res.render('create-user', id);
@@ -79,29 +81,23 @@ router.get('/create-user', function(req, res){
 //this will run if the user creates a new account, pushes that to the user and relational db and the house db if a new house is created
 router.post('/api/newuser/:id', function(req, res) {
     var data = req.body;
-    // console.log(data);
     var newUserCols = "firstname, lastname, birthday, email, phone, city, state, zip, facebook_id, created_at";
-    var newUserVals = [data.firstName, data.lastName, data.birthdate, data.email, parseInt(data.phone), data.city, data.state, data.zip, data.facebook_id, data.created_at]
-    var newRelation = {
-        user_id: data.facebook_id,
-        house_id: data.house_name
-    }
-    var newHouse = {
-        house_name: data.house_name,
-        password: data.password
-    }
-    if (!data.existingHouse) {
+    var newUserVals = [data.firstName, data.lastName, data.birthdate, data.email, parseInt(data.phone), data.city, data.state, data.zip, data.facebook_id, data.created_at];
+    //if new house is created, it will add the house to the house table, otherwise it does nothing with the house table
+    if (data.houseType === "new") {
         var newHouseCols = "house_name, password";
         var newHouseVals = [data.house_name, data.password];
         nymHouses.create(newHouseCols, newHouseVals, function(res){
             console.log("house create: " + res)
         })
     }
+    //creates new user in user table
     nymUsers.create(newUserCols, newUserVals, function(res){
         console.log("user create: " + res)
     })
     var newRelationCols = "house_name, facebook_id";
     var newRelationVals = [data.house_name, data.facebook_id];
+    //creates new user/house relation in relation table
     nymRelation.create(newRelationCols, newRelationVals, function(res){
         console.log(res);
     })
@@ -110,6 +106,7 @@ router.post('/api/newuser/:id', function(req, res) {
     res.send(joke);
 })
 
+//gets all houses from house table
 router.get('/api/allhouses', function(req, res){
     nymHouses.all(function(data) {
         var houses = {
@@ -119,15 +116,38 @@ router.get('/api/allhouses', function(req, res){
         res.send(houses);
     });
 })
-
+//displays tasks page
 router.get("/tasks", function(req, res) {
-    var tasks
-    res.render("tasks", tasks);
+    var Tasklist;
+    nymTasks
+
+    res.render("tasks", Tasklist);
 });
 
+//displays payment page
 router.get("/payment", function(req, res) {
     var payment
     res.render("payment", payment);
 });
+
+//api call to get relation table
+router.get("/api/relationtable", (req, res) => {
+    nymRelation.all((data) => {
+        res.send(data);
+    })
+})
+
+//api call to get all tasks from a certain house name
+router.get("/api/house/:house_name/tasks", (req, res) => {
+    var house_name = req.params.house_name;
+    console.log(house_name);
+    nymTasks.conditional(`where house_name = '${house_name}'`, (data) => {
+        res.send(data);
+    })
+
+
+
+  
+})
 
 module.exports = router;

@@ -19,10 +19,15 @@ var Inventory = {
   //     cb(res);
   //   });
   // }, 
-  	join: function(cols, table1, table2, table3, condition, cb) {
-  	orm.join(cols, "Inventory", "users", "house", condition, function(res) {
+  	join: function(cols, tables, condition, cb) {
+  	orm.join(cols, ["Inventory", "users", "house"], condition, function(res) {
   		cb(res);
   	}); 
+  },
+  delete: function(cols, condition, cb) {
+    orm.delete("Inventory", cols, condition, function(res) {
+      cb(res);
+    });
   }
 };
 

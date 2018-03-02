@@ -16,6 +16,11 @@ var HouseholdStatus = {
     orm.update("HouseholdStatus", objColVals, condition, function(res) {
       cb(res);
     });
+  },
+  join: function(cols, tables, condition, cb) {
+  	orm.join(cols, ["HouseholdStatus", "users", "house"], function(res) {
+  		cb(res);
+  	})
   }
 };
 

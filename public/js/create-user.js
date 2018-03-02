@@ -95,9 +95,6 @@ $(() =>{
         var existingHouse = $("#house").val();
         var existingHousePassword = $("#house-pass").val();
 
-
-
-
         var allHouses = []
 
         $.ajax({
@@ -189,7 +186,7 @@ var validation = (firstName, lastName, email, birthdate, phone, city, state, zip
         good = false;
     }
     if (!birthdate){
-        $("#birthdate-problem").text("Please Enter your DOB");
+        $("#birthdate-problem").text("Please Enter your Birthday");
         good = false;
     }
     if (!phone){

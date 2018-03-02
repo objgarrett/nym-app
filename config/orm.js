@@ -33,6 +33,16 @@ var orm = {
         }
         cb(result);
       });
+    }, 
+    condition: function(tableInput, condition, cb) {
+      var queryString = "SELECT * FROM " + tableInput + " ";
+      queryString += condition;
+      connection.query(queryString, function(err, result) {
+        if (err) {
+          throw err;
+        }
+        cb(result);
+      });
     },
     create: function(table, cols, vals, cb) {
       console.log(table);
@@ -90,6 +100,20 @@ var orm = {
         cb(result);
       })
 
+    }, 
+    delete: function(cols, table, condition, cb) {
+      var queryString = "DELETE ";
+      queryString += " FROM " + table;
+      queryString += " WHERE ";
+      queryString += condition;
+
+      console.log(queryString);
+      connection.query(queryString, function(err, result) {
+        if (err) {
+          throw err
+        }
+        cb(result);
+      })
     }
 };
 

@@ -1,5 +1,4 @@
-/* 
-***Color Scheme***
+/* ***Color Scheme***
 Blue - #297373
 Pinkish -  #FF8552
 Green - #9AE841
@@ -10,79 +9,80 @@ Grey - #DADBDC
 Title - Lobster (google fonts)
 Everything else - Arial Rounded MT Bold
 
-anything faded is at 65% opacity
-*/
-/* body {
-  background-color: #FF8552;
-} */
+anything faded is at 65% opacity*/
+
+/* ***************************** */
+/* TITLE AND MAIN TEXT ELEMENTS */
+/* *************************** */
 #titleBox {
-    background-color: #FF8552;
-    /* padding: 15px; */
-    text-align: center;
-    margin-bottom: 10px;
+  background-color: #FF8552;
+  /* padding: 15px; */
+  text-align: center;
+  margin-bottom: 10px;
 }
 #title {
-    font-family: 'Lobster', cursive;
-    color: #F2F4F4;
-    font-size: 6vw;
-}
-
-#messy-room {
-  width: 100%;
-  height: auto;
-  padding: 0px;  
+  font-family: 'Lobster', cursive;
+  color: #F2F4F4;
+  font-size: 4em;
 }
 
 #joinus {
-    text-align:center;
-    font-family: 'Lobster', cursive;
-    color: #FF8552;
-    font-size: 5vw;
+  text-align:center;
+  font-family: 'Lobster', cursive;
+  color: #FF8552;
+  font-size: 3em;
 }
 
 h2 {
-    font-family: 'Nunito', sans-serif;
-    color: #F2F4F4;
-    font-size: 3vw;
+  font-family: 'Nunito', sans-serif;
+  color: #F2F4F4;
+  font-size: 2.25em;
 }
 
-#or {
-    text-align: center;
-    font-family: 'Nunito', sans-serif;
-    color: #FF8552;
-    font-size: 3vw;
-    padding:15px;
-}
-
-#login {
-    border: solid;
-    border-color: #FF8552;
-    border-radius: 10px;
-    padding: 15px;
-    margin: auto;
+/* ***************************** */
+/* CREATE ACCOUNT PAGE */
+/* *************************** */
+#login-container {
+  width:95%;
+  border: solid;
+  border-color: #FF8552;
+  border-radius: 10px;
+  margin: auto;
+  margin-bottom:10px;
 }
 
 hr {
   border-color:#ffdbcc;
-  /* border: solid; */
-}
-/* Form Styling */
-input[type=text] {
-  /* padding: 12px 20px; */
-  /* margin: 8px 0; */
-  border: none;
-  font-family: 'Nunito', sans-serif;
-  color: #FF8552;
-  font-size:3vw;
-  opacity: 0.65;
-  /* text-align: center; */
-  /* width:95%; */
 }
 
-#birthdate {
+/* Form Styling */
+input {
+  width: 100%;
+}
+input[type=text], input[type=number], input[type=password], input[type=date], input[type=tel], select[id="state"] {
+  /* padding: 12px 20px; */
+  /* margin: 8px 0; */
   border: solid;
-  border-radius: 4px;
+  border-radius: 10px;
   border-color: #ffdbcc;
+  font-family: 'Nunito', sans-serif;
+  /* color: #FF8552; */
+  font-size:1.75em;
+  /* opacity: 0.65; */
+}
+
+#birthdate, #phone, #state, #zipcode, #house-pass, #new-house-pass, #new-house-pass-confirm, #house, #new-house {
+  border: solid;
+  border-radius: 10px;
+  border-color: #ffdbcc;
+  width: 100%;
+  height: 44px;
+}
+
+#houselogin {
+  font-family: 'Nunito', sans-serif;
+  color: #FF8552;
+  font-size: 2.25em;
 }
 
 .fa-user, .fa-envelope, .fa-unlock-alt {
@@ -95,12 +95,16 @@ button {
   font-family: 'Nunito', sans-serif;
   width:100%;
   padding: 15px;
+  margin-top:15px;
+  margin-bottom: 15px;
   border: none;
   border-radius: 10px;
-  font-size: 3vw;
+  font-size: 2.25em;
 }
 
-/* SIGN IN BUTTONS */
+/* ***************************** */
+/* CONTINUE WITH FACEBOOK BUTTON */
+/* *************************** */
 .loginBtn {
   box-sizing: border-box;
   position: relative;
@@ -109,11 +113,15 @@ button {
   padding: 0 15px 0 46px;
   border: none;
   text-align: left;
-  line-height: 34px;
+  line-height: 44px;
   white-space: nowrap;
   border-radius: 0.2em;
   font-size: 16px;
   color: #FFF;
+  background-color: #4C69BA;
+  background-image: linear-gradient(#4C69BA, #3B55A0);
+  /*font-family: "Helvetica neue", Helvetica Neue, Helvetica, Arial, sans-serif;*/
+  text-shadow: 0 -1px 0 #354C8C;
 }
 .loginBtn:before {
   content: "";
@@ -123,81 +131,55 @@ button {
   left: 0;
   width: 34px;
   height: 100%;
+  border-right: #364e92 1px solid;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_facebook.png') 6px 6px no-repeat;
 }
-.loginBtn:focus {
+.loginBtn:focus, .loginBtn:hover {
   outline: none;
+  background-color: #5B7BD5;
+  background-image: linear-gradient(#5B7BD5, #4864B1);
 }
 .loginBtn:active {
   box-shadow: inset 0 0 0 32px rgba(0,0,0,0.1);
 }
 
-/* Facebook */
-.loginBtn--facebook {
-  background-color: #4C69BA;
-  background-image: linear-gradient(#4C69BA, #3B55A0);
-  /*font-family: "Helvetica neue", Helvetica Neue, Helvetica, Arial, sans-serif;*/
-  text-shadow: 0 -1px 0 #354C8C;
-}
-.loginBtn--facebook:before {
-  border-right: #364e92 1px solid;
-  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_facebook.png') 6px 6px no-repeat;
-}
-.loginBtn--facebook:hover,
-.loginBtn--facebook:focus {
-  background-color: #5B7BD5;
-  background-image: linear-gradient(#5B7BD5, #4864B1);
-}
-
-/* Google */
-.loginBtn--google {
-  /*font-family: "Roboto", Roboto, arial, sans-serif;*/
-  background: #DD4B39;
-}
-.loginBtn--google:before {
-  border-right: #BB3F30 1px solid;
-  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_google.png') 6px 6px no-repeat;
-}
-.loginBtn--google:hover,
-.loginBtn--google:focus {
-  background: #E74B37;
-}
-/* EMAIL SIGN IN */
-.loginBtn--email {
-    background: #297373;
-}
-.loginBtn--email:before {
-    border-right: #225e5e 1px solid;
-    background: url('./images/email.png') 6px 6px no-repeat;
-}
-.loginBtn--email:hover,
-.loginBtn--email:focus {
-    background: #2f8383;
-}
-
+/* ***************************** */
 /* FOOTER/NAV */
-
-.footerIcons {
-  width: 10%;
+/* *************************** */
+.footer {
+  position: absolute;
+  margin: auto;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  background-color: #ff8552;
+}
+#footer-container {
   background-color: #FF8552;
-  padding: 1%;
-  margin-top: 4.1%;
+}
+.footerIcons {
+  background-color: #FF8552;
+  width: 10%;
+  height: auto;
   float: left;
-  border-style: solid;
-  border-width: 0px 2px 0px 2px;
-  border-color: #F2F4F4;
-  }
-  .footerLogo {
+  display: block;
+  padding: 2%;
+  /* margin-top: 1.1%; */
+  margin-left: 100px;
+  margin-right: auto;
+}
+.footerLogo {
   width: 10%;
   float: left;
-  padding: 1%;
-  padding-top: 4.4%;
-  padding-bottom: 2.3%;
-  border-radius: 80px 80px 0px 0px;
+  padding: 2%;
+  margin-left: 75px;
+  border-radius: 10px;
   background-color: #297373;
-  }
+}
 
-/* PAYMENTS PAGE */
-
+/* ***************************** */
+/* PAYMENT PAGE */
+/* *************************** */
 #title {
   background-color: #FF8552;
   padding: 15px;
@@ -205,10 +187,9 @@ button {
   padding-bottom:0px;
   font-family: 'Lobster', cursive;
   color: #F2F4F4;
-  font-size: 6vw;
+  /* font-size: 6vw; */
   text-align: center;
 }
-
 
 .reimbursePanel {
 background-color: #297373;
@@ -216,6 +197,63 @@ color: #F2F4F4;
 font-family: arial rounded mt bold, arial;
 }
 
-.paymentButton {
-
+@media only screen and (max-width: 667px) {
+  /* for mobile phones */
+  #titleBox {
+    background-color: #FF8552;
+    /* padding: 15px; */
+    text-align: center;
+    /* margin-bottom: 1px; */
+  }
+  #title {
+    font-size: 2em;
+  }
+  #joinus {
+    text-align:center;
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.625em;
+  }
+  #houselogin {
+    font-size: 1.65em;
+  }
+  input[type=text], input[type=number], input[type=password], input[type=date], input[type=tel], select[id="state"] {
+    font-size:1.375em;
+  }
+  button {
+    font-size: 1.65em;
+  }
+  #footercolumns {
+    width:20%;
+  }
+  .footer {
+    position: absolute;
+    margin: auto;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+  }
+  #footer-container {
+    background-color: #FF8552;
+  }
+  .footerIcons {
+    width: 20%;
+    height: auto;
+    float: left;
+    padding: 2%;
+    margin-top: 4.1%;
+    margin-left: 0;
+  }
+  .footerLogo {
+    width: 20%;
+    height:auto;
+    float: left;
+    border-radius: 10px 10px 0px 0px;
+    background-color: #297373;
+    padding: 1%;
+    padding-top: 4.4%;
+    padding-bottom: 2.6%;
+    margin-left: 0;
+  }
 }

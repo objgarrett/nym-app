@@ -1,4 +1,5 @@
 var facebook;
+
     // This is called with the results from from FB.getLoginStatus().
     //Facebook login validation. If valid, continues storing the facebook id as global var facebook
     //if invalid, reroute to login somehow. God help us. 
@@ -16,6 +17,8 @@ var facebook;
               console.log(data)
               if (data === "create-user") {
                 window.location.replace(`/${data}`)
+              } else {
+                documentShower();
               }
             })
           console.log(response.authResponse.userID)
@@ -25,6 +28,8 @@ var facebook;
           $.ajax({
             type: "GET",
             url: '/newlogin'
+            }).done(data => {
+              window.location.replace(`/login`);
             })
             return
         }
@@ -60,6 +65,41 @@ var facebook;
         });
     }
 
-$(() =>{
+var mainFxn = () =>{
     console.log("shit happens yo");
-})
+    $.ajax({
+      type: "GET",
+      url: "/api/relationtable"
+    }).done(relation => {
+      console.log(relation);
+      var house;
+      for (var i = 0; i < relation.length; i++) {
+        if (relation[i].facebook_id == facebook) {
+          house = relation[i].house_name.toLowerCase();;
+        }
+      }
+      console.log("house: " + house);
+      var users = [];
+      for (var i = 0; i < relation.length; i++) {
+        if (relation[i].house_name === house) {
+          users.push(relation[i].facebook_id)
+        }
+      }
+      console.log("users: " + users);
+      $.ajax({
+        type: "GET",
+        url: "/api/house/" + house + "/tasks"
+      }).done(apiTasks => {
+        console.log(apiTasks);
+      })
+    })
+}
+
+var documentHider = () => {
+  $("#document").hide();
+}
+documentHider();
+var documentShower = () => {
+  $("#document").show();
+  mainFxn();
+}
