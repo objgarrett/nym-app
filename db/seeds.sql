@@ -21,8 +21,18 @@ INSERT INTO Tasklist (taskid, text, complete, dueby, chore_price, houseid, useri
 
 INSERT INTO houseuserrelationship (facebook_id, house_name) VALUES (10156414072913949, "The Garretts");
 INSERT INTO houseuserrelationship (facebook_id, house_name) VALUES (10156414072913950, "The Garretts");
-INSERT INTO houseuserrelationship (facebook_id, house_name) VALUES (10160070396760582, "First House");
-INSERT INTO houseuserrelationship (facebook_id, house_name) VALUES (1893049390736977, "First House");
-INSERT INTO houseuserrelationship (facebook_id, house_name) VALUES (1893049390736978, "First House");
-INSERT INTO houseuserrelationship (facebook_id, house_name) VALUES (1893049390736962, "First House");
+INSERT INTO houseuserrelationship (facebook_id, house_name) VALUES (10160070396760582, "first house");
+INSERT INTO houseuserrelationship (facebook_id, house_name) VALUES (1893049390736977, "first house");
+INSERT INTO houseuserrelationship (facebook_id, house_name) VALUES (1893049390736978, "first house");
+INSERT INTO houseuserrelationship (facebook_id, house_name) VALUES (1893049390736962, "first house");
+
+INSERT INTO Inventory (inventoryid, inventorytext, houseid, house_name) VALUES (1, "Toilet paper", 9, "first house");
+INSERT INTO Inventory (inventoryid, inventorytext, houseid, house_name) VALUES (2, "Bread", 9, "first house");
+INSERT INTO Inventory (inventoryid, inventorytext, houseid, house_name) VALUES (3, "Eggs", 9, "first house");
+INSERT INTO Inventory (inventoryid, inventorytext, houseid, house_name) VALUES (5, "Cheese", 1, "The Garretts");
+INSERT INTO Inventory (inventoryid, inventorytext, houseid, house_name) VALUES (6, "Books to Read", 1, "The Garretts"); 
+
+INSERT INTO HouseholdStatus (householdid, statustext, status, houseid, house_name) VALUES (1, "Balcony Door Locked", true, 9, "first house");
+INSERT INTO HouseholdStatus (householdid, statustext, status, houseid, house_name) VALUES (2, "Window Closed", true, 1, "The Garretts");
+
 
