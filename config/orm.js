@@ -25,7 +25,7 @@ function objToSql(ob) {
 
   
 var orm = {
-    all: function(tableInput, cb) {
+    all: function(tableInput, field, cb) {
       var queryString = "SELECT * FROM " + tableInput + ";";
       connection.query(queryString, function(err, result) {
         if (err) {
@@ -42,7 +42,7 @@ var orm = {
           throw err;
         }
         cb(result);
-      })
+      });
     },
     create: function(table, cols, vals, cb) {
       console.log(table);
