@@ -20,36 +20,5 @@ var house = {
   }
 };
 
-// Export the database functions for the controller (catsController.js).
+// Export the database functions for the controller
 module.exports = house;
-
-
-
-
-
-
-
-
-
-
-
-
-// module.exports = function(sequelize, DataTypes) {
-//     var Households = sequelize.define("Households", {
-//         householdid: {
-//             type: DataTypes.INTEGER,
-//             allowNull: false
-//         },
-
-//         userid: {
-//             type: DataTypes.INTEGER,
-//             allowNull: false
-//         },
-
-//         create_at: {
-//             type: DataTypes.DATE,
-//             allowNull: false
-//         }
-//     });
-//     return Users;
-// };

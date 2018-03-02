@@ -9,9 +9,6 @@ var nymRelation = require("../models/relationship.js");
 var nymTasks = require("../models/taskmanager.js");
 
 //create all our routes and set up logic with those routes where required 
-//***************/
-//OBG's NOTE: Not sure if the logic in router.get is what we want...was going off the "MVC Example" in week 14 - hopefully this at least gets you started
-//***************/
 
 //render blank page and redirect 
 router.get("/", function(req, res){
@@ -143,11 +140,7 @@ router.get("/api/house/:house_name/tasks", (req, res) => {
     console.log(house_name);
     nymTasks.conditional(`where house_name = '${house_name}'`, (data) => {
         res.send(data);
-    })
-
-
-
-  
+    })  
 })
 
 module.exports = router;
