@@ -106,7 +106,7 @@ router.post('/api/newuser/:id', function(req, res) {
     res.send(joke);
 })
 
-//gets all houses from house table for comparison in create user
+//gets all houses from house table
 router.get('/api/allhouses', function(req, res){
     nymHouses.all(function(data) {
         var houses = {
@@ -118,17 +118,30 @@ router.get('/api/allhouses', function(req, res){
 })
 //displays tasks page
 router.get("/tasks", function(req, res) {
-    var tasks
-    res.render("tasks", tasks);
+    var Tasklist;
+    nymTasks
+
+    res.render("tasks", Tasklist);
 });
-
-
-
 
 //displays payment page
 router.get("/payment", function(req, res) {
     var payment
     res.render("payment", payment);
 });
+
+//api call to get relation table
+router.get("/api/relationtable", (req, res) => {
+    nymRelation.all((data) => {
+        res.send(data);
+    })
+})
+
+//api call to get all tasks from a certain house name
+router.get("/api/house/:house_name/tasks", (req, res) => {
+    var house_name = req.params.house_name;
+    console.log(house_name);
+    
+})
 
 module.exports = router;

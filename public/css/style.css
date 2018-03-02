@@ -15,40 +15,40 @@ anything faded is at 65% opacity*/
 /* TITLE AND MAIN TEXT ELEMENTS */
 /* *************************** */
 #titleBox {
-    background-color: #FF8552;
-    /* padding: 15px; */
-    text-align: center;
-    margin-bottom: 10px;
+  background-color: #FF8552;
+  /* padding: 15px; */
+  text-align: center;
+  margin-bottom: 10px;
 }
 #title {
-    font-family: 'Lobster', cursive;
-    color: #F2F4F4;
-    font-size: 4em;
+  font-family: 'Lobster', cursive;
+  color: #F2F4F4;
+  font-size: 4em;
 }
 
 #joinus {
-    text-align:center;
-    font-family: 'Lobster', cursive;
-    color: #FF8552;
-    font-size: 3em;
+  text-align:center;
+  font-family: 'Lobster', cursive;
+  color: #FF8552;
+  font-size: 3em;
 }
 
 h2 {
-    font-family: 'Nunito', sans-serif;
-    color: #F2F4F4;
-    font-size: 2.25em;
+  font-family: 'Nunito', sans-serif;
+  color: #F2F4F4;
+  font-size: 2.25em;
 }
 
 /* ***************************** */
 /* CREATE ACCOUNT PAGE */
 /* *************************** */
 #login-container {
-    border: solid;
-    border-color: #FF8552;
-    border-radius: 10px;
-    padding: 15px;
-    margin: auto;
-    margin-bottom:10px
+  width:95%;
+  border: solid;
+  border-color: #FF8552;
+  border-radius: 10px;
+  margin: auto;
+  margin-bottom:10px;
 }
 
 hr {
@@ -62,7 +62,9 @@ input {
 input[type=text], input[type=number], input[type=password], input[type=date], input[type=tel], select[id="state"] {
   /* padding: 12px 20px; */
   /* margin: 8px 0; */
-  border: none;
+  border: solid;
+  border-radius: 10px;
+  border-color: #ffdbcc;
   font-family: 'Nunito', sans-serif;
   /* color: #FF8552; */
   font-size:1.75em;
@@ -144,25 +146,36 @@ button {
 /* ***************************** */
 /* FOOTER/NAV */
 /* *************************** */
-.footerIcons {
+.footer {
+  position: absolute;
+  margin: auto;
+  bottom: 0;
   width: 100%;
+  height: auto;
+  background-color: #ff8552;
+}
+#footer-container {
   background-color: #FF8552;
-  padding: 1%;
-  margin-top: 4.1%;
+}
+.footerIcons {
+  background-color: #FF8552;
+  width: 10%;
+  height: auto;
   float: left;
-  border-style: solid;
-  border-width: 0px 2px 0px 2px;
-  border-color: #F2F4F4;
-  }
-  .footerLogo {
-  width: 100%;
+  display: block;
+  padding: 2%;
+  /* margin-top: 1.1%; */
+  margin-left: 100px;
+  margin-right: auto;
+}
+.footerLogo {
+  width: 10%;
   float: left;
-  padding: 1%;
-  padding-top: 4.4%;
-  padding-bottom: 2.3%;
-  border-radius: 80px 80px 0px 0px;
+  padding: 2%;
+  margin-left: 75px;
+  border-radius: 10px;
   background-color: #297373;
-  }
+}
 
 /* ***************************** */
 /* PAYMENT PAGE */
@@ -184,6 +197,63 @@ color: #F2F4F4;
 font-family: arial rounded mt bold, arial;
 }
 
-/* .paymentButton {
-
-} */
+@media only screen and (max-width: 667px) {
+  /* for mobile phones */
+  #titleBox {
+    background-color: #FF8552;
+    /* padding: 15px; */
+    text-align: center;
+    /* margin-bottom: 1px; */
+  }
+  #title {
+    font-size: 2em;
+  }
+  #joinus {
+    text-align:center;
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.625em;
+  }
+  #houselogin {
+    font-size: 1.65em;
+  }
+  input[type=text], input[type=number], input[type=password], input[type=date], input[type=tel], select[id="state"] {
+    font-size:1.375em;
+  }
+  button {
+    font-size: 1.65em;
+  }
+  #footercolumns {
+    width:20%;
+  }
+  .footer {
+    position: absolute;
+    margin: auto;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+  }
+  #footer-container {
+    background-color: #FF8552;
+  }
+  .footerIcons {
+    width: 20%;
+    height: auto;
+    float: left;
+    padding: 2%;
+    margin-top: 4.1%;
+    margin-left: 0;
+  }
+  .footerLogo {
+    width: 20%;
+    height:auto;
+    float: left;
+    border-radius: 10px 10px 0px 0px;
+    background-color: #297373;
+    padding: 1%;
+    padding-top: 4.4%;
+    padding-bottom: 2.6%;
+    margin-left: 0;
+  }
+}
