@@ -117,5 +117,9 @@ DROP TABLE users;
 DROP TABLE Tasklist;
 ALTER TABLE Tasklist
 ADD house_name VARCHAR (225);
+ALTER TABLE users
+ADD money_owed int;
+ALTER TABLE Tasklist
+ADD frequency VARCHAR (225);
 
 
