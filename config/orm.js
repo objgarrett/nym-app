@@ -25,7 +25,7 @@ function objToSql(ob) {
 
   
 var orm = {
-    all: function(tableInput, cb) {
+    all: function(tableInput, field, cb) {
       var queryString = "SELECT * FROM " + tableInput + ";";
       connection.query(queryString, function(err, result) {
         if (err) {
@@ -34,15 +34,16 @@ var orm = {
         cb(result);
       });
     }, 
-    condition: function(tableInput, condiiton, cb) {
+    condition: function(tableInput, condition, cb) {
       var queryString = "SELECT * FROM " + tableInput;
+      queryString += " WHERE ";
       queryString += condition;
       connection.query(queryString, function(err, result) {
         if (err) {
           throw err;
         }
         cb(result);
-      })
+      });
     },
     create: function(table, cols, vals, cb) {
       console.log(table);
