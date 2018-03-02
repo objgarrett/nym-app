@@ -106,8 +106,8 @@ MODIFY dueby BIGINT;
 
 DROP TABLE houseuserrelationship;
 CREATE TABLE houseuserrelationship (
-    facebook_id BIGINT,
-   house_name VARCHAR(225),
+	facebook_id BIGINT,
+	house_name VARCHAR(225),
     PRIMARY KEY (facebook_id, house_name)
 ); 
 
@@ -115,6 +115,7 @@ ALTER TABLE Tasklist
 DROP userassigned;
 DROP TABLE users;
 DROP TABLE Tasklist;
-
+ALTER TABLE Tasklist
+ADD house_name VARCHAR (225);
 
 
