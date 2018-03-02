@@ -9,9 +9,9 @@
         <div class="col-sm-12" id="orderBorder"></div>
     </div>
 </div> 
-{{!-- add last four digits of social and billing address for dwolla --}}
 
 <h1 id="joinus">Create Your Account</h1>
+
 <div class="container" id="login-container">
     <form class="create-form">
         <div class="form-group">
@@ -19,37 +19,31 @@
                 <label for="first-name"><i class=""></i></label>
                 <input type="text" id="first-name" name="first-name" placeholder="First Name">
         </div>
-    {{!-- <hr> --}}
         <div class="form-group">
             <div id="lastname-problem" class="problem"></div>
                 <label for="last-name"><i class=""></i></label>
                 <input type="text" id="last-name" name="last-name" placeholder="Last Name">
         </div>
-    {{!-- <hr> --}}
         <div class="form-group">
             <div id="email-problem" class="problem"></div>
                 <label for="email"><i class=""></i></label>
                 <input type="text" id="email" name="email" placeholder="E-mail">
         </div>
-    {{!-- <hr> --}}
         <div class="form-group">
             <div id="birthdate-problem" class="problem"></div>
                 <label for="birthdate"><i class=""></i></label>
                 <input type="date" id="birthdate" name="birthdate" placeholder="1990-05-15">
         </div>
-    {{!-- <hr> --}}
         <div class="form-group">
             <div id="phone-problem" class="problem"></div>
                 <label for="phone"><i class=""></i></label>
                 <input type="tel" id="phone" name="phone" placeholder="Phone Number">
         </div>
-    {{!-- <hr> --}}
         <div class="form-group">
             <div id="city-problem" class="problem"></div>
                 <label for="city"><i class=""></i></label>
                 <input type="text" id="city" name="city" placeholder="City">
         </div>
-    {{!-- <hr> --}}
         <div class="form-group">
             <div id="state-problem" class="problem"></div>
                 <label for="state"></label>
@@ -107,54 +101,48 @@
                 <option>WY</option>
                 </select>
         </div>
-    {{!-- <hr> --}}
         <div class="form-group">
             <div id="zip-problem" class="problem" class="problem"></div>
                 <label for="zipcode"><i class=""></i></label>
                 <input type="number" id="zipcode" name="zipcode" placeholder="Zip">
-        </div> 
-    {{!-- <hr> --}}
+        </div>
+        {{!--LOGGING IN AND/OR CREATING A NEW HOUSE  --}}
         <div id="double-house-problem" class="problem"></div>
-            <div class="row">
-                <div class="col-sm-6">
-                    <h2 id="houselogin">Already have a House?</h2>
-                    <div class="form-group">
-                        <div id="house-problem" class="problem"></div>
-                        <label for="house"><i class=""></i></label>
-                        <input type="text" id="house" name="house" placeholder="Enter House Name">
-                    </div>
-                    {{!-- <hr> --}}
-                    <div class="form-group">
-                        <label for="house-pass"><i class=""></i></label>
-                        <input type="password" id="house-pass" name="house-pass" placeholder="House Password">
-                    </div>
-                                    {{!-- <hr> --}}
-
+        <div class="row">
+            {{!-- LOGGING IN TO EXISTING HOUSE --}}
+            <div class="col-sm-6">
+                <h2 id="houselogin">Already have a House?</h2>
+                <div class="form-group">
+                    <div id="house-problem" class="problem"></div>
+                    <label for="house"><i class=""></i></label>
+                    <input type="text" id="house" name="house" placeholder="Enter House Name">
                 </div>
-                <div class="col-sm-6">    
-                    <h2 id="houselogin">Create New House:</h2>
-                    <div class="form-group">
-                        <div id="new-house-problem" class="problem"></div>   
-                        <label for="new-house"><i class=""></i></label>
-                        <input type="text" id="new-house" name="new-house" placeholder="Enter House Name">
-                    </div>
-                    {{!-- <hr>                                      --}}
-                    <div class="form-group">
-                        <label for="new-house-pass"><i class=""></i></label>
-                        <input type="password" id="new-house-pass" name="new-house-pass" placeholder="Create Password">
-                    </div>
-                    {{!-- <hr>                                      --}}
-                    <div class="form-group">
-                        <label for="new-house-pass-confirm"><i class=""></i></label>
-                        <input type="password" id="new-house-pass-confirm" name="new-house-pass-confirm" placeholder="Confirm Password">
-                    </div>
+                <div class="form-group">
+                    <label for="house-pass"><i class=""></i></label>
+                    <input type="password" id="house-pass" name="house-pass" placeholder="House Password">
                 </div>
             </div>
-        <button type="button" id="createButton">Submit</button>
-
+            {{!-- CREATING A NEW HOUSE --}}
+            <div class="col-sm-6">    
+                <h2 id="houselogin">Create New House:</h2>
+                <div class="form-group">
+                    <div id="new-house-problem" class="problem"></div>   
+                    <label for="new-house"><i class=""></i></label>
+                    <input type="text" id="new-house" name="new-house" placeholder="Enter House Name">
+                </div>
+                <div class="form-group">
+                    <label for="new-house-pass"><i class=""></i></label>
+                    <input type="password" id="new-house-pass" name="new-house-pass" placeholder="Create Password">
+                </div>
+                <div class="form-group">
+                    <label for="new-house-pass-confirm"><i class=""></i></label>
+                    <input type="password" id="new-house-pass-confirm" name="new-house-pass-confirm" placeholder="Confirm Password">
+                </div>
+            </div>
         </div>
+        <button type="button" id="createButton">Submit</button>
     </form>
-</div>   
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.js"></script>
 <script src="/js/create-user.js"></script>
