@@ -35,6 +35,4 @@ INSERT INTO Inventory (inventoryid, inventorytext, houseid, house_name) VALUES (
 INSERT INTO HouseholdStatus (householdid, statustext, status, houseid, house_name) VALUES (1, "Balcony Door Locked", true, 9, "first house");
 INSERT INTO HouseholdStatus (householdid, statustext, status, houseid, house_name) VALUES (2, "Window Closed", true, 1, "The Garretts");
 
-DELETE 
-FROM house
-WHERE houseid = 1;
+
