@@ -10,7 +10,6 @@ var facebook;
           console.log("Logged in by the powers vested in me by the state of virginia i do hereby pronounce you a beagle")
           facebook = response.authResponse.userID;
           //checks if the person with the id number is in our db. if they aren't, they get redirected back to the create user page.
-<<<<<<< Updated upstream
           $.ajax({
             type: "GET",
             url: 'api/userlogin/' + response.authResponse.userID,
@@ -22,17 +21,6 @@ var facebook;
                 documentShower();
               }
             })
-=======
-          // $.ajax({
-          //   type: "GET",
-          //   url: 'api/userlogin/' + response.authResponse.userID,
-          //   }).done(data => {
-          //     console.log(data)
-          //     if (data === "create-user") {
-          //       window.location.replace(`/${data}`)
-          //     }
-          //   })
->>>>>>> Stashed changes
           console.log(response.authResponse.userID)
         } else {
           // The person is not logged into facebook
