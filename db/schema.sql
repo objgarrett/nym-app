@@ -3,7 +3,6 @@ CREATE DATABASE s2lugpg6wdxixion;
 USE s2lugpg6wdxixion; 
 
 CREATE TABLE users (
-	id INT NOT NULL auto_increment,
     firstname VARCHAR (225) NOT NULL,
     lastname VARCHAR (225) NOT NULL,
     birthday date,
@@ -13,8 +12,8 @@ CREATE TABLE users (
     state VARCHAR (225),
     zip INT (5),
     created_at datetime,
-    facebook_id INT,
-    PRIMARY KEY (id)
+    facebook_id BIGINT,
+    PRIMARY KEY (facebook_id)
 );
  
 
@@ -22,14 +21,14 @@ CREATE TABLE Tasklist (
 	taskid INT NOT NULL auto_increment,
     text VARCHAR (225) NOT NULL,
     complete BOOLEAN NOT NULL,
-    dueby date,
-    userassigned VARCHAR (225) NOT NULL,
+    dueby BIGINT,
+    chore_price INT,
     houseid INT NOT NULL,
-    userid INT NOT NULL,
+    userid BIGINT NOT NULL,
     PRIMARY KEY (taskid),
     INDEX user_id (userid),
 	FOREIGN KEY (userid)
-		REFERENCES users(id)
+		REFERENCES users(facebook_id)
         ON DELETE CASCADE,
 	INDEX house_id (houseid),
     FOREIGN KEY (houseid)
@@ -114,7 +113,8 @@ CREATE TABLE houseuserrelationship (
 
 ALTER TABLE Tasklist
 DROP userassigned;
-
+DROP TABLE users;
+DROP TABLE Tasklist;
 
 
 
