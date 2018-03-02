@@ -141,7 +141,13 @@ router.get("/api/relationtable", (req, res) => {
 router.get("/api/house/:house_name/tasks", (req, res) => {
     var house_name = req.params.house_name;
     console.log(house_name);
-    
+    nymTasks.conditional(`where house_name = '${house_name}'`, (data) => {
+        res.send(data);
+    })
+
+
+
+  
 })
 
 module.exports = router;

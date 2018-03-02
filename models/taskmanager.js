@@ -8,7 +8,7 @@ var Tasklist = {
     });
   },
     conditional: function(condition, cb) {
-      orm.condion("Tasklist", condition, function(res) {
+      orm.condition("Tasklist", condition, function(res) {
         cb(res);
       });
     },

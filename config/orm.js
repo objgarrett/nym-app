@@ -34,8 +34,8 @@ var orm = {
         cb(result);
       });
     }, 
-    condition: function(tableInput, condiiton, cb) {
-      var queryString = "SELECT * FROM " + tableInput;
+    condition: function(tableInput, condition, cb) {
+      var queryString = "SELECT * FROM " + tableInput + " ";
       queryString += condition;
       connection.query(queryString, function(err, result) {
         if (err) {
