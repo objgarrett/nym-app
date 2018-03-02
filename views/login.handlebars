@@ -1,28 +1,42 @@
 <div id="fb-root"></div>
 
-<div class="container-fluid" id="titleBox">
+<div class="container" id="titleBox">
     <div class="row">
         <div class="col-sm-12"></div>
             <div class="col-sm-12" id="main">
                 <h1 id="title">Not Your Maid </h1>
                 <h2>Clean Up After Your Own Damn Self</h2>
             </div>
-        <div class="col-sm-12" id="orderBorder"></div>   
+        {{!-- <div class="col-sm-12" id="orderBorder"></div>    --}}
     </div>
 </div>
 
-<div class="container" id="messy-room">
+<div class="container" id="homepage-container">
     <div class="row">
-        <div class="col-sm-6">
-            <h2>COPY GOES HERE</h2>
-        </div>        
+        <div class="col-sm" id="leftside-home">
+            <br>
+            <h2>Living with roommates is awful</h2>
+            <hr>
+            <h2>Fighting with roommates is worse</h2>
+        </div>     
+        <div class="col-sm">
+            <img src="css/images/appIcon.png" alt="not your maid logo" id="nym-logo">
+        </div>   
+        <div class="col-sm" id="nym-list">
+            <ul>
+                <li>Register your household</li>
+                <li>Manage and track chores</li>
+                <li>Keep roommates accountable</li>
+                <li>Never run out of toilet paper again</li>
+            </ul>
+        </div>
     </div>
-</div>
-<div class="container" id="new-user">        
-    <div id="status"></div>
-    <div class="row">
-        <button class="col-sm-12 loginBtn loginBtn--facebook" id="facebook-login">Continue with Facebook</button>
-    </div>
-</div>
 
+    <div class="row" id="new-user">        
+        <div id="status"></div>
+        <div class="col-sm">
+            <button class="col-sm-12 loginBtn loginBtn--facebook" id="facebook-login">Continue with Facebook</button>
+        </div>
+    </div>
+</div>
 <script src="/js/login.js"></script>

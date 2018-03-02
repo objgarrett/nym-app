@@ -121,6 +121,22 @@ router.get("/tasks", function(req, res) {
     res.render("tasks", Tasklist);
 });
 
+// displays inventory/household status page
+router.get("/inventory", function(req, res) {
+    var inventory;
+    // nymInventory
+
+    res.render("inventory", inventory);
+});
+
+// displays settings page
+router.get("/settings", function(req, res) {
+    var settings;
+    // nymSettings
+
+    res.render("settings", settings);
+});
+
 //displays payment page
 router.get("/payment", function(req, res) {
     var payment

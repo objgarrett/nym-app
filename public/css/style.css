@@ -4,7 +4,6 @@ Pinkish -  #FF8552
 Green - #9AE841
 White - #F2F4F4
 Grey - #DADBDC
-
 ***Fonts***
 Title - Lobster (google fonts)
 Everything else - Arial Rounded MT Bold
@@ -12,33 +11,83 @@ Everything else - Arial Rounded MT Bold
 anything faded is at 65% opacity*/
 
 /* ***************************** */
-/* TITLE AND MAIN TEXT ELEMENTS */
+/* TITLE AND MAIN ELEMENTS */
 /* *************************** */
+body {
+  background: #F2F4F4;
+}
 #titleBox {
   background-color: #FF8552;
-  /* padding: 15px; */
   text-align: center;
   margin-bottom: 10px;
+  position:fixed;
+  top:0;
+  right:0;
+  left:0;
+  z-index:1030;
 }
 #title {
   font-family: 'Lobster', cursive;
   color: #F2F4F4;
   font-size: 4em;
 }
-
+#secondary-header {
+  position: fixed;
+  top:0;
+  right:0;
+  left:0;
+  z-index:1030;
+  background:#FF8552
+}
 #joinus {
   text-align:center;
   font-family: 'Lobster', cursive;
   color: #FF8552;
   font-size: 3em;
 }
-
 h2 {
   font-family: 'Nunito', sans-serif;
   color: #F2F4F4;
   font-size: 2.25em;
 }
+/* ***************************** */
+/* LOGIN/HOMEPAGE */
+/* *************************** */
 
+#homepage-container {
+  background:#297373;
+  margin-top:150px;
+  padding:0px;
+}
+#leftside-home {
+  margin-top:0px;
+  background: #297373;
+  /* padding:15px; */
+  padding-top:50px;
+  text-align: center;
+  font-size: .85em;
+}
+
+#nym-logo {
+  width:176px;
+  height:176px;
+  border: #297373;
+  padding:0px;
+  margin:80px;
+}
+ul {
+  font-family: 'Nunito', sans-serif;
+  color: #F2F4F4;
+  font-size: 1.80em;
+  text-align: left;
+  padding-top:50px;
+  padding-left:0px;
+}
+#new-user {
+  background:#297373;
+  padding:15px;
+  width:100%;
+}
 /* ***************************** */
 /* CREATE ACCOUNT PAGE */
 /* *************************** */
@@ -60,17 +109,12 @@ input {
   width: 100%;
 }
 input[type=text], input[type=number], input[type=password], input[type=date], input[type=tel], select[id="state"] {
-  /* padding: 12px 20px; */
-  /* margin: 8px 0; */
   border: solid;
   border-radius: 10px;
   border-color: #ffdbcc;
   font-family: 'Nunito', sans-serif;
-  /* color: #FF8552; */
   font-size:1.75em;
-  /* opacity: 0.65; */
 }
-
 #birthdate, #phone, #state, #zipcode, #house-pass, #new-house-pass, #new-house-pass-confirm, #house, #new-house {
   border: solid;
   border-radius: 10px;
@@ -78,17 +122,11 @@ input[type=text], input[type=number], input[type=password], input[type=date], in
   width: 100%;
   height: 44px;
 }
-
 #houselogin {
   font-family: 'Nunito', sans-serif;
   color: #FF8552;
   font-size: 2.25em;
 }
-
-.fa-user, .fa-envelope, .fa-unlock-alt {
-  color: #FF8552;
-}
-
 button {
   background: #FF8552;
   color: #F2F4F4;
@@ -100,6 +138,135 @@ button {
   border: none;
   border-radius: 10px;
   font-size: 2.25em;
+}
+
+/* TASK MANAGER PAGE */
+#tasks-title {
+  font-family: 'Lobster', cursive;
+  color: #FF8552;
+  text-align: center;
+  font-size: 2.25em;
+  margin-top:100px;
+}
+#tasks {
+  background: #297373;
+  border-style: none;
+  border-radius: 0px;
+  height: 44px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.375em;
+  color: #F2F4F4;
+  padding-top: 0px;
+  text-align: left;
+  border-bottom: none;
+  margin-bottom: 0;
+  width: 89.19%;
+  float: left;
+}
+#due-by, #assigned-to, #task-edit {
+  background:#369696;
+  border-style: none;
+  border-radius:0px;
+  height:44px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.375em;
+  color: #DADBDC;
+  margin-top:0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+}
+#delete-button, #update-button, #more-button {
+  width:40px;
+  height: 44px;
+  float: left;
+  background: #297373;
+  margin-bottom:0;
+  padding-top: 2px;
+  margin-top:15px;
+}
+#more-button {
+  color: #DADBDC;
+}
+#add-chore {
+  background: #caccce;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.375em;
+  color: #F2F4F4;
+  border-radius: 0px;
+  margin-bottom:0px;
+}
+#add-task, #add-assign, #add-dueby, #add-dueby-input {
+  background:#DADBDC;
+  border-style: none;
+  border-radius:0px;
+  height:44px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.375em;
+  color: #F2F4F4;
+  margin-top:0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+}
+#add-dueby-input {
+  margin-bottom: 150px;
+}
+
+/* INVENTORY PAGE */
+input[type="checkbox"] {
+  background: #FF8552
+}
+/* SETTINGS PAGE */
+#user-name {
+  margin-top:100px;
+  background: #297373;
+  width:100%;
+  height:44px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.374em;
+  color: #F2F4F4;
+  padding-top:5px;
+  text-align: center;
+}
+#user-icon {
+  background: #DADBDC;
+  height:44px;
+  width:10%;
+  color: #297373;
+  float: left;
+  padding:10px;
+}
+#other-users {
+  background: #DADBDC;
+  height:44px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.374em;
+  color: #F2F4F4;
+  padding-top:5px;
+  padding-left: 10px;
+  width:85.91%;
+  float:left;
+}
+#message-user {
+  background: #DADBDC;
+  height:44px;
+  color: #297373;
+  float: left;
+}
+#log-out-btn {
+  background: #297373;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.375em;
+  color: #F2F4F4;
+  margin-bottom:0px;
+  border-radius:4px;
+}
+#delete-acct-btn {
+  background: #FF8552;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.375em;
+  color: #F2F4F4;
+  margin-bottom:50px;
+  border-radius:4px;
 }
 
 /* ***************************** */
@@ -147,7 +314,7 @@ button {
 /* FOOTER/NAV */
 /* *************************** */
 .footer {
-  position: absolute;
+  position: fixed;
   margin: auto;
   bottom: 0;
   width: 100%;
@@ -164,7 +331,6 @@ button {
   float: left;
   display: block;
   padding: 2%;
-  /* margin-top: 1.1%; */
   margin-left: 100px;
   margin-right: auto;
 }
@@ -187,23 +353,30 @@ button {
   padding-bottom:0px;
   font-family: 'Lobster', cursive;
   color: #F2F4F4;
-  /* font-size: 6vw; */
   text-align: center;
 }
-
 .reimbursePanel {
 background-color: #297373;
 color: #F2F4F4;
 font-family: arial rounded mt bold, arial;
 }
-
+  /* *************************************************** */
+  /* FOR MOBILE PHONES - SPECIFICALLY iPHONE6 - 375x667 */
+  /* *************************************************** */
 @media only screen and (max-width: 667px) {
-  /* for mobile phones */
+  /* ***************************** */
+  /* MOBILE Title and Main Page Elements */
+  /* ***************************** */
   #titleBox {
     background-color: #FF8552;
-    /* padding: 15px; */
     text-align: center;
-    /* margin-bottom: 1px; */
+  }
+  #secondary-header {
+    position: fixed;
+    top:0;
+    right:0;
+    left:0;
+    z-index:1030;
   }
   #title {
     font-size: 2em;
@@ -215,6 +388,9 @@ font-family: arial rounded mt bold, arial;
   h2 {
     font-size: 1.625em;
   }
+  /* ***************************** */
+  /* MOBILE CREATE USER PAGE */
+  /* ***************************** */
   #houselogin {
     font-size: 1.65em;
   }
@@ -224,11 +400,142 @@ font-family: arial rounded mt bold, arial;
   button {
     font-size: 1.65em;
   }
+    /* ***************************** */
+  /* MOBILE TASK MANAGER PAGE */
+  /* ***************************** */
+  #tasks-title {
+    font-family: 'Lobster', cursive;
+    color: #FF8552;
+    text-align: center;
+    font-size: 2em;
+    margin-top: 60px;
+  }
+  #tasks {
+    background: #297373;
+    border-style: none;
+    border-radius: 0px;
+    height: 44px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.375em;
+    color: #F2F4F4;
+    padding-top: 5px;
+    text-align: left;
+    border-bottom: none;
+    margin-bottom: 0;
+    width: 63%;
+    float: left;
+  }
+  #due-by, #assigned-to, #task-edit {
+    background:#369696;
+    border-style: none;
+    border-radius:0px;
+    height:44px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.375em;
+    color: #DADBDC;
+    margin-top:0px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+  }
+  #delete-button, #update-button, #more-button {
+    width:40px;
+    height: 44px;
+    float: left;
+    background: #297373;
+    margin-bottom:0;
+    padding-top: 2px;
+    margin-top:15px;
+  }
+  #more-button {
+    color: #DADBDC;
+  }
+  #add-chore {
+    background: #caccce;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.375em;
+    color: #F2F4F4;
+    margin-bottom:0px;
+    border-radius:0px;
+  }
+  #add-task, #add-assign, #add-dueby, #add-dueby-input {
+    background:#DADBDC;
+    border-style: none;
+    border-radius:0px;
+    height:44px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.375em;
+    color: #F2F4F4;
+    margin-top:0px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+  }
+  #add-dueby-input {
+    margin-bottom: 100px;
+  }
+  /* ***************************** */
+  /* MOBILE SETTINGS PAGE */
+  /* ***************************** */  
+  #user-name {
+    margin-top:60px;
+    background: #297373;
+    width:100%;
+    height:44px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.374em;
+    color: #F2F4F4;
+    padding-top:5px;
+    text-align: center;
+    border-radius: 0px 0px 4px 4px;
+  }
+  #user-icon {
+    background: #DADBDC;
+    height:44px;
+    color: #297373;
+    float: left;
+    border-radius: 4px 0px 0px 4px;
+  }
+  #other-users {
+    background: #DADBDC;
+    height:44px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.374em;
+    color: #F2F4F4;
+    padding-top:5px;
+    padding-left: 10px;
+    width:76.5%;
+    float:left;
+  }
+  #message-user {
+    background: #DADBDC;
+    height:44px;
+    color: #297373;
+    float: left;
+    border-radius: 0px 4px 4px 0px;
+  }
+  #log-out-btn {
+    background: #297373;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.375em;
+    color: #F2F4F4;
+    margin-bottom:0px;
+    border-radius:4px;
+  }
+  #delete-acct-btn {
+    background: #FF8552;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.375em;
+    color: #F2F4F4;
+    margin-bottom:50px;
+    border-radius:4px;
+  }
+  /* ***************************** */
+  /* MOBILE FOOTER */
+  /* ***************************** */  
   #footercolumns {
     width:20%;
   }
   .footer {
-    position: absolute;
+    position: fixed;
     margin: auto;
     bottom: 0;
     width: 100%;
