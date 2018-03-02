@@ -18,6 +18,13 @@ CREATE TABLE users (
     last_four_ssn INT (4),
     money_owed BIGINT,
     PRIMARY KEY (facebook_id)
+); 
+
+CREATE TABLE house (
+	houseid INT NOT NULL auto_increment,
+	password VARCHAR (16),
+    house_name VARCHAR (225),
+	PRIMARY KEY (houseid)
 );
  
 
@@ -74,12 +81,6 @@ CREATE TABLE sessions (
     PRIMARY KEY (GUID)
 );
 
-CREATE TABLE house (
-	houseid INT NOT NULL auto_increment,
-	password VARCHAR (16),
-    house_name VARCHAR (225),
-	PRIMARY KEY (houseid)
-);
 
 CREATE TABLE houseuserrelationship (
 	facebook_id BIGINT,
