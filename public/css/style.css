@@ -174,7 +174,6 @@ button {
   margin-bottom: 0px;
   padding-top: 0px;
 }
-
 #add-dueby-input {
   margin-bottom: 150px;
 }
@@ -190,6 +189,57 @@ input[type="checkbox"] {
   text-align: center;
   font-size: 2.25em;
   margin-top:100px;
+}
+#user-name {
+  background: #297373;
+  width:100%;
+  height:44px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.374em;
+  color: #F2F4F4;
+  padding-top:5px;
+  text-align: center;
+}
+#user-icon {
+  background: #DADBDC;
+  height:44px;
+  width:10%;
+  color: #297373;
+  float: left;
+  padding:10px;
+}
+#other-users {
+  background: #DADBDC;
+  height:44px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.374em;
+  color: #F2F4F4;
+  padding-top:5px;
+  padding-left: 10px;
+  width:85.91%;
+  float:left;
+}
+#message-user {
+  background: #DADBDC;
+  height:44px;
+  color: #297373;
+  float: left;
+}
+#log-out-btn {
+  background: #297373;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.375em;
+  color: #F2F4F4;
+  margin-bottom:0px;
+  border-radius:4px;
+}
+#delete-acct-btn {
+  background: #FF8552;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.375em;
+  color: #F2F4F4;
+  margin-bottom:50px;
+  border-radius:4px;
 }
 
 /* ***************************** */
