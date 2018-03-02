@@ -89,8 +89,8 @@ var mainFxn = () =>{
       $.ajax({
         type: "GET",
         url: "/api/house/" + house + "/settings"
-      }).done(apiTasks => {
-        console.log(apiTasks);
+      }).done(apiSettings => {
+        console.log(apiSettings);
       })
     })
 }
@@ -103,3 +103,4 @@ var documentShower = () => {
   $("#document").show();
   mainFxn();
 }
+
