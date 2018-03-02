@@ -16,6 +16,11 @@ var user = {
     orm.update("users", objColVals, condition, function(res) {
       cb(res);
     });
+  },
+  delete: function(cols, condition, cb) {
+    orm.delete("users", cols, condition, function(res) {
+      cb(res);
+    });
   }
 };
 

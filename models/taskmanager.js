@@ -18,9 +18,14 @@ var Tasklist = {
     });
   },
   	join: function(cols, tables, condition, cb) {
-  	orm.join(cols, "Tasklist", "users", "houseuserrelationship", condition, function(res) {
+  	orm.join(cols, ["Tasklist", "users", "houseuserrelationship"], condition, function(res) {
   		cb(res);
   	}); 
+  },
+  delete: function(cols, condition, cb) {
+    orm.delete(cols, "Tasklist", condition, function(res) {
+      cb(res);
+    });
   }
 };
 
