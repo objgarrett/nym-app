@@ -10,41 +10,29 @@ var facebook;
           console.log("Logged in by the powers vested in me by the state of virginia i do hereby pronounce you a beagle")
           facebook = response.authResponse.userID;
           //checks if the person with the id number is in our db. if they aren't, they get redirected back to the create user page.
-<<<<<<< Updated upstream
-          $.ajax({
-            type: "GET",
-            url: 'api/userlogin/' + response.authResponse.userID,
-            }).done(data => {
-              console.log(data)
-              if (data === "create-user") {
-                window.location.replace(`/${data}`)
-              } else {
-                documentShower();
-              }
-            })
-=======
-          // $.ajax({
-          //   type: "GET",
-          //   url: 'api/userlogin/' + response.authResponse.userID,
-          //   }).done(data => {
-          //     console.log(data)
-          //     if (data === "create-user") {
-          //       window.location.replace(`/${data}`)
-          //     }
-          //   })
->>>>>>> Stashed changes
-          console.log(response.authResponse.userID)
-        } else {
-          // The person is not logged into facebook
-          console.log("this should redirect");
-          // $.ajax({
-          //   type: "GET",
-          //   url: '/newlogin'
-          //   }).done(data => {
-          //     window.location.replace(`/login`);
-          //   })
-            return
-        }
+        //   $.ajax({
+        //     type: "GET",
+        //     url: 'api/userlogin/' + response.authResponse.userID,
+        //     }).done(data => {
+        //       console.log(data)
+        //       if (data === "create-user") {
+        //         window.location.replace(`/${data}`)
+        //       } else {
+        //         documentShower();
+        //       }
+        //     })
+        //   console.log(response.authResponse.userID)
+        // } else {
+        //   // The person is not logged into facebook
+        //   console.log("this should redirect");
+        //   $.ajax({
+        //     type: "GET",
+        //     url: '/newlogin'
+        //     }).done(data => {
+        //       window.location.replace(`/login`);
+        //     })
+        //     return
+        // }
     }
     function checkLoginState() {
         FB.getLoginStatus(function(response) {
@@ -79,32 +67,32 @@ var facebook;
 
 var mainFxn = () =>{
     console.log("shit happens yo");
-    $.ajax({
-      type: "GET",
-      url: "/api/relationtable"
-    }).done(relation => {
-      console.log(relation);
-      var house;
-      for (var i = 0; i < relation.length; i++) {
-        if (relation[i].facebook_id == facebook) {
-          house = relation[i].house_name.toLowerCase();;
-        }
-      }
-      console.log("house: " + house);
-      var users = [];
-      for (var i = 0; i < relation.length; i++) {
-        if (relation[i].house_name === house) {
-          users.push(relation[i].facebook_id)
-        }
-      }
-      console.log("users: " + users);
-      $.ajax({
-        type: "GET",
-        url: "/api/house/" + house + "/tasks"
-      }).done(apiTasks => {
-        console.log(apiTasks);
-      })
-    })
+    // $.ajax({
+    //   type: "GET",
+    //   url: "/api/relationtable"
+    // }).done(relation => {
+    //   console.log(relation);
+    //   var house;
+    //   for (var i = 0; i < relation.length; i++) {
+    //     if (relation[i].facebook_id == facebook) {
+    //       house = relation[i].house_name.toLowerCase();;
+    //     }
+    //   }
+    //   console.log("house: " + house);
+    //   var users = [];
+    //   for (var i = 0; i < relation.length; i++) {
+    //     if (relation[i].house_name === house) {
+    //       users.push(relation[i].facebook_id)
+    //     }
+    //   }
+    //   console.log("users: " + users);
+    //   $.ajax({
+    //     type: "GET",
+    //     url: "/api/house/" + house + "/tasks"
+    //   }).done(apiTasks => {
+    //     console.log(apiTasks);
+    //   })
+    // })
 }
 
 var documentHider = () => {

@@ -1,9 +1,10 @@
 <head>
-<script src="https://cdn.dwolla.com/1/dwolla.js"></script>
+  <script src="https://cdn.dwolla.com/1/dwolla.js"></script>
 </head>
 
+
 <header>
-    <div class="container" id="secondary-header">
+    <div class="container-fluid" id="secondary-header">
         <div class="row">
             <div class="col-sm-12"></div>
                 <div class="col-sm-12" id="main">
@@ -29,22 +30,6 @@
     </div>
 </footer>
 
-{{!-- <script type="text/javascript">
-$('#start').click(function() {
-  var iavToken = 'lr0Ax1zwIpeXXt8sJDiVXjPbwEeGO6QKFWBIaKvnFG0Sm2j7vL';
-  dwolla.configure('sandbox');
-  dwolla.iav.start(iavToken, {
-  container: 'iavContainer',
-  stylesheets: [
-    'http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext',
-    'http://myapp.com/iav/someStylesheet.css'
-  ],
-  microDeposits: false,
-  fallbackToMicroDeposits: false
-}, function(err, res) {
-  console.log('Error: ' + JSON.stringify(err) + ' -- Response: ' + JSON.stringify(res));
-});
-});
-</script> --}}
+<script>  dwolla.configure('sandbox');</script>
 <script src="/js/facebook-login.js"></script>
-<script src="/js/payment.js"></script>
+<script src="../public/js/payment.js"></script>
