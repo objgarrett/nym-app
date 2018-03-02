@@ -588,7 +588,7 @@ font-family: arial rounded mt bold, arial;
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: #ccc;
+      background-color: #DADBDC;
       -webkit-transition: .4s;
       transition: .4s;
     }
@@ -600,17 +600,17 @@ font-family: arial rounded mt bold, arial;
       width: 26px;
       left: 4px;
       bottom: 4px;
-      background-color: white;
+      background-color: #FF8552;
       -webkit-transition: .4s;
       transition: .4s;
     }
     
     input:checked + .slider {
-      background-color: #2196F3;
+      background-color: #9AE841;
     }
     
     input:focus + .slider {
-      box-shadow: 0 0 1px #2196F3;
+      box-shadow: 0 0 1px #9AE841;
     }
     
     input:checked + .slider:before {
@@ -627,3 +627,10 @@ font-family: arial rounded mt bold, arial;
     .slider.round:before {
       border-radius: 50%;
     }
+
+    /* ***Color Scheme***
+Blue - #297373
+Pinkish -  #FF8552
+Green - #9AE841
+White - #F2F4F4
+Grey - #DADBDC
