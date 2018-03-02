@@ -588,7 +588,7 @@ font-family: arial rounded mt bold, arial;
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: #DADBDC;
+      background-color: #FF8552;
       -webkit-transition: .4s;
       transition: .4s;
     }
@@ -600,7 +600,7 @@ font-family: arial rounded mt bold, arial;
       width: 26px;
       left: 4px;
       bottom: 4px;
-      background-color: #FF8552;
+      background-color: #DADBDC;
       -webkit-transition: .4s;
       transition: .4s;
     }
