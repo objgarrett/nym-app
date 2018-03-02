@@ -7,10 +7,15 @@ var Tasklist = {
       cb(res);
     });
   },
-  create: function(cols, vals, cb) {
-  orm.create("Tasklist", cols, vals, function(res) {
-    cb(res);
-  });
+    conditional: function(condition, cb) {
+      orm.condion("Tasklist", condition, function(res) {
+        cb(res);
+      });
+    },
+  	create: function(cols, vals, cb) {
+    orm.create("Tasklist", cols, vals, function(res) {
+      cb(res);
+    });
   },
   update: function(objColVals, condition, cb) {
     orm.update("Tasklist", objColVals, condition, function(res) {
