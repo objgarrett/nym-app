@@ -11,7 +11,7 @@ Everything else - Arial Rounded MT Bold
 anything faded is at 65% opacity*/
 
 /* ***************************** */
-/* TITLE AND MAIN TEXT ELEMENTS */
+/* TITLE AND MAIN ELEMENTS */
 /* *************************** */
 body {
   background: #F2F4F4;
@@ -20,13 +20,17 @@ body {
   background-color: #FF8552;
   text-align: center;
   margin-bottom: 10px;
+  position:fixed;
+  top:0;
+  right:0;
+  left:0;
+  z-index:1030;
 }
 #title {
   font-family: 'Lobster', cursive;
   color: #F2F4F4;
   font-size: 4em;
 }
-
 #secondary-header {
   position: fixed;
   top:0;
@@ -35,20 +39,55 @@ body {
   z-index:1030;
   background:#FF8552
 }
-
 #joinus {
   text-align:center;
   font-family: 'Lobster', cursive;
   color: #FF8552;
   font-size: 3em;
 }
-
 h2 {
   font-family: 'Nunito', sans-serif;
   color: #F2F4F4;
   font-size: 2.25em;
 }
+/* ***************************** */
+/* LOGIN/HOMEPAGE */
+/* *************************** */
 
+#homepage-container {
+  background:#297373;
+  margin-top:150px;
+  padding:0px;
+}
+#leftside-home {
+  margin-top:0px;
+  background: #297373;
+  /* padding:15px; */
+  padding-top:50px;
+  text-align: center;
+  font-size: .85em;
+}
+
+#nym-logo {
+  width:176px;
+  height:176px;
+  border: #297373;
+  padding:0px;
+  margin:80px;
+}
+ul {
+  font-family: 'Nunito', sans-serif;
+  color: #F2F4F4;
+  font-size: 1.80em;
+  text-align: left;
+  padding-top:50px;
+  padding-left:0px;
+}
+#new-user {
+  background:#297373;
+  padding:15px;
+  width:100%;
+}
 /* ***************************** */
 /* CREATE ACCOUNT PAGE */
 /* *************************** */
