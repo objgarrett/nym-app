@@ -7,7 +7,7 @@ CREATE TABLE users (
     lastname VARCHAR (225) NOT NULL,
     birthday date,
     email VARCHAR (225),
-    phone INT (10),
+    phone VARCHAR (10),
     city VARCHAR (225),
     state VARCHAR (225),
     zip INT (5),
