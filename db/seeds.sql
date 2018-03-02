@@ -19,8 +19,10 @@ INSERT INTO Tasklist (taskid, text, complete, dueby, chore_price, houseid, useri
 INSERT INTO Tasklist (taskid, text, complete, dueby, chore_price, houseid, userid, house_name, frequency) VALUES (23, "Buy Olivia Chocolate", false, "2018-03-01", 4, 1, 10156414072913950, "The Garretts", "weekly");
 INSERT INTO Tasklist (taskid, text, complete, dueby, chore_price, houseid, userid, house_name, frequency) VALUES (24, "Prepare recyling", true, "2018-03-02", 4, 1, 10156414072913949, "The Garretts", "weekly");
 
+INSERT INTO houseuserrelationship (facebook_id, house_name) VALUES (10156414072913949, "The Garretts");
+INSERT INTO houseuserrelationship (facebook_id, house_name) VALUES (10156414072913950, "The Garretts");
+INSERT INTO houseuserrelationship (facebook_id, house_name) VALUES (10160070396760582, "First House");
+INSERT INTO houseuserrelationship (facebook_id, house_name) VALUES (1893049390736977, "First House");
+INSERT INTO houseuserrelationship (facebook_id, house_name) VALUES (1893049390736978, "First House");
+INSERT INTO houseuserrelationship (facebook_id, house_name) VALUES (1893049390736962, "First House");
 
-SELECT * 
-FROM users;
-SELECT * 
-FROM Tasklist;
