@@ -1,3 +1,4 @@
+<div id="document">
 <header>
     <div class="container" id="secondary-header">
         <div class="row">
@@ -10,16 +11,15 @@
     </div>
 </header>
 
-<div class="container" id="calendar"></div>
 
 <div class="container" id="tasklist">
-    <ul class="tasks">
+    {{!-- <ul class="tasks">
         {{#each Tasklist}}
             {{#unless complete}}
                 {{text}}
             {{/unless}}
         {{/each}}        
-    </ul>
+    </ul> --}}
 </div>
 
 <footer class="footer">
@@ -47,4 +47,5 @@
         </div>
     </div>
 </footer>
+</div>
 <script src="/js/tasks.js"></script>

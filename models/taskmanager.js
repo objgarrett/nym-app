@@ -17,7 +17,7 @@ var Tasklist = {
       cb(res);
     });
   },
-  	join: function(cols, table1, table2, table3, condition, cb) {
+  	join: function(cols, tables, condition, cb) {
   	orm.join(cols, "Tasklist", "users", "houseuserrelationship", condition, function(res) {
   		cb(res);
   	}); 

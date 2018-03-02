@@ -18,6 +18,7 @@ var facebook;
               if (data === "create-user") {
                 window.location.replace(`/${data}`)
               }
+              documentShower();
             })
           console.log(response.authResponse.userID)
         } else {
@@ -66,3 +67,11 @@ var facebook;
 $(() =>{
     console.log("shit happens yo");
 })
+
+var documentHider = () => {
+  $("#document").hide();
+}
+documentHider();
+var documentShower = () => {
+  $("#document").show();
+}
