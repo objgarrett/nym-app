@@ -87,7 +87,8 @@ CREATE TABLE houseuserrelationship (
 	house_name VARCHAR(225),
     PRIMARY KEY (facebook_id, house_name)
 );
-    
+   
+
 
 
 
