@@ -152,11 +152,28 @@ button {
   color: #DADBDC;
 }
 #add-chore {
-  background: #DADBDC;
+  background: #caccce;
   font-family: 'Nunito', sans-serif;
   font-size: 1.375em;
   color: #F2F4F4;
-  margin-bottom:150px;
+  border-radius: 0px;
+  margin-bottom:0px;
+}
+#add-task, #add-assign, #add-dueby, #add-dueby-input {
+  background:#DADBDC;
+  border-style: none;
+  border-radius:0px;
+  height:44px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.375em;
+  color: #F2F4F4;
+  margin-top:0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+}
+
+#add-dueby-input {
+  margin-bottom: 150px;
 }
 
 /* ***************************** */
@@ -336,11 +353,28 @@ font-family: arial rounded mt bold, arial;
     color: #DADBDC;
   }
   #add-chore {
-    background: #DADBDC;
+    background: #caccce;
     font-family: 'Nunito', sans-serif;
     font-size: 1.375em;
     color: #F2F4F4;
-    margin-bottom:100px;
+    margin-bottom:0px;
+    border-radius:0px;
+  }
+  #add-task, #add-assign, #add-dueby, #add-dueby-input {
+    background:#DADBDC;
+    border-style: none;
+    border-radius:0px;
+    height:44px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.375em;
+    color: #F2F4F4;
+    margin-top:0px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+  }
+
+  #add-dueby-input {
+    margin-bottom: 100px;
   }
   /* Footer */
   #footercolumns {
