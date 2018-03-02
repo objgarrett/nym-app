@@ -25,12 +25,12 @@ var facebook;
         } else {
           // The person is not logged into facebook
           console.log("this should redirect");
-          // $.ajax({
-          //   type: "GET",
-          //   url: '/newlogin'
-          //   }).done(data => {
-          //     window.location.replace(`/login`);
-          //   })
+          $.ajax({
+            type: "GET",
+            url: '/newlogin'
+            }).done(data => {
+              window.location.replace(`/login`);
+            })
             return
         }
     }
