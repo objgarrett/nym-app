@@ -9,7 +9,7 @@ var Inventory = {
     });
   },
    conditional: function(condition, cb) {
-    orm.condition("users", condition, function(res) {
+    orm.condition("inventory", condition, function(res) {
       cb(res);
     });
   },

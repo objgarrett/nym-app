@@ -170,7 +170,7 @@ router.get('/api/users/:house_name', (req, res) => {
 
 router.get('/api/house/:house_name/inventory', (req, res) => {
     var house_name = req.params.house_name;
-    nymInventory.conditional(`where house-name = '${house_name}'`, data => {
+    nymInventory.conditional(`where house_name = '${house_name}'`, data => {
         res.send(data);
     })
 })

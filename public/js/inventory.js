@@ -97,13 +97,13 @@ var mainFxn = () =>{
         }).done(apiInventory => {
           console.log(apiInventory);
           for (var j = 0; j < apiInventory.length; j++){
-              var divToAdd = $(`<div class="div-to-append house-inventory"><div class="row"><div class="col-sm" id="inventorycontainer"><div id="inventory">${apiInventory[j].text}</div>`)
+              var divToAdd = $(`<div class="div-to-append house-inventory"><div class="row"><div class="col-sm" id="inventorycontainer"><div id="inventory">${apiInventory[j].inventorytext}</div>`)
               $("#inventory-append").append(divToAdd);
             } 
           })
       })
-    }
-
+    })
+  }
 
 // var divToAdd = $(<div class="div-to-append user-task"><div class="row"><div class="col-sm" id="taskcontainer"><div id="tasks"><i class="fas fa-check"></i>${apiTasks[i].text}</div><img src="css/images/edit-white.png" alt="update button" id="update-button"><img src="css/images/garbage-2-white.png" alt="delete button" id="delete-button"><i class="far fa-caret-square-down" id="more-button"></i></div></div><div class="row"><div class="col-sm"><p id="task-edit">Update Chore:</p><input type="text" id="task-edit"><p id="assigned-to">Assigned to: ${person}</p><input type="text" id="assigned-to"><p id="due-by">Due On: ${date}</p><input type="date" id="due-by"></div></div></div>)
 
