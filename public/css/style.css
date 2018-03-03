@@ -231,7 +231,7 @@ button {
   margin-bottom: 0px;
   padding-top: 0px;
 }
-#delete-button, #update-button, #more-button, .fa-check {
+#delete-button, #update-button, #more-button, #check-button, .fa-check {
   width:40px;
   height: 44px;
   float: left;
