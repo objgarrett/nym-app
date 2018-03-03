@@ -4,24 +4,29 @@
     <div class="row">
         <div class="col-sm-12"></div>
             <div class="col-sm-12" id="main">
-                <h1 id="title">Not Your Maid </h1>
-                <h2>Clean Up After Your Own Damn Self</h2>
+                <h1 id="login-title">Not Your Maid </h1>
+                <h2 id="login-subtitle">Clean Up After Your Own Damn Self</h2>
             </div>
-        {{!-- <div class="col-sm-12" id="orderBorder"></div>    --}}
     </div>
+    <hr id="title-divider">
 </div>
-
+<div class="row" id="new-user">        
+    <div id="status"></div>
+        <div class="col-sm">
+            <button class="col-sm-12 loginBtn loginBtn--facebook" id="facebook-login">Continue with Facebook</button>
+        </div>
+</div>
 <div class="container" id="homepage-container">
     <div class="row">
         <div class="col-sm" id="leftside-home">
             <br>
-            <h2>Living with roommates is awful</h2>
-            <hr>
-            <h2>Fighting with roommates is worse</h2>
+            <h2 id="homepage-text">Living with roommates is awful</h2>
+            <hr id="homepage-divider">
+            <h2 id="homepage-text">Fighting with roommates is worse</h2>
         </div>     
         <div class="col-sm">
-            <img src="css/images/appIcon.png" alt="not your maid logo" id="nym-logo">
-        </div>   
+            <img src="css/images/logoblue.png" alt="not your maid logo" id="nym-logo">
+        </div> 
         <div class="col-sm" id="nym-list">
             <ul>
                 <li>Register your household</li>
@@ -31,12 +36,8 @@
             </ul>
         </div>
     </div>
-
-    <div class="row" id="new-user">        
-        <div id="status"></div>
-        <div class="col-sm">
-            <button class="col-sm-12 loginBtn loginBtn--facebook" id="facebook-login">Continue with Facebook</button>
-        </div>
-    </div>
 </div>
+<footer class="footer" id="login-footer">
+    <span>©2018 Olivia Garrett, Brittany Gillespie, Mary Hall, Jordan Shear</span>
+</footer>
 <script src="/js/login.js"></script>

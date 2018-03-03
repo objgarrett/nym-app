@@ -6,6 +6,11 @@ var user = {
       cb(res);
     });
   },
+  conditional: function(condition, cb) {
+    orm.condition("users", condition, function(res) {
+      cb(res);
+    });
+  },
   // The variables cols and vals are arrays.
   create: function(cols, vals, cb) {
     orm.create("users", cols, vals, function(res) {

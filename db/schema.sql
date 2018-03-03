@@ -17,6 +17,7 @@ CREATE TABLE users (
     billing_address2 VARCHAR (225),
     last_four_ssn INT (4),
     money_owed BIGINT,
+    house_name VARCHAR (225),
     PRIMARY KEY (facebook_id)
 ); 
 
