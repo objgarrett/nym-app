@@ -469,7 +469,7 @@ input:checked + .slider:before {
 .reimbursePanel {
 background-color: #297373;
 color: #F2F4F4;
-margin-top: 84px;
+margin-top: 64px;
 text-align: center;
 font-family: 'Nunito', sans-serif;
 font-size: 1.375em;
