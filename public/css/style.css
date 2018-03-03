@@ -20,11 +20,6 @@ body {
   background-color: #F2F4F4;
   text-align: center;
   margin-bottom: 10px;
-  /* position:fixed;
-  top:0;
-  right:0;
-  left:0;
-  z-index:1030; */
 }
 #secondary-header {
   position: fixed;
@@ -191,7 +186,6 @@ button {
   border-radius: 10px;
   font-size: 2.25em;
 }
-
 /* TASK MANAGER PAGE */
 #tasks-header {
   font-family: 'Lobster', cursive;
@@ -241,9 +235,6 @@ button {
   background: #297373;
   margin-bottom:0;
   padding:5px;
-  /* padding-left:2px;
-  padding-bottom:5px;
-  padding-top: 5px; */
   margin-top:0px;
 }
 .more-button {
@@ -272,7 +263,6 @@ button {
 #add-dueby-input {
   margin-bottom: 500px;
 }
-
 /* INVENTORY PAGE */
 #toggle-box {
   background: #297373;
@@ -347,7 +337,6 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
-
 /* SETTINGS PAGE */
 #settings-title {
   font-family: 'Lobster', cursive;
@@ -408,7 +397,6 @@ input:checked + .slider:before {
   margin-bottom:50px;
   border-radius:4px;
 }
-
 /* ***************************** */
 /* FOOTER/NAV */
 /* *************************** */
@@ -452,7 +440,6 @@ input:checked + .slider:before {
   border-radius: 10px;
   background-color: #297373;
 }
-
 /* ***************************** */
 /* PAYMENT PAGE */
 /* *************************** */
@@ -488,12 +475,10 @@ width: 80%;
   margin-top: 30px;
   margin-bottom: 170px;
 }
-
 .paymentForm {
   width: 80%;
   margin: auto;
 }
-
 .roommateImg {
   border-style: solid;
   border-width: 3px;
@@ -502,14 +487,6 @@ width: 80%;
   height: 90px;
   margin: auto;
 }
-
-/* 
-Blue - #297373
-Pinkish -  #FF8552
-Green - #9AE841
-White - #F2F4F4
-Grey - #DADBDC */
-
   /* *************************************************** */
   /* FOR MOBILE PHONES - SPECIFICALLY iPHONE6 - 375x667 */
   /* *************************************************** */
@@ -545,77 +522,77 @@ Grey - #DADBDC */
     font-size: 1.375em;
     margin-top:10px;
   }
-/* ***************************** */
-/* MOBILE LOGIN/HOMEPAGE */
-/* *************************** */
-#login-title {
-  font-family: 'Lobster', cursive;
-  color: #F2F4F4;
-  font-size: 2em;
-  background-color: #FF8552;
-}
-#login-subtitle {
-  font-family: 'Nunito', sans-serif;
-  color: #F2F4F4;
-  font-size: .9em;
-}
-#homepage-container {
-  background:#F2F4F4;
-  padding:0px;
-}
-#leftside-home {
-  margin-top:0px;
-  background: #F2F4F4;
-  padding-top:0px;
-}
-#homepage-text {
-  color: #297373;
-  font-size: 1.25em;
-  text-align: center;
-}
-#nym-logo {
-  width:100px;
-  height:100px;
-  padding:0px;
-  margin-top: 10px;
-  margin-left:130px;
-  margin-bottom:15px;
-}
-ul {
-  font-family: 'Nunito', sans-serif;
-  color: #f4f2f2;
-  font-size: 1em;
-  text-align: left;
-  padding-top:15px;
-  padding-left:55px;
-  padding-bottom:15px;
-  background-color: #297373;
-}
-#title-divider {
-  border-top: 0px double #DADBDC;
-}
-#homepage-divider {
-  border-top: 2px double #DADBDC;
-  width:75%;
-}
-#login-footer {
-  color: #F4f2f2;
-  font-family: 'Nunito', sans-serif;
-  font-size:.7em;
-  text-align: center;
-  padding-top:30px;
-}
-#orderborder {
-  margin-bottom:10px;
-}
-/* ***************************** */
-/* MOBILE CONTINUE WITH FACEBOOK BUTTON */
-/* *************************** */
-.loginBtn {
-  width: 65%;
-  margin: 0em;
-  margin-left:65px;
-}
+  /* ***************************** */
+  /* MOBILE LOGIN/HOMEPAGE */
+  /* *************************** */
+  #login-title {
+    font-family: 'Lobster', cursive;
+    color: #F2F4F4;
+    font-size: 2em;
+    background-color: #FF8552;
+  }
+  #login-subtitle {
+    font-family: 'Nunito', sans-serif;
+    color: #F2F4F4;
+    font-size: .9em;
+  }
+  #homepage-container {
+    background:#F2F4F4;
+    padding:0px;
+  }
+  #leftside-home {
+    margin-top:0px;
+    background: #F2F4F4;
+    padding-top:0px;
+  }
+  #homepage-text {
+    color: #297373;
+    font-size: 1.25em;
+    text-align: center;
+  }
+  #nym-logo {
+    width:100px;
+    height:100px;
+    padding:0px;
+    margin-top: 10px;
+    margin-left:130px;
+    margin-bottom:15px;
+  }
+  ul {
+    font-family: 'Nunito', sans-serif;
+    color: #f4f2f2;
+    font-size: 1em;
+    text-align: left;
+    padding-top:15px;
+    padding-left:55px;
+    padding-bottom:15px;
+    background-color: #297373;
+  }
+  #title-divider {
+    border-top: 0px double #DADBDC;
+  }
+  #homepage-divider {
+    border-top: 2px double #DADBDC;
+    width:75%;
+  }
+  #login-footer {
+    color: #F4f2f2;
+    font-family: 'Nunito', sans-serif;
+    font-size:.7em;
+    text-align: center;
+    padding-top:30px;
+  }
+  #orderborder {
+    margin-bottom:10px;
+  }
+  /* ***************************** */
+  /* MOBILE CONTINUE WITH FACEBOOK BUTTON */
+  /* *************************** */
+  .loginBtn {
+    width: 65%;
+    margin: 0em;
+    margin-left:65px;
+  }
   /* ***************************** */
   /* MOBILE CREATE USER PAGE */
   /* ***************************** */
@@ -745,7 +722,6 @@ ul {
     width: 50%;
 
   }
- 
   /* ***************************** */
   /* MOBILE SETTINGS PAGE */
   /* ***************************** */  
@@ -814,7 +790,6 @@ ul {
     font-size: 1.375em;
     margin-top:10px;
   }
-
   .reimbursePanel {
     width: 100%;
   }
