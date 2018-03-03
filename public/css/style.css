@@ -98,6 +98,9 @@ ul {
 #title-divider, #homepage-divider {
   border-top: 3px double #DADBDC;
 }
+#orderBorder {
+  margin-bottom:100px;
+}
 /* ***************************** */
 /* CONTINUE WITH FACEBOOK BUTTON */
 /* *************************** */
@@ -231,7 +234,7 @@ button {
   margin-bottom: 0px;
   padding-top: 0px;
 }
-#delete-button, #update-button, #more-button, #check-button  {
+.delete-button, .update-button, .more-button, .check-button  {
   width:40px;
   height: 44px;
   float: left;
@@ -243,7 +246,7 @@ button {
   padding-top: 5px; */
   margin-top:0px;
 }
-#more-button {
+.more-button {
   color: #DADBDC;
 }
 #add-chore {
@@ -338,6 +341,16 @@ input[type="checkbox"] {
 /* ***************************** */
 /* FOOTER/NAV */
 /* *************************** */
+#login-footer {
+  margin:auto;
+  margin-left:0;
+  height:75px;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.375em;
+  color: #f2f4f4;
+  padding:10px;
+}
 .footer {
   position: fixed;
   margin: auto;
@@ -487,7 +500,7 @@ ul {
   text-align: left;
   padding-top:15px;
   padding-left:55px;
-  padding-bottom:55px;
+  padding-bottom:15px;
   background-color: #297373;
 }
 #title-divider {
@@ -503,6 +516,9 @@ ul {
   font-size:.75em;
   text-align: center;
   padding-top:15px;
+}
+#orderborder {
+  margin-bottom:10px;
 }
 /* ***************************** */
 /* MOBILE CONTINUE WITH FACEBOOK BUTTON */
@@ -572,7 +588,7 @@ ul {
     margin-bottom: 0px;
     padding-top: 0px;
   }
-  #delete-button, #update-button, #more-button {
+  .delete-button, .update-button, .more-button {
     width:40px;
     height: 44px;
     float: left;
@@ -581,7 +597,7 @@ ul {
     padding-top: 2px;
     margin-top:15px;
   }
-  #more-button {
+  .more-button {
     color: #DADBDC;
   }
   #add-chore {

@@ -124,7 +124,8 @@ var mainFxn = () =>{
             } 
           }
           $("#check-button").on("click", () => {
-            console.log("on click happened")
+            console.log("on click happened");
+            // divToAdd;
           })
           
         })
