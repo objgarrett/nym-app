@@ -98,6 +98,9 @@ ul {
 #title-divider, #homepage-divider {
   border-top: 3px double #DADBDC;
 }
+#orderBorder {
+  margin-bottom:100px;
+}
 /* ***************************** */
 /* CONTINUE WITH FACEBOOK BUTTON */
 /* *************************** */
@@ -202,7 +205,7 @@ button {
   color: #FF8552;
   text-align: center;
   font-size: 2.25em;
-  margin-top:100px;
+  margin-top:80px;
 }
 #tasks {
   background: #297373;
@@ -212,11 +215,11 @@ button {
   font-family: 'Nunito', sans-serif;
   font-size: 1.375em;
   color: #F2F4F4;
-  padding-top: 0px;
+  padding-top: 5px;
   text-align: left;
   border-bottom: none;
   margin-bottom: 0;
-  width: 89.19%;
+  width: 85.54%;
   float: left;
 }
 #due-by, #assigned-to, #task-edit {
@@ -231,16 +234,19 @@ button {
   margin-bottom: 0px;
   padding-top: 0px;
 }
-#delete-button, #update-button, #more-button, #check-button, .fa-check {
+.delete-button, .update-button, .more-button, .check-button  {
   width:40px;
   height: 44px;
   float: left;
   background: #297373;
   margin-bottom:0;
-  padding-top: 2px;
-  margin-top:15px;
+  padding:5px;
+  /* padding-left:2px;
+  padding-bottom:5px;
+  padding-top: 5px; */
+  margin-top:0px;
 }
-#more-button {
+.more-button {
   color: #DADBDC;
 }
 #add-chore {
@@ -264,7 +270,7 @@ button {
   padding-top: 0px;
 }
 #add-dueby-input {
-  margin-bottom: 150px;
+  margin-bottom: 500px;
 }
 
 /* INVENTORY PAGE */
@@ -335,12 +341,23 @@ input[type="checkbox"] {
 /* ***************************** */
 /* FOOTER/NAV */
 /* *************************** */
+#login-footer {
+  margin:auto;
+  margin-left:0;
+  height:75px;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.375em;
+  color: #f2f4f4;
+  padding:10px;
+}
 .footer {
   position: fixed;
   margin: auto;
+  margin-left: -78px;
   bottom: 0;
   width: 100%;
-  height: auto;
+  height: 100px;
   background-color: #ff8552;
 }
 #footer-container {
@@ -483,7 +500,7 @@ ul {
   text-align: left;
   padding-top:15px;
   padding-left:55px;
-  padding-bottom:55px;
+  padding-bottom:15px;
   background-color: #297373;
 }
 #title-divider {
@@ -499,6 +516,9 @@ ul {
   font-size:.75em;
   text-align: center;
   padding-top:15px;
+}
+#orderborder {
+  margin-bottom:10px;
 }
 /* ***************************** */
 /* MOBILE CONTINUE WITH FACEBOOK BUTTON */
@@ -568,7 +588,7 @@ ul {
     margin-bottom: 0px;
     padding-top: 0px;
   }
-  #delete-button, #update-button, #more-button {
+  .delete-button, .update-button, .more-button {
     width:40px;
     height: 44px;
     float: left;
@@ -577,7 +597,7 @@ ul {
     padding-top: 2px;
     margin-top:15px;
   }
-  #more-button {
+  .more-button {
     color: #DADBDC;
   }
   #add-chore {
