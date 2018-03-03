@@ -209,24 +209,31 @@ button {
   font-family: 'Nunito', sans-serif;
   font-size: 1.375em;
   color: #F2F4F4;
-  padding-top: 5px;
+  padding-top: 0px;
+  padding-bottom:5px;
   text-align: left;
   border-bottom: none;
-  margin-bottom: 0;
-  width: 85.54%;
+  margin-bottom: 10px;
+  width: 65.54%;
   float: left;
 }
-#due-by, #assigned-to, #task-edit {
+#due-by, #assigned-to {
   background:#369696;
   border-style: none;
   border-radius:0px;
   height:44px;
   font-family: 'Nunito', sans-serif;
   font-size: 1.375em;
+  text-align: center;
   color: #DADBDC;
-  margin-top:0px;
+  margin-top:-10px;
   margin-bottom: 0px;
+  margin-left:-15px;
   padding-top: 0px;
+  width:102.75%;
+}
+#due-by {
+  margin-bottom:5px;
 }
 .delete-button, .update-button, .more-button, .check-button  {
   width:40px;
@@ -237,16 +244,13 @@ button {
   padding:5px;
   margin-top:0px;
 }
-.more-button {
-  color: #DADBDC;
-}
 #add-chore {
   background: #caccce;
   font-family: 'Nunito', sans-serif;
   font-size: 1.375em;
   color: #F2F4F4;
   border-radius: 0px;
-  margin-bottom:0px;
+  margin-bottom:150px;
 }
 #add-task, #add-assign, #add-dueby, #add-dueby-input {
   background:#DADBDC;
@@ -261,7 +265,16 @@ button {
   padding-top: 0px;
 }
 #add-dueby-input {
-  margin-bottom: 500px;
+  margin-bottom: 1000px;
+}
+#tasks-footer {
+  position: fixed;
+  margin: auto;
+  margin-left: -85px;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background-color: #ff8552;
 }
 /* INVENTORY PAGE */
 #toggle-box {
@@ -633,45 +646,44 @@ width: 80%;
     border-radius: 0px;
     height: 44px;
     font-family: 'Nunito', sans-serif;
-    font-size: 1.375em;
+    font-size: .75em;
     color: #F2F4F4;
-    padding-top: 5px;
+    padding-top: 2px;
     text-align: left;
     /* border-bottom: none; */
     /* margin-bottom: 10px; */
-    width: 63%;
+    width: 75%;
     float: left;
   }
-  #due-by, #assigned-to, #task-edit {
+  #due-by, #assigned-to {
     background:#369696;
     border-style: none;
     border-radius:0px;
     height:44px;
     font-family: 'Nunito', sans-serif;
-    font-size: 1.375em;
+    font-size: 1em;
     color: #DADBDC;
-    margin-top:0px;
+    margin-top:-10px;
     margin-bottom: 0px;
     padding-top: 0px;
+    width:104.5%;
   }
   .delete-button, .update-button, .more-button {
     width:40px;
     height: 44px;
     float: left;
     background: #297373;
-    margin-bottom:0;
-    padding-top: 2px;
-    margin-top:15px;
-  }
-  .more-button {
-    color: #DADBDC;
+    margin-bottom:2px;
+    padding-top: 5px;
+    padding-bottom:5px;
+    /* margin-top:10px; */
   }
   #add-chore {
     background: #caccce;
     font-family: 'Nunito', sans-serif;
     font-size: 1.375em;
     color: #F2F4F4;
-    margin-bottom:0px;
+    margin-bottom:100px;
     border-radius:0px;
   }
   #add-task, #add-assign, #add-dueby, #add-dueby-input {
@@ -688,6 +700,15 @@ width: 80%;
   }
   #add-dueby-input {
     margin-bottom: 100px;
+  }
+  #tasks-footer {
+    position: fixed;
+    margin: auto;
+    margin-left:-14px;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #ff8552;
   }
   /* ***************************** */
   /* MOBILE INVENTORY PAGE */
