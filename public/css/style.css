@@ -397,13 +397,6 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-
-Blue - #297373
-Pinkish -  #FF8552
-Green - #9AE841
-White - #F2F4F4
-Grey - #DADBDC
-
 /* ***************************** */
 /* FOOTER/NAV */
 /* *************************** */
@@ -481,109 +474,11 @@ font-size: 1.375em;
   margin-top: 30px;
 }
 
-.cardInfoBox {
-  background-color: #EFF1F1;
-  color: #F2F4F4;
-  text-align: center;
-  line-height: 70px;
-  font-family: 'Nunito', sans-serif;
-  width: 500px;
-  height: 140px;
-  font-size: 1.375em;
-  border-radius: 20px;
+.paymentForm {
+  width: 80%;
   margin: auto;
-  margin-top: 30px;
-  border-style: solid;
-  border-color:  #297373;
-  border-width: 2px;
 }
 
-.emailPayments {
-  background-color: #EFF1F1;
-  color: #DADBDC;
-  text-align: center;
-  line-height: 70px;
-  font-family: 'Nunito', sans-serif;
-  width: 500px;
-  height: 70px;
-  font-size: 1.375em;
-  border-radius: 20px;
-  margin: auto;
-  margin-top: 30px;
-  border-style: solid;
-  border-color:  #297373;
-  border-width: 2px;
-}
-
-.creditCardDiv {
-  line-height: 70px;
-
-
-}
-
-.calendarPayment {
-  border-top-style: solid;
-  border-top-color: #DADBDC;
-  border-top-width: 2px;
-  border-right-style: solid;
-  border-right-color: #DADBDC;
-  border-right-width: 2px;
-  color: #DADBDC;
-  width: 50%;
-  float: left;
-  line-height: 70px;
-}
-
-.CVCLock {
-  border-top-style: solid;
-  border-top-color: #DADBDC;
-  border-top-width: 2px;
-  color: #DADBDC;
-  width: 50%;
-  float: left;
-  line-height: 70px;
-}
-
-#emailPayments {
-  align-content: left;
-  height: 50px;
-}
-
-#CVCLock {
-  align-content: left;
-  height: 50px;
-}
-
-#calendarPayment {
-  position: relative;
-  left: auto;
-  height: 50px;
-}
-
-#creditCardDiv {
-  align-content: left;
-  height: 50px;
-}
-
-#emailPaymentsSpan {
-  align-content: left;
-
-}
-
-#CVCLockSpan {
-  align-content: left;
-
-}
-
-#calendarPaymentSpan {
-  align-content: left;
-  left: auto;
-
-}
-
-#creditCardDivSpan {
-align-content: left;
-}
 /* 
 Blue - #297373
 Pinkish -  #FF8552
