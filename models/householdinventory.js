@@ -8,6 +8,11 @@ var Inventory = {
       cb(res);
     });
   },
+   conditional: function(condition, cb) {
+    orm.condition("users", condition, function(res) {
+      cb(res);
+    });
+  },
   	create: function(cols, vals, cb) {
     orm.create("Inventory", cols, vals, function(res) {
       cb(res);

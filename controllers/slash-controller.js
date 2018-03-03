@@ -7,6 +7,7 @@ var nymUsers = require("../models/users.js");
 var nymHouses = require("../models/households.js");
 var nymRelation = require("../models/relationship.js");
 var nymTasks = require("../models/taskmanager.js");
+var nymInventory = require("../models/householdinventory.js");
 
 //create all our routes and set up logic with those routes where required 
 
@@ -163,6 +164,13 @@ router.get("/api/house/:house_name/tasks", (req, res) => {
 router.get('/api/users/:house_name', (req, res) => {
     var house_name = req.params.house_name;
     nymUsers.conditional(`where house_name = '${house_name}'`, data => {
+        res.send(data);
+    })
+})
+
+router.get('/api/house/:house_name/inventory', (req, res) => {
+    var house_name = req.params.house_name;
+    nymInventory.conditional(`where house-name = '${house_name}'`, data => {
         res.send(data);
     })
 })

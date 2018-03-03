@@ -45,6 +45,13 @@ h2 {
   color: #F2F4F4;
   font-size: 2.25em;
 }
+#main {
+  font-family: 'Lobster', cursive;
+  color: #F2F4F4;
+  text-align: center;
+  font-size: 1.375em;
+  margin-top:10px;
+}
 /* ***************************** */
 /* LOGIN/HOMEPAGE */
 /* *************************** */
@@ -141,6 +148,7 @@ ul {
   border-radius: 10px;
   margin: auto;
   margin-bottom:10px;
+  margin-top:15px;
 }
 hr {
   border-color:#ffdbcc;
@@ -182,6 +190,13 @@ button {
 }
 
 /* TASK MANAGER PAGE */
+#tasks-header {
+  font-family: 'Lobster', cursive;
+  color: #F2F4F4;
+  text-align: center;
+  font-size: 2em;
+  margin-top:10px;
+}
 #tasks-title {
   font-family: 'Lobster', cursive;
   color: #FF8552;
@@ -257,6 +272,13 @@ input[type="checkbox"] {
   background: #FF8552
 }
 /* SETTINGS PAGE */
+#settings-title {
+  font-family: 'Lobster', cursive;
+  color: #F2F4F4;
+  text-align: center;
+  font-size: 2em;
+  margin-top:10px;
+}
 #user-name {
   margin-top:100px;
   background: #297373;
@@ -346,7 +368,13 @@ input[type="checkbox"] {
 /* ***************************** */
 /* PAYMENT PAGE */
 /* *************************** */
-
+#payment-title {
+  font-family: 'Lobster', cursive;
+  color: #F2F4F4;
+  text-align: center;
+  font-size: 2em;
+  margin-top:10px;
+}
 .reimbursePanel {
 background-color: #297373;
 color: #F2F4F4;
@@ -405,8 +433,15 @@ font-size: 1.375em;
   h2 {
     font-size: 1.625em;
   }
+  #main {
+    font-family: 'Lobster', cursive;
+    color: #F2F4F4;
+    text-align: center;
+    font-size: 1.375em;
+    margin-top:10px;
+  }
 /* ***************************** */
-/* LOGIN/HOMEPAGE */
+/* MOBILE LOGIN/HOMEPAGE */
 /* *************************** */
 #login-title {
   font-family: 'Lobster', cursive;
@@ -492,6 +527,13 @@ ul {
   /* ***************************** */
   /* MOBILE TASK MANAGER PAGE */
   /* ***************************** */
+  #tasks-header {
+    font-family: 'Lobster', cursive;
+    color: #F2F4F4;
+    text-align: center;
+    font-size: 1.375em;
+    margin-top:10px;
+  }
   #tasks-title {
     font-family: 'Lobster', cursive;
     color: #FF8552;
@@ -564,6 +606,13 @@ ul {
   /* ***************************** */
   /* MOBILE SETTINGS PAGE */
   /* ***************************** */  
+  #settings-title {
+    font-family: 'Lobster', cursive;
+    color: #F2F4F4;
+    text-align: center;
+    font-size: 1.375em;
+    margin-top:10px;
+  }
   #user-name {
     margin-top:60px;
     background: #297373;
@@ -616,6 +665,11 @@ ul {
     color: #F2F4F4;
     margin-bottom:50px;
     border-radius:4px;
+  }
+  /* MOBILE PAYMENT PAGE */
+  #payment-title {
+    font-size: 1.375em;
+    margin-top:10px;
   }
   /* ***************************** */
   /* MOBILE FOOTER */
