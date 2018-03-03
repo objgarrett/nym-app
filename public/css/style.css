@@ -736,8 +736,15 @@ ul {
     border-bottom: none;
     /* margin-bottom: 10px; */
     width: 100%;
-    float: left;
+    float: right;
+    clear: both;
+    padding-left:15px;
   }
+  #inventoryContainer {
+    width: 50%;
+
+  }
+ 
   /* ***************************** */
   /* MOBILE SETTINGS PAGE */
   /* ***************************** */  
