@@ -202,7 +202,7 @@ button {
   color: #FF8552;
   text-align: center;
   font-size: 2.25em;
-  margin-top:100px;
+  margin-top:80px;
 }
 #tasks {
   background: #297373;
@@ -212,11 +212,11 @@ button {
   font-family: 'Nunito', sans-serif;
   font-size: 1.375em;
   color: #F2F4F4;
-  padding-top: 0px;
+  padding-top: 5px;
   text-align: left;
   border-bottom: none;
   margin-bottom: 0;
-  width: 89.19%;
+  width: 85.54%;
   float: left;
 }
 #due-by, #assigned-to, #task-edit {
@@ -231,14 +231,17 @@ button {
   margin-bottom: 0px;
   padding-top: 0px;
 }
-#delete-button, #update-button, #more-button, #check-button, .fa-check {
+#delete-button, #update-button, #more-button, #check-button  {
   width:40px;
   height: 44px;
   float: left;
   background: #297373;
   margin-bottom:0;
-  padding-top: 2px;
-  margin-top:15px;
+  padding:5px;
+  /* padding-left:2px;
+  padding-bottom:5px;
+  padding-top: 5px; */
+  margin-top:0px;
 }
 #more-button {
   color: #DADBDC;
@@ -264,7 +267,7 @@ button {
   padding-top: 0px;
 }
 #add-dueby-input {
-  margin-bottom: 150px;
+  margin-bottom: 500px;
 }
 
 /* INVENTORY PAGE */
@@ -338,9 +341,10 @@ input[type="checkbox"] {
 .footer {
   position: fixed;
   margin: auto;
+  margin-left: -78px;
   bottom: 0;
   width: 100%;
-  height: auto;
+  height: 100px;
   background-color: #ff8552;
 }
 #footer-container {
