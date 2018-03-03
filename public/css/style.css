@@ -26,17 +26,6 @@ body {
   left:0;
   z-index:1030; */
 }
-#login-title {
-  font-family: 'Lobster', cursive;
-  color: #FF8552;
-  font-size: 4em;
-  background-color: #F2F4F4;
-}
-#login-subtitle {
-  font-family: 'Nunito', sans-serif;
-  color: #297373;
-  font-size: 2.25em;
-}
 #secondary-header {
   position: fixed;
   top:0;
@@ -59,6 +48,17 @@ h2 {
 /* ***************************** */
 /* LOGIN/HOMEPAGE */
 /* *************************** */
+#login-title {
+  font-family: 'Lobster', cursive;
+  color: #FF8552;
+  font-size: 4em;
+  background-color: #F2F4F4;
+}
+#login-subtitle {
+  font-family: 'Nunito', sans-serif;
+  color: #297373;
+  font-size: 2.25em;
+}
 #homepage-container {
   background:#F2F4F4;
   /* margin-top:150px; */
@@ -92,7 +92,6 @@ ul {
 #title-divider, #homepage-divider {
   border-top: 3px double #DADBDC;
 }
-
 /* ***************************** */
 /* CONTINUE WITH FACEBOOK BUTTON */
 /* *************************** */
@@ -144,11 +143,9 @@ ul {
   margin: auto;
   margin-bottom:10px;
 }
-
 hr {
   border-color:#ffdbcc;
 }
-
 /* Form Styling */
 input {
   width: 100%;
@@ -392,6 +389,74 @@ font-family: arial rounded mt bold, arial;
   h2 {
     font-size: 1.625em;
   }
+/* ***************************** */
+/* LOGIN/HOMEPAGE */
+/* *************************** */
+#login-title {
+  font-family: 'Lobster', cursive;
+  color: #F2F4F4;
+  font-size: 2.25em;
+  background-color: #FF8552;
+}
+#login-subtitle {
+  font-family: 'Nunito', sans-serif;
+  color: #F2F4F4;
+  font-size: 1.25em;
+}
+#homepage-container {
+  background:#F2F4F4;
+  padding:0px;
+}
+#leftside-home {
+  margin-top:0px;
+  background: #F2F4F4;
+  padding-top:0px;
+}
+#homepage-text {
+  color: #297373;
+  font-size: 1.25em;
+  text-align: center;
+}
+#nym-logo {
+  width:100px;
+  height:100px;
+  padding:0px;
+  margin-top: 10px;
+  margin-left:130px;
+  margin-bottom:15px;
+}
+ul {
+  font-family: 'Nunito', sans-serif;
+  color: #f4f2f2;
+  font-size: 1.25em;
+  text-align: left;
+  padding-top:15px;
+  padding-left:55px;
+  padding-bottom:55px;
+  background-color: #297373;
+}
+#title-divider {
+  border-top: 0px double #DADBDC;
+}
+#homepage-divider {
+  border-top: 2px double #DADBDC;
+  width:75%;
+}
+#login-footer {
+  color: #F4f2f2;
+  font-family: 'Nunito', sans-serif;
+  font-size:.75em;
+  text-align: center;
+  padding-top:15px;
+}
+/* ***************************** */
+/* MOBILE CONTINUE WITH FACEBOOK BUTTON */
+/* *************************** */
+.loginBtn {
+  width: 65%;
+  margin: 0em;
+  margin-left:65px;
+}
   /* ***************************** */
   /* MOBILE CREATE USER PAGE */
   /* ***************************** */
@@ -404,7 +469,7 @@ font-family: arial rounded mt bold, arial;
   button {
     font-size: 1.65em;
   }
-    /* ***************************** */
+  /* ***************************** */
   /* MOBILE TASK MANAGER PAGE */
   /* ***************************** */
   #tasks-title {
@@ -568,73 +633,3 @@ font-family: arial rounded mt bold, arial;
     margin-left: 0;
   }
 }
-
-  /* ***************************** */
-  /* TOGGLE */
-  /* ***************************** */
-
-    /* The switch - the box around the slider */
-    .switch {
-      position: relative;
-      display: inline-block;
-      width: 60px;
-      height: 34px;
-    }
-    
-    /* Hide default HTML checkbox */
-    .switch input {display:none;}
-    
-    /* The slider */
-    .slider {
-      position: absolute;
-      cursor: pointer;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: #FF8552;
-      -webkit-transition: .4s;
-      transition: .4s;
-    }
-    
-    .slider:before {
-      position: absolute;
-      content: "";
-      height: 26px;
-      width: 26px;
-      left: 4px;
-      bottom: 4px;
-      background-color: #DADBDC;
-      -webkit-transition: .4s;
-      transition: .4s;
-    }
-    
-    input:checked + .slider {
-      background-color: #9AE841;
-    }
-    
-    input:focus + .slider {
-      box-shadow: 0 0 1px #9AE841;
-    }
-    
-    input:checked + .slider:before {
-      -webkit-transform: translateX(26px);
-      -ms-transform: translateX(26px);
-      transform: translateX(26px);
-    }
-    
-    /* Rounded sliders */
-    .slider.round {
-      border-radius: 34px;
-    }
-    
-    .slider.round:before {
-      border-radius: 50%;
-    }
-
-    /* ***Color Scheme***
-Blue - #297373
-Pinkish -  #FF8552
-Green - #9AE841
-White - #F2F4F4
-Grey - #DADBDC
