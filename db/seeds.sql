@@ -9,12 +9,12 @@ INSERT INTO house (houseid, password, house_name) VALUES (9, "password", "first 
 INSERT INTO house (houseid, password, house_name) VALUES (1, "password", "The Garretts");
 
 
-INSERT INTO Tasklist (taskid, text, complete, dueby, chore_price, houseid, userid, house_name, frequency) VALUES (7, "Vaccuum floor", false, 1520208000, 4, 9, 1893049390736977, "first_house", "weekly");
-INSERT INTO Tasklist (taskid, text, complete, dueby, chore_price, houseid, userid, house_name, frequency) VALUES (9, "Wash Dishes", true, 1520208000, 4, 9, 1893049390736977, "first_house", "daily");
-INSERT INTO Tasklist (taskid, text, complete, dueby, chore_price, houseid, userid, house_name, frequency) VALUES (10, "Take out trash", true, 1520208000, 4, 9, 10160070396760582, "first_house", "weekly");
-INSERT INTO Tasklist (taskid, text, complete, dueby, chore_price, houseid, userid, house_name, frequency) VALUES (12, "Refill ice", true, 1520208000, 4, 9, 10160070396760582, "first_house", "weekly");
-INSERT INTO Tasklist (taskid, text, complete, dueby, chore_price, houseid, userid, house_name, frequency) VALUES (18, "Facilitate rent payment", true, 1520208000, 4, 9, 1893049390736978, "first_house", "monthly");
-INSERT INTO Tasklist (taskid, text, complete, dueby, chore_price, houseid, userid, house_name, frequency) VALUES (19, "Prepare recylcing", false, 1520208000, 4, 9, 1893049390736962, "first_house", "weekly");
+INSERT INTO Tasklist (taskid, text, complete, dueby, chore_price, houseid, userid, house_name, frequency) VALUES (7, "Vaccuum floor", false, 1520208000, 4, 9, 1893049390736977, "first house", "weekly");
+INSERT INTO Tasklist (taskid, text, complete, dueby, chore_price, houseid, userid, house_name, frequency) VALUES (9, "Wash Dishes", true, 1520208000, 4, 9, 1893049390736977, "first house", "daily");
+INSERT INTO Tasklist (taskid, text, complete, dueby, chore_price, houseid, userid, house_name, frequency) VALUES (10, "Take out trash", true, 1520208000, 4, 9, 10160070396760582, "first house", "weekly");
+INSERT INTO Tasklist (taskid, text, complete, dueby, chore_price, houseid, userid, house_name, frequency) VALUES (12, "Refill ice", true, 1520208000, 4, 9, 10160070396760582, "first house", "weekly");
+INSERT INTO Tasklist (taskid, text, complete, dueby, chore_price, houseid, userid, house_name, frequency) VALUES (18, "Facilitate rent payment", true, 1520208000, 4, 9, 1893049390736978, "first house", "monthly");
+INSERT INTO Tasklist (taskid, text, complete, dueby, chore_price, houseid, userid, house_name, frequency) VALUES (19, "Prepare recylcing", false, 1520208000, 4, 9, 1893049390736962, "first house", "weekly");
 INSERT INTO Tasklist (taskid, text, complete, dueby, chore_price, houseid, userid, house_name, frequency) VALUES (21, "Walk your stupid dog so it doesn't crap in the house", false, 1520208000, 4, 9, 1893049390736962, "first_house", "daily");
 INSERT INTO Tasklist (taskid, text, complete, dueby, chore_price, houseid, userid, house_name, frequency) VALUES (23, "Buy Olivia Chocolate", false, 1520208000, 4, 1, 10156414072913950, "The Garretts", "weekly");
 INSERT INTO Tasklist (taskid, text, complete, dueby, chore_price, houseid, userid, house_name, frequency) VALUES (24, "Prepare recyling", true, 1520208000, 4, 1, 10156414072913949, "The Garretts", "weekly");
@@ -35,6 +35,4 @@ INSERT INTO Inventory (inventoryid, inventorytext, houseid, house_name) VALUES (
 INSERT INTO HouseholdStatus (householdid, statustext, status, houseid, house_name) VALUES (1, "Balcony Door Locked", true, 9, "first house");
 INSERT INTO HouseholdStatus (householdid, statustext, status, houseid, house_name) VALUES (2, "Window Closed", true, 1, "The Garretts");
 
-DELETE 
-FROM house
-WHERE houseid = 1;
+
