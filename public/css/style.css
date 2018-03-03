@@ -346,20 +346,37 @@ input[type="checkbox"] {
 /* ***************************** */
 /* PAYMENT PAGE */
 /* *************************** */
-#title {
-  background-color: #FF8552;
-  padding: 15px;
-  text-align: center;
-  padding-bottom:0px;
-  font-family: 'Lobster', cursive;
-  color: #F2F4F4;
-  text-align: center;
-}
+
 .reimbursePanel {
 background-color: #297373;
 color: #F2F4F4;
-font-family: arial rounded mt bold, arial;
+margin-top: 84px;
+text-align: center;
+font-family: 'Nunito', sans-serif;
+font-size: 1.375em;
 }
+.payNow {
+  background-color: #297373;
+  color: #F2F4F4;
+  text-align: center;
+  line-height: 70px;
+  font-family: 'Nunito', sans-serif;
+  width: 300px;
+  height: 70px;
+  font-size: 1.375em;
+  border-radius: 20px;
+  margin-top: 25px;
+  margin: auto;
+}
+
+.cardInfoBox {
+
+}
+
+.emailPayments {
+
+}
+
   /* *************************************************** */
   /* FOR MOBILE PHONES - SPECIFICALLY iPHONE6 - 375x667 */
   /* *************************************************** */
