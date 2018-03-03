@@ -78,8 +78,8 @@ router.get('/create-user', function(req, res){
 //this will run if the user creates a new account, pushes that to the user and relational db and the house db if a new house is created
 router.post('/api/newuser/:id', function(req, res) {
     var data = req.body;
-    var newUserCols = "firstname, lastname, birthday, email, phone, city, state, zip, facebook_id, created_at";
-    var newUserVals = [data.firstName, data.lastName, data.birthdate, data.email, parseInt(data.phone), data.city, data.state, data.zip, data.facebook_id, data.created_at];
+    var newUserCols = "firstname, lastname, birthday, email, phone, city, state, zip, facebook_id, created_at, house_name";
+    var newUserVals = [data.firstName, data.lastName, data.birthdate, data.email, parseInt(data.phone), data.city, data.state, data.zip, data.facebook_id, data.created_at, data.house_name];
     //if new house is created, it will add the house to the house table, otherwise it does nothing with the house table
     if (data.houseType === "new") {
         var newHouseCols = "house_name, password";
@@ -155,8 +155,16 @@ router.get("/api/house/:house_name/tasks", (req, res) => {
     var house_name = req.params.house_name;
     console.log(house_name);
     nymTasks.conditional(`where house_name = '${house_name}'`, (data) => {
+        console.log(data);
         res.send(data);
     })  
+})
+
+router.get('/api/users/:house_name', (req, res) => {
+    var house_name = req.params.house_name;
+    nymUsers.conditional(`where house_name = '${house_name}'`, data => {
+        res.send(data);
+    })
 })
 
 module.exports = router;
