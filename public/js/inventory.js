@@ -93,54 +93,17 @@ var mainFxn = () =>{
         console.log(apiUsers);
         $.ajax({
           type: "GET",
-          url: "/api/house/" + house + "/tasks"
-        }).done(apiTasks => {
-          console.log(apiTasks);
-          for (var j = 0; j < apiTasks.length; j++){
-            if (parseInt(apiTasks[j].userid) === parseInt(facebook)) {
-              var person
-              var date = moment.unix(apiTasks[j].dueby).format("MM/DD/YYYY");
-
-              for (var i = 0; i< apiUsers.length; i++) {
-                if (apiTasks[j].userid === apiUsers[i].facebook_id) {
-                  person = apiUsers[i].firstname + " " + apiUsers[i].lastname;
-                }
-              }
-<<<<<<< HEAD
-              var divToAdd = $(`<div class="div-to-append user-task" facebook="${facebook}"><div class="row"><div class="col-sm" id="taskcontainer"><img src="css/images/checked-white.png" alt="check button" id="check-button"><div id="tasks">${apiTasks[j].text}</div><img src="css/images/edit-white.png" alt="update button" id="update-button"><img src="css/images/garbage-2-white.png" alt="delete button" id="delete-button"><i class="far fa-caret-square-down" id="more-button"></i></div></div><div class="row"><div class="col-sm"><p id="task-edit">Update Chore:</p><input type="text" id="task-edit"><p id="assigned-to">Assigned to: ${person}</p><input type="text" id="assigned-to"><p id="due-by">Due On: ${date}</p><input type="date" id="due-by"></div></div></div>`)
-=======
-              var divToAdd = $(`<div class="div-to-append user-task" facebook="${facebook}" taskid="${apiTasks[i].taskid}"><div class="row"><div class="col-sm" id="taskcontainer"><div><img src="css/images/edit-white.png" alt="update button" id="check-button"></div><div id="tasks">${apiTasks[j].text}</div><img src="css/images/edit-white.png" alt="update button" id="update-button"><img src="css/images/garbage-2-white.png" alt="delete button" id="delete-button"><i class="far fa-caret-square-down" id="more-button"></i></div></div><div class="row"><div class="col-sm"><p id="task-edit">Update Chore:</p><input type="text" id="task-edit"><p id="assigned-to">Assigned to: ${person}</p><input type="text" id="assigned-to"><p id="due-by">Due On: ${date}</p><input type="date" id="due-by"></div></div></div>`)
->>>>>>> 9113c115d7048a9fba12d5c59b9d52bfef09cee5
-              $("#task-append").append(divToAdd);
+          url: "/api/house/" + house + "/inventory"
+        }).done(apiInventory => {
+          console.log(apiInventory);
+          for (var j = 0; j < apiInventory.length; j++){
+              var divToAdd = $(`<div class="div-to-append house-inventory"><div class="row"><div class="col-sm" id="inventorycontainer"><div id="inventory">${apiInventory[j].inventorytext}</div>`)
+              $("#inventory-append").append(divToAdd);
             } 
-          }
-          for (var j = 0; j < apiTasks.length; j++){
-            if (parseInt(apiTasks[j].userid) !== parseInt(facebook)) {
-              var person
-              var date = moment.unix(apiTasks[j].dueby).format("MM/DD/YYYY");
-              for (var i = 0; i< apiUsers.length; i++) {
-                if (apiTasks[j].userid === apiUsers[i].facebook_id) {
-                  person = apiUsers[i].firstname + " " + apiUsers[i].lastname;
-                }
-              }
-              var divToAdd = $(`<div class="div-to-append user-task"><div class="row"><div class="col-sm" id="taskcontainer"><img src="css/images/checked-white.png" alt="update button" id="check-button"><div id="tasks">${apiTasks[j].text}</div><img src="css/images/edit-white.png" alt="update button" id="update-button"><img src="css/images/garbage-2-white.png" alt="delete button" id="delete-button"><i class="far fa-caret-square-down" id="more-button"></i></div></div><div class="row"><div class="col-sm"><p id="task-edit">Update Chore:</p><input type="text" id="task-edit"><p id="assigned-to">Assigned to: ${person}</p><input type="text" id="assigned-to"><p id="due-by">Due On: ${date}</p><input type="date" id="due-by"></div></div></div>`)
-              $("#task-append").append(divToAdd);
-            } 
-          }
-          $("#check-button").on("click", () => {
-            console.log("on click happened")
           })
-          
-        })
       })
     })
-}
-
-
-
-$(".task-append").on("click", "img#check-button", () => {
-  console.log($("this"));
-})
+  }
 
 // var divToAdd = $(<div class="div-to-append user-task"><div class="row"><div class="col-sm" id="taskcontainer"><div id="tasks"><i class="fas fa-check"></i>${apiTasks[i].text}</div><img src="css/images/edit-white.png" alt="update button" id="update-button"><img src="css/images/garbage-2-white.png" alt="delete button" id="delete-button"><i class="far fa-caret-square-down" id="more-button"></i></div></div><div class="row"><div class="col-sm"><p id="task-edit">Update Chore:</p><input type="text" id="task-edit"><p id="assigned-to">Assigned to: ${person}</p><input type="text" id="assigned-to"><p id="due-by">Due On: ${date}</p><input type="date" id="due-by"></div></div></div>)
 
