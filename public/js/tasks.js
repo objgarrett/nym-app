@@ -111,7 +111,11 @@ var mainFxn = () =>{
                   person = apiUsers[i].firstname + " " + apiUsers[i].lastname;
                 }
               }
+<<<<<<< HEAD
               var divToAdd = $(`<div class="div-to-append user-task" facebook="${facebook}><div class="row"><div class="col-sm" ><div><img src="css/images/checked-white.png" alt="update button" class="check-button" name="${num}" onclick="checkTask(${taskNum})"></div><div id="tasks">${apiTasks[j].text} ${word}</div><img src="css/images/garbage-2-white.png" alt="delete button" class="delete-button" onclick="deleteTask(${taskNum})"><i class="far fa-caret-square-down" class="more-button" onclick="showDiv(${num})"></i></div></div><div class="row"><div class="col-sm" id="taskcontainer${num}"><p id="task-edit">Update Chore:</p><input type="text" id="task-edit"><p id="assigned-to">Assigned to: ${person}</p><input type="text" id="assigned-to"><p id="due-by">Due On: ${date}</p><input type="date" id="due-by"></div></div></div>`)
+=======
+              var divToAdd = $(`<div class="div-to-append user-task"><div class="row"><div class="col-sm" ><div><img src="css/images/checked-white.png" alt="update button" class="check-button" name="${num}" onclick="checkTask(${taskNum})"></div><div id="tasks">${apiTasks[j].text} ${word}</div><img src="css/images/garbage-2-white.png" alt="delete button" class="delete-button" onclick="deleteTask(${taskNum})"><i class="far fa-caret-square-down" class="more-button" onclick="showDiv(${num})"></i></div></div><div class="row"><div class="col-sm" id="taskcontainer${num}"><p id="task-edit">Update Chore:</p><input type="text" id="task-edit"><p id="assigned-to">Assigned to: ${person}</p><input type="text" id="assigned-to"><p id="due-by">Due On: ${date}</p><input type="date" id="due-by"></div></div></div>`)
+>>>>>>> 1dd1e15235b6afbbffbbaf095bfad3bde5b79a90
               $("#task-append").append(divToAdd);
               divHider(num);
             } 
@@ -142,6 +146,9 @@ var mainFxn = () =>{
           })
           
         })
+        var divToAppend = `<div class="row"><div class="col-sm"><button id="add-chore" onclick="showAddTask()">+ Add Chore</button></div></div>`;
+        var formToAppend = `<form class="create-form"><div class="form-group"><div id="`
+
       })
     })
 }
