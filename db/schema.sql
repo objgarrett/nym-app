@@ -90,7 +90,6 @@ CREATE TABLE houseuserrelationship (
 );
    
 
-ALTER TABLE users
-ADD house_name VARCHAR (225);
+
 
 
