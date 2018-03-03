@@ -69,7 +69,7 @@ var mainFxn = () =>{
     console.log("shit happens yo");
     $.ajax({
       type: "GET",
-      url: "/api/relationtable"
+      url: "api/relationtable"
     }).done(relation => {
       console.log(relation);
       var house;
@@ -87,13 +87,14 @@ var mainFxn = () =>{
       }
       console.log("users: " + users);
       $.ajax({
-        type: "GET",
-        url: "/api/house/" + house + "/settings"
+        type: "POST",
+        url: "/api/house/settings",
+        data: users
       }).done(apiSettings => {
         console.log(apiSettings);
       })
     })
-}
+  }
 
 var documentHider = () => {
   $("#document").hide();

@@ -159,4 +159,14 @@ router.get("/api/house/:house_name/tasks", (req, res) => {
     })  
 })
 
+router.post("/api/house/settings", (req, res) => {
+    var facebook_id = req.body.data;
+    res.send(facebook_id);
+    // nymUsers.conditional(`where facebook_id = '${facebook_id}'`, (data) => {
+    //     res.send(data);
+    // })  
+}) 
+
+
+
 module.exports = router;
