@@ -191,4 +191,12 @@ router.put('/api/tasks/:taskid/complete', (req, res) => {
     })
 })
 
+router.post('/api/tasks/add', (req, res) => {
+    var data = req.body;
+    nymTasks.create("text, userid, dueby, complete, house_name, chore_price, frequency", [data.text, data.facebook_id, parseInt(data.dueby), 0, data.houseGlobal, 4, "daily"], data => {
+        console.log("WE GOT HERE");
+        res.send(data);
+    })
+})
+
 module.exports = router;

@@ -90,6 +90,8 @@ CREATE TABLE houseuserrelationship (
 );
    
 
+alter table tasklist
+modify houseid INT;
 
 
 
