@@ -9,11 +9,11 @@ if (process.env.JAWSDB_URL) {
     connection = mysql.createConnection({
         host: 'localhost',
         user: 'root',
-        // password: process.env.DB_PASS,
+        password: process.env.DB_PASS,
         // database: 'nym_db'
-        // //database: 'NYM_DB'
-        password: "password",
-        database: 's2lugpg6wdxixion1'
+        database: 'NYM_DB'
+        // password: "password",
+        // database: 's2lugpg6wdxixion1'
     });
 };    
 
