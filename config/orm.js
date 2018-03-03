@@ -37,6 +37,7 @@ var orm = {
     condition: function(tableInput, condition, cb) {
       var queryString = "SELECT * FROM " + tableInput + " ";
       queryString += condition;
+      console.log("The query string is: " +queryString);
       connection.query(queryString, function(err, result) {
         if (err) {
           throw err;

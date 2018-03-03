@@ -67,7 +67,7 @@ var users = [];
     }
 
 var mainFxn = () =>{
-    console.log("shit happens yo");
+    // console.log("shit happens yo");
     $.ajax({
       type: "GET",
       url: "api/relationtable"
