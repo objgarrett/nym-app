@@ -277,6 +277,23 @@ button {
 input[type="checkbox"] {
   background: #FF8552
 }
+#inventory {
+  background: #297373;
+  border-style: none;
+  border-radius: 4px;
+  height: 44px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.375em;
+  color: #F2F4F4;
+  padding-top: 5px;
+  text-align: left;
+  border-bottom: none;
+  margin-bottom: 10px;
+  width: 85.54%;
+  float: left;
+
+}
+
 /* SETTINGS PAGE */
 #settings-title {
   font-family: 'Lobster', cursive;
