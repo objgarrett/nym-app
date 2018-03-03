@@ -260,12 +260,24 @@ button {
   font-family: 'Nunito', sans-serif;
   font-size: 1.375em;
   color: #F2F4F4;
-  margin-top:0px;
+  margin-top:-250px;
   margin-bottom: 0px;
   padding-top: 0px;
 }
 #add-dueby-input {
   margin-bottom: 1000px;
+}
+#createButton {
+  background: #FF8552;
+  color: #F2F4F4;
+  font-family: 'Nunito', sans-serif;
+  width:100%;
+  padding: 15px;
+  margin-top:100px;
+  margin-bottom: 150px;
+  border: none;
+  border-radius: 10px;
+  font-size: 2.25em;
 }
 #tasks-footer {
   position: fixed;
