@@ -45,6 +45,13 @@ h2 {
   color: #F2F4F4;
   font-size: 2.25em;
 }
+#main {
+  font-family: 'Lobster', cursive;
+  color: #F2F4F4;
+  text-align: center;
+  font-size: 1.375em;
+  margin-top:10px;
+}
 /* ***************************** */
 /* LOGIN/HOMEPAGE */
 /* *************************** */
@@ -61,7 +68,6 @@ h2 {
 }
 #homepage-container {
   background:#F2F4F4;
-  /* margin-top:150px; */
   padding:0px;
 }
 #leftside-home {
@@ -142,6 +148,7 @@ ul {
   border-radius: 10px;
   margin: auto;
   margin-bottom:10px;
+  margin-top:15px;
 }
 hr {
   border-color:#ffdbcc;
@@ -183,6 +190,13 @@ button {
 }
 
 /* TASK MANAGER PAGE */
+#tasks-header {
+  font-family: 'Lobster', cursive;
+  color: #F2F4F4;
+  text-align: center;
+  font-size: 2em;
+  margin-top:10px;
+}
 #tasks-title {
   font-family: 'Lobster', cursive;
   color: #FF8552;
@@ -217,7 +231,7 @@ button {
   margin-bottom: 0px;
   padding-top: 0px;
 }
-#delete-button, #update-button, #more-button, .fa-check {
+#delete-button, #update-button, #more-button, #check-button, .fa-check {
   width:40px;
   height: 44px;
   float: left;
@@ -258,6 +272,13 @@ input[type="checkbox"] {
   background: #FF8552
 }
 /* SETTINGS PAGE */
+#settings-title {
+  font-family: 'Lobster', cursive;
+  color: #F2F4F4;
+  text-align: center;
+  font-size: 2em;
+  margin-top:10px;
+}
 #user-name {
   margin-top:100px;
   background: #297373;
@@ -347,20 +368,43 @@ input[type="checkbox"] {
 /* ***************************** */
 /* PAYMENT PAGE */
 /* *************************** */
-#title {
-  background-color: #FF8552;
-  padding: 15px;
-  text-align: center;
-  padding-bottom:0px;
+#payment-title {
   font-family: 'Lobster', cursive;
   color: #F2F4F4;
   text-align: center;
+  font-size: 2em;
+  margin-top:10px;
 }
 .reimbursePanel {
 background-color: #297373;
 color: #F2F4F4;
-font-family: arial rounded mt bold, arial;
+margin-top: 84px;
+text-align: center;
+font-family: 'Nunito', sans-serif;
+font-size: 1.375em;
 }
+.payNow {
+  background-color: #297373;
+  color: #F2F4F4;
+  text-align: center;
+  line-height: 70px;
+  font-family: 'Nunito', sans-serif;
+  width: 300px;
+  height: 70px;
+  font-size: 1.375em;
+  border-radius: 20px;
+  margin-top: 25px;
+  margin: auto;
+}
+
+.cardInfoBox {
+
+}
+
+.emailPayments {
+
+}
+
   /* *************************************************** */
   /* FOR MOBILE PHONES - SPECIFICALLY iPHONE6 - 375x667 */
   /* *************************************************** */
@@ -389,8 +433,15 @@ font-family: arial rounded mt bold, arial;
   h2 {
     font-size: 1.625em;
   }
+  #main {
+    font-family: 'Lobster', cursive;
+    color: #F2F4F4;
+    text-align: center;
+    font-size: 1.375em;
+    margin-top:10px;
+  }
 /* ***************************** */
-/* LOGIN/HOMEPAGE */
+/* MOBILE LOGIN/HOMEPAGE */
 /* *************************** */
 #login-title {
   font-family: 'Lobster', cursive;
@@ -463,6 +514,10 @@ ul {
   #houselogin {
     font-size: 1.65em;
   }
+  #login-container {
+    margin-top:35px;
+    margin-bottom:35px;
+  }
   input[type=text], input[type=number], input[type=password], input[type=date], input[type=tel], select[id="state"] {
     font-size:1.375em;
   }
@@ -472,6 +527,13 @@ ul {
   /* ***************************** */
   /* MOBILE TASK MANAGER PAGE */
   /* ***************************** */
+  #tasks-header {
+    font-family: 'Lobster', cursive;
+    color: #F2F4F4;
+    text-align: center;
+    font-size: 1.375em;
+    margin-top:10px;
+  }
   #tasks-title {
     font-family: 'Lobster', cursive;
     color: #FF8552;
@@ -544,6 +606,13 @@ ul {
   /* ***************************** */
   /* MOBILE SETTINGS PAGE */
   /* ***************************** */  
+  #settings-title {
+    font-family: 'Lobster', cursive;
+    color: #F2F4F4;
+    text-align: center;
+    font-size: 1.375em;
+    margin-top:10px;
+  }
   #user-name {
     margin-top:60px;
     background: #297373;
@@ -596,6 +665,11 @@ ul {
     color: #F2F4F4;
     margin-bottom:50px;
     border-radius:4px;
+  }
+  /* MOBILE PAYMENT PAGE */
+  #payment-title {
+    font-size: 1.375em;
+    margin-top:10px;
   }
   /* ***************************** */
   /* MOBILE FOOTER */
