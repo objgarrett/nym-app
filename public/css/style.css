@@ -355,6 +355,7 @@ text-align: center;
 font-family: 'Nunito', sans-serif;
 font-size: 1.375em;
 }
+
 .payNow {
   background-color: #297373;
   color: #F2F4F4;
@@ -365,8 +366,8 @@ font-size: 1.375em;
   height: 70px;
   font-size: 1.375em;
   border-radius: 20px;
-  margin-top: 25px;
   margin: auto;
+  margin-top: 30px;
 }
 
 .cardInfoBox {

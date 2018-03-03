@@ -10,7 +10,7 @@ if (process.env.JAWSDB_URL) {
         host: 'localhost',
         user: 'root',
         password: process.env.DB_PASS,
-        database: 'nym_db'
+        database: 'NYM_DB'
     });
 };    
 
