@@ -45,6 +45,13 @@ h2 {
   color: #F2F4F4;
   font-size: 2.25em;
 }
+#main {
+  font-family: 'Lobster', cursive;
+  color: #F2F4F4;
+  text-align: center;
+  font-size: 1.375em;
+  margin-top:10px;
+}
 /* ***************************** */
 /* LOGIN/HOMEPAGE */
 /* *************************** */
@@ -90,6 +97,9 @@ ul {
 }
 #title-divider, #homepage-divider {
   border-top: 3px double #DADBDC;
+}
+#orderBorder {
+  margin-bottom:100px;
 }
 /* ***************************** */
 /* CONTINUE WITH FACEBOOK BUTTON */
@@ -141,6 +151,7 @@ ul {
   border-radius: 10px;
   margin: auto;
   margin-bottom:10px;
+  margin-top:15px;
 }
 hr {
   border-color:#ffdbcc;
@@ -182,12 +193,19 @@ button {
 }
 
 /* TASK MANAGER PAGE */
+#tasks-header {
+  font-family: 'Lobster', cursive;
+  color: #F2F4F4;
+  text-align: center;
+  font-size: 2em;
+  margin-top:10px;
+}
 #tasks-title {
   font-family: 'Lobster', cursive;
   color: #FF8552;
   text-align: center;
   font-size: 2.25em;
-  margin-top:100px;
+  margin-top:80px;
 }
 #tasks {
   background: #297373;
@@ -197,11 +215,11 @@ button {
   font-family: 'Nunito', sans-serif;
   font-size: 1.375em;
   color: #F2F4F4;
-  padding-top: 0px;
+  padding-top: 5px;
   text-align: left;
   border-bottom: none;
   margin-bottom: 0;
-  width: 89.19%;
+  width: 85.54%;
   float: left;
 }
 #due-by, #assigned-to, #task-edit {
@@ -216,16 +234,19 @@ button {
   margin-bottom: 0px;
   padding-top: 0px;
 }
-#delete-button, #update-button, #more-button, #check-button, .fa-check {
+.delete-button, .update-button, .more-button, .check-button  {
   width:40px;
   height: 44px;
   float: left;
   background: #297373;
   margin-bottom:0;
-  padding-top: 2px;
-  margin-top:15px;
+  padding:5px;
+  /* padding-left:2px;
+  padding-bottom:5px;
+  padding-top: 5px; */
+  margin-top:0px;
 }
-#more-button {
+.more-button {
   color: #DADBDC;
 }
 #add-chore {
@@ -249,7 +270,7 @@ button {
   padding-top: 0px;
 }
 #add-dueby-input {
-  margin-bottom: 150px;
+  margin-bottom: 500px;
 }
 
 /* INVENTORY PAGE */
@@ -257,6 +278,13 @@ input[type="checkbox"] {
   background: #FF8552
 }
 /* SETTINGS PAGE */
+#settings-title {
+  font-family: 'Lobster', cursive;
+  color: #F2F4F4;
+  text-align: center;
+  font-size: 2em;
+  margin-top:10px;
+}
 #user-name {
   margin-top:100px;
   background: #297373;
@@ -379,12 +407,23 @@ Grey - #DADBDC
 /* ***************************** */
 /* FOOTER/NAV */
 /* *************************** */
+#login-footer {
+  margin:auto;
+  margin-left:0;
+  height:75px;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.375em;
+  color: #f2f4f4;
+  padding:10px;
+}
 .footer {
   position: fixed;
   margin: auto;
+  margin-left: -78px;
   bottom: 0;
   width: 100%;
-  height: auto;
+  height: 100px;
   background-color: #ff8552;
 }
 #footer-container {
@@ -412,7 +451,13 @@ Grey - #DADBDC
 /* ***************************** */
 /* PAYMENT PAGE */
 /* *************************** */
-
+#payment-title {
+  font-family: 'Lobster', cursive;
+  color: #F2F4F4;
+  text-align: center;
+  font-size: 2em;
+  margin-top:10px;
+}
 .reimbursePanel {
 background-color: #297373;
 color: #F2F4F4;
@@ -574,19 +619,26 @@ Grey - #DADBDC */
   h2 {
     font-size: 1.625em;
   }
+  #main {
+    font-family: 'Lobster', cursive;
+    color: #F2F4F4;
+    text-align: center;
+    font-size: 1.375em;
+    margin-top:10px;
+  }
 /* ***************************** */
-/* LOGIN/HOMEPAGE */
+/* MOBILE LOGIN/HOMEPAGE */
 /* *************************** */
 #login-title {
   font-family: 'Lobster', cursive;
   color: #F2F4F4;
-  font-size: 2.25em;
+  font-size: 2em;
   background-color: #FF8552;
 }
 #login-subtitle {
   font-family: 'Nunito', sans-serif;
   color: #F2F4F4;
-  font-size: 1.25em;
+  font-size: .9em;
 }
 #homepage-container {
   background:#F2F4F4;
@@ -613,11 +665,11 @@ Grey - #DADBDC */
 ul {
   font-family: 'Nunito', sans-serif;
   color: #f4f2f2;
-  font-size: 1.25em;
+  font-size: 1em;
   text-align: left;
   padding-top:15px;
   padding-left:55px;
-  padding-bottom:55px;
+  padding-bottom:15px;
   background-color: #297373;
 }
 #title-divider {
@@ -630,9 +682,12 @@ ul {
 #login-footer {
   color: #F4f2f2;
   font-family: 'Nunito', sans-serif;
-  font-size:.75em;
+  font-size:.7em;
   text-align: center;
-  padding-top:15px;
+  padding-top:30px;
+}
+#orderborder {
+  margin-bottom:10px;
 }
 /* ***************************** */
 /* MOBILE CONTINUE WITH FACEBOOK BUTTON */
@@ -661,6 +716,13 @@ ul {
   /* ***************************** */
   /* MOBILE TASK MANAGER PAGE */
   /* ***************************** */
+  #tasks-header {
+    font-family: 'Lobster', cursive;
+    color: #F2F4F4;
+    text-align: center;
+    font-size: 1.375em;
+    margin-top:10px;
+  }
   #tasks-title {
     font-family: 'Lobster', cursive;
     color: #FF8552;
@@ -695,7 +757,7 @@ ul {
     margin-bottom: 0px;
     padding-top: 0px;
   }
-  #delete-button, #update-button, #more-button {
+  .delete-button, .update-button, .more-button {
     width:40px;
     height: 44px;
     float: left;
@@ -704,7 +766,7 @@ ul {
     padding-top: 2px;
     margin-top:15px;
   }
-  #more-button {
+  .more-button {
     color: #DADBDC;
   }
   #add-chore {
@@ -733,6 +795,13 @@ ul {
   /* ***************************** */
   /* MOBILE SETTINGS PAGE */
   /* ***************************** */  
+  #settings-title {
+    font-family: 'Lobster', cursive;
+    color: #F2F4F4;
+    text-align: center;
+    font-size: 1.375em;
+    margin-top:10px;
+  }
   #user-name {
     margin-top:60px;
     background: #297373;
@@ -785,6 +854,11 @@ ul {
     color: #F2F4F4;
     margin-bottom:50px;
     border-radius:4px;
+  }
+  /* MOBILE PAYMENT PAGE */
+  #payment-title {
+    font-size: 1.375em;
+    margin-top:10px;
   }
   /* ***************************** */
   /* MOBILE FOOTER */
