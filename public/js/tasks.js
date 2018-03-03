@@ -142,11 +142,7 @@ var mainFxn = () =>{
         // var formToAppend = `<form class="create-form" id="appended-form" status="hidden"><div class="form-group"><label for="add-task">Task Name</label><input type="text" id="add-task" name="add-task" placeholder="Chore Name goes Here"></div><div class="form-group" id="add-task-form"><label for="add-assign">Roomate to Assign</label><select class="form-control" id="add-assign" value="Assign" placeholder="Assign User">${userSelectAdd}</select><div class="form-group" id="add-task-form"><label for="add-dueby">Due Date</label><input type="date" id="add-dueby" name="add-dueby" placeholder="2018-03-05">`;
         // var buttonToAppend = `<button type="button" id="createButton" onclick="addChore()">Submit</button>`
         var divToAppend = `<div class="row"><div class="col-sm"><button id="add-chore" onclick="showAddTask()">+ Add Chore</button></div></div>`;
-<<<<<<< HEAD
-        var formToAppend = `<form class="create-form" id="appended-form" status="hidden"><div class="form-group"><label for="add-task">Task Name</label><input type="text" id="add-task" name="add-task" placeholder="Chore Name goes Here"></div><div class="form-group"><label for="add-assign">Roomate to Assign</label><select class="form-control" id="add-assign" value="Assign">${userSelectAdd}</select><div class="form-group"><label for="add-dueby">Due Date</label><input type="date" id="add-dueby" name="add-dueby" placeholder="2018-03-05">`;
-=======
         var formToAppend = `<form class="create-form" id="appended-form" status="hidden"><div class="form-group"><label for="add-task">Task Name</label><input type="text" id="add-task" name="add-task" placeholder="Chore Name goes Here"></div><div class="form-group" id="add-task-form"><label for="add-assign"></label><select class="form-control" id="add-assign" value="Assign" placeholder="Assign User">${userSelectAdd}</select><div class="form-group" id="add-task-form"><label for="add-dueby">Due Date</label><input type="date" id="add-dueby" name="add-dueby" placeholder="2018-03-05">`;
->>>>>>> b4cbb63e0abd03959e832d456d1af036a4745d08
         var buttonToAppend = `<button type="button" id="createButton" onclick="addChore()">Submit</button>`
         
 
