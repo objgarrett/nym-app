@@ -1,4 +1,5 @@
 var facebook;
+var users = [];
 
     // This is called with the results from from FB.getLoginStatus().
     //Facebook login validation. If valid, continues storing the facebook id as global var facebook
@@ -79,20 +80,19 @@ var mainFxn = () =>{
         }
       }
       console.log("house: " + house);
-      var users = [];
       for (var i = 0; i < relation.length; i++) {
         if (relation[i].house_name === house) {
           users.push(relation[i].facebook_id)
         }
       }
       console.log("users: " + users);
-      $.ajax({
-        type: "POST",
-        url: "/api/house/settings",
-        data: users
-      }).done(apiSettings => {
-        console.log(apiSettings);
-      })
+      // $.ajax({
+      //   type: "POST",
+      //   url: "/api/house/settings",
+      //   data: users
+      // }).done(apiSettings => {
+      //   console.log(apiSettings);
+      // })
     })
   }
 
@@ -105,3 +105,13 @@ var documentShower = () => {
   mainFxn();
 }
 
+$(() => {
+  $("#delete-acct-btn").on("click", () => {
+    $.ajax({
+      type: "DELETE",
+      url: `/api/users/delete/${facebook}`
+    }).done(data => {
+      window.location.reload();
+    })
+  })
+})

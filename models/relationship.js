@@ -15,6 +15,11 @@ var houseuserrelationship = {
     orm.update("houseuserrelationship", objColVals, condition, function(res) {
       cb(res);
     });
+  },
+  delete: function(cols, condition, cb) {
+    orm.delete(cols, "houseuserrelationship", condition, function(res) {
+      cb(res);
+    });
   }
 };
 

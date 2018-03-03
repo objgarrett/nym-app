@@ -23,7 +23,7 @@ var user = {
     });
   },
   delete: function(cols, condition, cb) {
-    orm.delete("users", cols, condition, function(res) {
+    orm.delete(cols, "users", condition, function(res) {
       cb(res);
     });
   }

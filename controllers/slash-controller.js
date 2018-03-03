@@ -199,4 +199,13 @@ router.post('/api/tasks/add', (req, res) => {
     })
 })
 
+router.delete('/api/users/delete/:facebook_id', (req, res) => {
+    var facebook_id = req.params.facebook_id;
+    nymUsers.delete("facebook_id", `facebook_id = '${facebook_id}'`, data => {
+        nymRelation.delete("facebook_id", `facebook_id = '${facebook_id}'`, data1 => {
+            res.send(data1);
+        })
+    })
+})
+
 module.exports = router;
