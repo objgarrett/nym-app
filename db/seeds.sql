@@ -1,9 +1,9 @@
-INSERT INTO users (firstname, lastname, birthday, email, phone, city, state, zip, created_at, facebook_id, money_owed) VAlUES ("Olivia", "Garrett", "1990-05-15", "oliviajonesbgarrett@gmail.com", "8642303336", "Richmond", "VA", 23230, 15200006638564, 10156414072913949, 0);
-INSERT INTO users (firstname, lastname, birthday, email, phone, city, state, zip, created_at, facebook_id, money_owed) VAlUES ("Jordan", "Shear", "1111-11-11", "shear_J@hotmail.com", "5032988866", "Renton", "WA", 98056, 1519946590671, 10160070396760582, 0);
-INSERT INTO users (firstname, lastname, birthday, email, phone, city, state, zip, created_at, facebook_id, money_owed) VAlUES ("Mary", "Hall", "1995-06-27", "mlh2913@msn.com", "8049206658", "Chester", "VA", 23831, 15199465876308, 1893049390736977, 0);
-INSERT INTO users (firstname, lastname, birthday, email, phone, city, state, zip, created_at, facebook_id, money_owed) VAlUES ("Brittany", "Gillespie", "1993-07-27", "brittanyemail@aol.com", "5556203758", "Richmond", "VA", 23237, 15199465876308, 1893049390736978, 0);
-INSERT INTO users (firstname, lastname, birthday, email, phone, city, state, zip, created_at, facebook_id, money_owed) VAlUES ("Bad", "Roomie", "1994-08-24", "whatrchores@aol.com", "5558233758", "Richmond", "VA", 23237, 15199465876308, 1893049390736962, 16);
-INSERT INTO users (firstname, lastname, birthday, email, phone, city, state, zip, created_at, facebook_id, money_owed) VAlUES ("Press", "Garrett", "1990-05-15", "pressgarrett@gmail.com", "8647065891", "Richmond", "VA", 23230, 15199465876308, 10156414072913950, 4);
+INSERT INTO users (firstname, lastname, birthday, email, phone, city, state, zip, created_at, facebook_id, money_owed, house_name) VAlUES ("Olivia", "Garrett", "1990-05-15", "oliviajonesbgarrett@gmail.com", "8642303336", "Richmond", "VA", 23230, 15200006638564, 10156414072913949, 0, "The Garretts");
+INSERT INTO users (firstname, lastname, birthday, email, phone, city, state, zip, created_at, facebook_id, money_owed, house_name) VAlUES ("Jordan", "Shear", "1111-11-11", "shear_J@hotmail.com", "5032988866", "Renton", "WA", 98056, 1519946590671, 10160070396760582, 0, "first house");
+INSERT INTO users (firstname, lastname, birthday, email, phone, city, state, zip, created_at, facebook_id, money_owed, house_name) VAlUES ("Mary", "Hall", "1995-06-27", "mlh2913@msn.com", "8049206658", "Chester", "VA", 23831, 15199465876308, 1893049390736977, 0, "first house");
+INSERT INTO users (firstname, lastname, birthday, email, phone, city, state, zip, created_at, facebook_id, money_owed, house_name) VAlUES ("Brittany", "Gillespie", "1993-07-27", "brittanyemail@aol.com", "5556203758", "Richmond", "VA", 23237, 15199465876308, 1893049390736978, 0, "first house");
+INSERT INTO users (firstname, lastname, birthday, email, phone, city, state, zip, created_at, facebook_id, money_owed, house_name) VAlUES ("Bad", "Roomie", "1994-08-24", "whatrchores@aol.com", "5558233758", "Richmond", "VA", 23237, 15199465876308, 1893049390736962, 16, "first house");
+INSERT INTO users (firstname, lastname, birthday, email, phone, city, state, zip, created_at, facebook_id, money_owed, house_name) VAlUES ("Press", "Garrett", "1990-05-15", "pressgarrett@gmail.com", "8647065891", "Richmond", "VA", 23230, 15199465876308, 10156414072913950, 4, "The Garretts");
 
 INSERT INTO house (houseid, password, house_name) VALUES (9, "password", "first house");
 INSERT INTO house (houseid, password, house_name) VALUES (1, "password", "The Garretts");
@@ -15,7 +15,7 @@ INSERT INTO Tasklist (taskid, text, complete, dueby, chore_price, houseid, useri
 INSERT INTO Tasklist (taskid, text, complete, dueby, chore_price, houseid, userid, house_name, frequency) VALUES (12, "Refill ice", true, 1520208000, 4, 9, 10160070396760582, "first house", "weekly");
 INSERT INTO Tasklist (taskid, text, complete, dueby, chore_price, houseid, userid, house_name, frequency) VALUES (18, "Facilitate rent payment", true, 1520208000, 4, 9, 1893049390736978, "first house", "monthly");
 INSERT INTO Tasklist (taskid, text, complete, dueby, chore_price, houseid, userid, house_name, frequency) VALUES (19, "Prepare recylcing", false, 1520208000, 4, 9, 1893049390736962, "first house", "weekly");
-INSERT INTO Tasklist (taskid, text, complete, dueby, chore_price, houseid, userid, house_name, frequency) VALUES (21, "Walk your stupid dog so it doesn't crap in the house", false, 1520208000, 4, 9, 1893049390736962, "first_house", "daily");
+INSERT INTO Tasklist (taskid, text, complete, dueby, chore_price, houseid, userid, house_name, frequency) VALUES (21, "Walk your stupid dog so it doesn't crap in the house", false, 1520208000, 4, 9, 1893049390736962, "first house", "daily");
 INSERT INTO Tasklist (taskid, text, complete, dueby, chore_price, houseid, userid, house_name, frequency) VALUES (23, "Buy Olivia Chocolate", false, 1520208000, 4, 1, 10156414072913950, "The Garretts", "weekly");
 INSERT INTO Tasklist (taskid, text, complete, dueby, chore_price, houseid, userid, house_name, frequency) VALUES (24, "Prepare recyling", true, 1520208000, 4, 1, 10156414072913949, "The Garretts", "weekly");
 
@@ -34,5 +34,6 @@ INSERT INTO Inventory (inventoryid, inventorytext, houseid, house_name) VALUES (
 
 INSERT INTO HouseholdStatus (householdid, statustext, status, houseid, house_name) VALUES (1, "Balcony Door Locked", true, 9, "first house");
 INSERT INTO HouseholdStatus (householdid, statustext, status, houseid, house_name) VALUES (2, "Window Closed", true, 1, "The Garretts");
+
 
 
