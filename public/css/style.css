@@ -490,6 +490,15 @@ font-size: 1.375em;
   margin: auto;
 }
 
+.roommateImg {
+  border-style: solid;
+  border-width: 3px;
+  border-color: #F2F4F4;
+  border-radius: 100px;
+  height: 3%;
+  margin: auto;
+}
+
 /* 
 Blue - #297373
 Pinkish -  #FF8552
