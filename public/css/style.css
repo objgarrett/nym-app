@@ -309,6 +309,72 @@ input[type="checkbox"] {
   margin-bottom:50px;
   border-radius:4px;
 }
+/* TOGGLE */
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #DADBDC;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #FF8552;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #9AE841;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #9AE841;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+Blue - #297373
+Pinkish -  #FF8552
+Green - #9AE841
+White - #F2F4F4
+Grey - #DADBDC
 
 /* ***************************** */
 /* FOOTER/NAV */
@@ -371,12 +437,114 @@ font-size: 1.375em;
 }
 
 .cardInfoBox {
-
+  background-color: #EFF1F1;
+  color: #F2F4F4;
+  text-align: center;
+  line-height: 70px;
+  font-family: 'Nunito', sans-serif;
+  width: 500px;
+  height: 140px;
+  font-size: 1.375em;
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 30px;
+  border-style: solid;
+  border-color:  #297373;
+  border-width: 2px;
 }
 
 .emailPayments {
+  background-color: #EFF1F1;
+  color: #DADBDC;
+  text-align: center;
+  line-height: 70px;
+  font-family: 'Nunito', sans-serif;
+  width: 500px;
+  height: 70px;
+  font-size: 1.375em;
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 30px;
+  border-style: solid;
+  border-color:  #297373;
+  border-width: 2px;
+}
+
+.creditCardDiv {
+  line-height: 70px;
+
 
 }
+
+.calendarPayment {
+  border-top-style: solid;
+  border-top-color: #DADBDC;
+  border-top-width: 2px;
+  border-right-style: solid;
+  border-right-color: #DADBDC;
+  border-right-width: 2px;
+  color: #DADBDC;
+  width: 50%;
+  float: left;
+  line-height: 70px;
+}
+
+.CVCLock {
+  border-top-style: solid;
+  border-top-color: #DADBDC;
+  border-top-width: 2px;
+  color: #DADBDC;
+  width: 50%;
+  float: left;
+  line-height: 70px;
+}
+
+#emailPayments {
+  align-content: left;
+  height: 50px;
+}
+
+#CVCLock {
+  align-content: left;
+  height: 50px;
+}
+
+#calendarPayment {
+  position: relative;
+  left: auto;
+  height: 50px;
+}
+
+#creditCardDiv {
+  align-content: left;
+  height: 50px;
+}
+
+#emailPaymentsSpan {
+  align-content: left;
+
+}
+
+#CVCLockSpan {
+  align-content: left;
+
+}
+
+#calendarPaymentSpan {
+  align-content: left;
+  left: auto;
+
+}
+
+#creditCardDivSpan {
+align-content: left;
+}
+/* 
+Blue - #297373
+Pinkish -  #FF8552
+Green - #9AE841
+White - #F2F4F4
+Grey - #DADBDC */
 
   /* *************************************************** */
   /* FOR MOBILE PHONES - SPECIFICALLY iPHONE6 - 375x667 */
