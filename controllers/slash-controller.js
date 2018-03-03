@@ -168,9 +168,25 @@ router.get('/api/users/:house_name', (req, res) => {
     })
 })
 
+
 router.get('/api/house/:house_name/inventory', (req, res) => {
     var house_name = req.params.house_name;
     nymInventory.conditional(`where house_name = '${house_name}'`, data => {
+        res.send(data);
+    })
+})
+
+router.delete('/api/tasks/:taskid/delete', (req, res) => {
+    var taskid = req.params.taskid;
+    nymTasks.delete("bullshit", `taskid = '${taskid}'`, data => {
+        res.send(data);
+    })
+})
+
+router.put('/api/tasks/:taskid/complete', (req, res) => {
+    var taskid = req.params.taskid;
+    var condition = `taskid = ${taskid}`;
+    nymTasks.update({complete: 1}, condition, data => {
         res.send(data);
     })
 })

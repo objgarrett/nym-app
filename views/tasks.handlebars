@@ -18,12 +18,16 @@
     </div>
     <div class="task-append" id="task-append">
     </div>
+    <div class="add-append">
+    </div>
+
+    
     <div class="row">
         <div class="col-sm">
-            <button id="add-chore">+ Add Chore</button>
+            <button id="add-chore" onclick="showAddTask()">+ Add Chore</button>
         </div>
     </div>
-    <div class="row">   
+    <div class="row" id="add-task-form">   
         <div class="col-sm">
             <p id="add-task">New Chore:</p>
                 <input type="text" id="add-task">
@@ -31,9 +35,10 @@
                 <input type="text" id="add-assign">
             <p id="add-dueby">Due On:</p> 
                 <input type="date" id="add-dueby-input"> 
-        </div>    
+        </div>
+        <button type="button" id="createbutton">Submit</button>
     </div>               
-<footer class="footer" id="tasks-footer">
+{{!-- <footer class="footer" id="tasks-footer">
     <div class="container" id="footer-container">
         <a href="/payment"><img class="footerIcons" id="paymenticon" src="css/images/transfer-10-white.png" alt="payments"></a>
         <a href="/inventory"><img class="footerIcons" src="css/images/026-home-white-fixed.png" alt="inventory"></a>
@@ -41,7 +46,7 @@
         <a href="/tasks"><img class="footerIcons" src="css/images/list111-white.png" alt="tasklist"></a>
         <a href="/settings"><img class="footerIcons" id="settingsicon" src="css/images/settings-5-white.png" alt="settings"></a>
     </div>
-</footer>
+</footer> --}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.js"></script>
 <script src="/js/tasks.js"></script>
 
