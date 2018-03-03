@@ -651,7 +651,8 @@ ul {
   }
   #tasks {
     background: #297373;
-    border-style: none;
+    border-style: solid 10px;
+    border-color:#DADBDC;
     border-radius: 0px;
     height: 44px;
     font-family: 'Nunito', sans-serif;
@@ -659,8 +660,8 @@ ul {
     color: #F2F4F4;
     padding-top: 5px;
     text-align: left;
-    border-bottom: none;
-    margin-bottom: 0;
+    /* border-bottom: none; */
+    /* margin-bottom: 10px; */
     width: 63%;
     float: left;
   }
