@@ -290,10 +290,10 @@ button {
   font-size: 1.375em;
   color: #F2F4F4;
   padding-top: 5px;
+  padding-left:15px;
   text-align: left;
   border-bottom: none;
-  /* margin-bottom: 10px; */
-  width: 85.54%;
+  width: 100%;
   float: left;
 }
 /* TOGGLE */
