@@ -469,10 +469,14 @@ input:checked + .slider:before {
 .reimbursePanel {
 background-color: #297373;
 color: #F2F4F4;
+padding-top: 15px;
+padding-bottom: 15px;
+margin: auto;
 margin-top: 64px;
 text-align: center;
 font-family: 'Nunito', sans-serif;
 font-size: 1.375em;
+width: 80%;
 }
 .payNow {
   color: #F2F4F4;
@@ -485,7 +489,7 @@ font-size: 1.375em;
   border-radius: 20px;
   margin: auto;
   margin-top: 30px;
-  margin-bottom: 150px;
+  margin-bottom: 170px;
 }
 
 .paymentForm {
@@ -498,7 +502,7 @@ font-size: 1.375em;
   border-width: 3px;
   border-color: #F2F4F4;
   border-radius: 100px;
-  height: 3%;
+  height: 90px;
   margin: auto;
 }
 
@@ -804,6 +808,10 @@ ul {
   #payment-title {
     font-size: 1.375em;
     margin-top:10px;
+  }
+
+  .reimbursePanel {
+    width: 100%;
   }
   /* ***************************** */
   /* MOBILE FOOTER */
