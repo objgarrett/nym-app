@@ -97,7 +97,7 @@ var mainFxn = () =>{
         }).done(apiInventory => {
           console.log(apiInventory);
           for (var j = 0; j < apiInventory.length; j++){
-              var divToAdd = $(`<div class="div-to-append house-inventory"><div class="row"><div class="col-sm" id="inventorycontainer"><div id="inventory">${apiInventory[j].inventorytext}</div>`)
+              var divToAdd = $(`<div class="div-to-append house-inventory"><div class="row" id="toggle-box"><label class="switch"><input type="checkbox"><span class="slider round"></span></label><div class="col-sm" id="inventorycontainer"><div id="inventory">${apiInventory[j].inventorytext}</div>`)
               $("#inventory-append").append(divToAdd);
             } 
           })
