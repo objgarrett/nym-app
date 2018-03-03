@@ -260,7 +260,7 @@ button {
   font-family: 'Nunito', sans-serif;
   font-size: 1.375em;
   color: #F2F4F4;
-  margin-top:-250px;
+  /* margin-top:-250px; */
   margin-bottom: 0px;
   padding-top: 0px;
 }
